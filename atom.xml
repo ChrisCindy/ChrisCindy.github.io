@@ -58,7 +58,7 @@
     <link href="http://yoursite.com/2016/07/08/Hello%20World/"/>
     <id>http://yoursite.com/2016/07/08/Hello World/</id>
     <published>2016-07-08T03:25:04.000Z</published>
-    <updated>2016-07-08T07:02:51.000Z</updated>
+    <updated>2016-07-08T08:32:54.000Z</updated>
     
     <content type="html">&lt;p&gt;恩，这是hexo建好后默认的第一篇博文，没有想过删除它，因为我觉得对于这样一个有纪念意义的时刻，应该有一篇文章能够记录一下。&lt;/p&gt;
 &lt;p&gt;没错，终于有自己可以写文章的地方了，感觉就像是终于有了一个只属于自己的小窝，这种美妙的感觉难以言表。从今以后，就在这里分享技术，感悟生活啦。&lt;/p&gt;
@@ -72,6 +72,8 @@
 &lt;p&gt;没错，终于有自己可以写文章的地方了，感觉就像是终于有了一个只属于自己的小窝，这种美妙的感觉难以言表。从今以后，就在这里分享技术，感悟生
     
     </summary>
+    
+      <category term="生活感悟" scheme="http://yoursite.com/categories/%E7%94%9F%E6%B4%BB%E6%84%9F%E6%82%9F/"/>
     
     
       <category term="里程碑" scheme="http://yoursite.com/tags/%E9%87%8C%E7%A8%8B%E7%A2%91/"/>
