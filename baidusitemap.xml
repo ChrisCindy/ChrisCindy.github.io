@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+
+    
+    
+  <url>
+    <loc>http://yoursite.com/2016/07/08/Hello%20World/</loc>
+    <lastmod>2016-07-08T08:32:54.000Z</lastmod>
+    <data>
+        <display>
+        <title>Hello World</title>
+        <pubTime>2016-07-08T03:25:04.000Z</pubTime>
+        
+        <tag>里程碑</tag>
+         
+         
+           
+             
+              <breadCrumb title="生活感悟" url="http://yoursite.com/categories/%E7%94%9F%E6%B4%BB%E6%84%9F%E6%82%9F/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2016/07/08/%E4%B8%A4%E4%B8%AAGit%E5%B8%90%E5%8F%B7%E5%A6%82%E4%BD%95%E5%9C%A8%E4%B8%80%E5%8F%B0%E7%94%B5%E8%84%91%E4%B8%8A%E5%85%B1%E5%AD%98/</loc>
+    <lastmod>2016-07-08T08:24:38.000Z</lastmod>
+    <data>
+        <display>
+        <title>两个Git帐号如何在一台电脑上共存</title>
+        <pubTime>2016-07-08T08:11:59.000Z</pubTime>
+        
+        <tag>Git</tag>
+         
+         
+           
+             
+              <breadCrumb title="解决方案" url="http://yoursite.com/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+    
+    
+    
+</urlset>
