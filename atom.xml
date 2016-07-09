@@ -4,9 +4,9 @@
   
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
+  <link href="http://chriscindy.top/"/>
   <updated>2016-07-08T08:24:38.000Z</updated>
-  <id>http://yoursite.com/</id>
+  <id>http://chriscindy.top/</id>
   
   <author>
     <name>ChrisCindy</name>
@@ -17,8 +17,8 @@
   
   <entry>
     <title>两个Git帐号如何在一台电脑上共存</title>
-    <link href="http://yoursite.com/2016/07/08/%E4%B8%A4%E4%B8%AAGit%E5%B8%90%E5%8F%B7%E5%A6%82%E4%BD%95%E5%9C%A8%E4%B8%80%E5%8F%B0%E7%94%B5%E8%84%91%E4%B8%8A%E5%85%B1%E5%AD%98/"/>
-    <id>http://yoursite.com/2016/07/08/两个Git帐号如何在一台电脑上共存/</id>
+    <link href="http://chriscindy.top/2016/07/08/%E4%B8%A4%E4%B8%AAGit%E5%B8%90%E5%8F%B7%E5%A6%82%E4%BD%95%E5%9C%A8%E4%B8%80%E5%8F%B0%E7%94%B5%E8%84%91%E4%B8%8A%E5%85%B1%E5%AD%98/"/>
+    <id>http://chriscindy.top/2016/07/08/两个Git帐号如何在一台电脑上共存/</id>
     <published>2016-07-08T08:11:59.000Z</published>
     <updated>2016-07-08T08:24:38.000Z</updated>
     
@@ -46,17 +46,17 @@
     
     </summary>
     
-      <category term="解决方案" scheme="http://yoursite.com/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
+      <category term="解决方案" scheme="http://chriscindy.top/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
     
     
-      <category term="Git" scheme="http://yoursite.com/tags/Git/"/>
+      <category term="Git" scheme="http://chriscindy.top/tags/Git/"/>
     
   </entry>
   
   <entry>
     <title>Hello World</title>
-    <link href="http://yoursite.com/2016/07/08/Hello%20World/"/>
-    <id>http://yoursite.com/2016/07/08/Hello World/</id>
+    <link href="http://chriscindy.top/2016/07/08/Hello%20World/"/>
+    <id>http://chriscindy.top/2016/07/08/Hello World/</id>
     <published>2016-07-08T03:25:04.000Z</published>
     <updated>2016-07-08T08:32:54.000Z</updated>
     
@@ -73,10 +73,10 @@
     
     </summary>
     
-      <category term="生活感悟" scheme="http://yoursite.com/categories/%E7%94%9F%E6%B4%BB%E6%84%9F%E6%82%9F/"/>
+      <category term="生活感悟" scheme="http://chriscindy.top/categories/%E7%94%9F%E6%B4%BB%E6%84%9F%E6%82%9F/"/>
     
     
-      <category term="里程碑" scheme="http://yoursite.com/tags/%E9%87%8C%E7%A8%8B%E7%A2%91/"/>
+      <category term="里程碑" scheme="http://chriscindy.top/tags/%E9%87%8C%E7%A8%8B%E7%A2%91/"/>
     
   </entry>
   
