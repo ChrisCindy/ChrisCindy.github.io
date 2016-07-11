@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://chriscindy.top/"/>
-  <updated>2016-07-11T03:43:10.000Z</updated>
+  <updated>2016-07-11T06:14:43.000Z</updated>
   <id>http://chriscindy.top/</id>
   
   <author>
@@ -20,11 +20,9 @@
     <link href="http://chriscindy.top/2016/07/11/%E8%AF%91-%E4%BD%BF%E7%94%A8Riot%EF%BC%8CES6%E5%92%8CWebpack%E6%9E%84%E5%BB%BA%E5%BA%94%E7%94%A8/"/>
     <id>http://chriscindy.top/2016/07/11/译-使用Riot，ES6和Webpack构建应用/</id>
     <published>2016-07-11T03:10:52.000Z</published>
-    <updated>2016-07-11T03:43:10.000Z</updated>
+    <updated>2016-07-11T06:14:43.000Z</updated>
     
-    <content type="html">&lt;blockquote&gt;&lt;p&gt;原文出处：&lt;/p&gt;
-&lt;footer&gt;&lt;strong&gt;srackham&lt;/strong&gt;&lt;cite&gt;&lt;a href=&quot;http://blog.srackham.com/posts/riot-es6-webpack-apps/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Building Apps with Riot, ES6 and Webpack&lt;/a&gt;&lt;/cite&gt;&lt;/footer&gt;&lt;/blockquote&gt;
-&lt;p&gt;在读完Muut上&lt;a href=&quot;https://muut.com/blog/technology/frameworkless-javascript.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Frameworkless JavaScript&lt;/a&gt;这篇博文后，我遇上了&lt;a href=&quot;http://riotjs.com/zh/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Riot&lt;/a&gt;，请一定先阅读该博文！Muut的程序员拿出实际行动编写了&lt;a href=&quot;http://riotjs.com/zh/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Riot&lt;/a&gt;，一个&lt;a href=&quot;https://muut.com/blog/technology/riot-2.0/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;类似React&lt;/a&gt;的用来构建响应式UI组件的微型库。&lt;/p&gt;
+    <content type="html">&lt;p&gt;在读完Muut上&lt;a href=&quot;https://muut.com/blog/technology/frameworkless-javascript.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Frameworkless JavaScript&lt;/a&gt;这篇博文后，我遇上了&lt;a href=&quot;http://riotjs.com/zh/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Riot&lt;/a&gt;，请一定先阅读该博文！Muut的程序员拿出实际行动编写了&lt;a href=&quot;http://riotjs.com/zh/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Riot&lt;/a&gt;，一个&lt;a href=&quot;https://muut.com/blog/technology/riot-2.0/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;类似React&lt;/a&gt;的用来构建响应式UI组件的微型库。&lt;/p&gt;
 &lt;p&gt;阅读Riot的文档时，令我感触最深的是Riot竟如此容易理解——相比React来说，在Riot里需要学习的术语和概念极少（说实话，和Polymer和Angular等比起来，Riot也是十分简单易懂的）。&lt;/p&gt;
 &lt;p&gt;为了有助于学习Riot，我把自己用React编写的&lt;a href=&quot;https://github.com/srackham/flux-backbone-todo&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;flux-backbone-todo&lt;/a&gt;搬运到了用Riot编写的&lt;a href=&quot;https://github.com/srackham/riot-todo&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Riot Todo app&lt;/a&gt;上。这篇博文就是我记录这次重构经历的笔记的合集。&lt;/p&gt;
 &lt;p&gt;如果觉得文章太长，这里是精简版：&lt;/p&gt;
@@ -88,12 +86,13 @@
 &lt;/ul&gt;
 &lt;p&gt;我不是很喜欢调试程序和设置断点——大多数情况下我仅仅会有策略地在代码中放置暂时性的&lt;code&gt;console.log()&lt;/code&gt;。&lt;/p&gt;
 &lt;h2 id=&quot;未来蓝图&quot;&gt;&lt;a href=&quot;#未来蓝图&quot; class=&quot;headerlink&quot; title=&quot;未来蓝图&quot;&gt;&lt;/a&gt;未来蓝图&lt;/h2&gt;&lt;p&gt;Riot（类似React）是一个UI库而不是一个框架。这非常棒（相对于大包大揽的框架来说，我更喜欢小而精的库的集合），但是对于具有一定复杂度的应用来说就需要条理清晰的高级的结构（一个体系结构）来提高可伸缩性、可发展性和可维护性。&lt;a href=&quot;https://www.npmjs.com/package/flux&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Flux&lt;/a&gt;为类似React的应用增加了体系结构的选择。我喜欢Flux，因为它很容易理解并且它能给人一种很直观的感觉（并非出于任何理论上的信仰）。&lt;a href=&quot;https://github.com/srackham/riot-todo&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Riot Todo app&lt;/a&gt;使用了名为&lt;a href=&quot;https://github.com/jimsparkman/RiotControl&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;RiotControl&lt;/a&gt;的Flux风格的dispatcher（经过轻微修改）来实现Flux体系结构。&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;原文出处：&lt;/p&gt;
+&lt;footer&gt;&lt;strong&gt;srackham&lt;/strong&gt;&lt;cite&gt;&lt;a href=&quot;http://blog.srackham.com/posts/riot-es6-webpack-apps/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Building Apps with Riot, ES6 and Webpack&lt;/a&gt;&lt;/cite&gt;&lt;/footer&gt;&lt;/blockquote&gt;
 </content>
     
     <summary type="html">
     
-      &lt;blockquote&gt;&lt;p&gt;原文出处：&lt;/p&gt;
-&lt;footer&gt;&lt;strong&gt;srackham&lt;/strong&gt;&lt;cite&gt;&lt;a href=&quot;http://blog.srackham.com/posts/riot-es6-webpack-apps/&quot; target=&quot;_bla
+      &lt;p&gt;在读完Muut上&lt;a href=&quot;https://muut.com/blog/technology/frameworkless-javascript.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Frameworkless JavaScript&lt;
     
     </summary>
     

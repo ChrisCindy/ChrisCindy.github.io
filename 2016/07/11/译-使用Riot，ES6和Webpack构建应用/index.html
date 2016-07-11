@@ -90,25 +90,19 @@
 
 
 
-<meta name="description" content="原文出处：
-srackhamBuilding Apps with Riot, ES6 and Webpack
-在读完Muut上Frameworkless JavaScript这篇博文后，我遇上了Riot，请一定先阅读该博文！Muut的程序员拿出实际行动编写了Riot，一个类似React的用来构建响应式UI组件的微型库。
-阅读Riot的文档时，令我感触最深的是Riot竟如此容易理解——相比React">
+<meta name="description" content="在读完Muut上Frameworkless JavaScript这篇博文后，我遇上了Riot，请一定先阅读该博文！Muut的程序员拿出实际行动编写了Riot，一个类似React的用来构建响应式UI组件的微型库。
+阅读Riot的文档时，令我感触最深的是Riot竟如此容易理解——相比React来说，在Riot里需要学习的术语和概念极少（说实话，和Polymer和Angular等比起来，Riot也是十分">
 <meta property="og:type" content="article">
 <meta property="og:title" content="[译]使用Riot，ES6和Webpack构建应用">
 <meta property="og:url" content="http://chriscindy.top/2016/07/11/译-使用Riot，ES6和Webpack构建应用/index.html">
 <meta property="og:site_name" content="sunflower->FE">
-<meta property="og:description" content="原文出处：
-srackhamBuilding Apps with Riot, ES6 and Webpack
-在读完Muut上Frameworkless JavaScript这篇博文后，我遇上了Riot，请一定先阅读该博文！Muut的程序员拿出实际行动编写了Riot，一个类似React的用来构建响应式UI组件的微型库。
-阅读Riot的文档时，令我感触最深的是Riot竟如此容易理解——相比React">
-<meta property="og:updated_time" content="2016-07-11T03:43:10.000Z">
+<meta property="og:description" content="在读完Muut上Frameworkless JavaScript这篇博文后，我遇上了Riot，请一定先阅读该博文！Muut的程序员拿出实际行动编写了Riot，一个类似React的用来构建响应式UI组件的微型库。
+阅读Riot的文档时，令我感触最深的是Riot竟如此容易理解——相比React来说，在Riot里需要学习的术语和概念极少（说实话，和Polymer和Angular等比起来，Riot也是十分">
+<meta property="og:updated_time" content="2016-07-11T06:14:43.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="[译]使用Riot，ES6和Webpack构建应用">
-<meta name="twitter:description" content="原文出处：
-srackhamBuilding Apps with Riot, ES6 and Webpack
-在读完Muut上Frameworkless JavaScript这篇博文后，我遇上了Riot，请一定先阅读该博文！Muut的程序员拿出实际行动编写了Riot，一个类似React的用来构建响应式UI组件的微型库。
-阅读Riot的文档时，令我感触最深的是Riot竟如此容易理解——相比React">
+<meta name="twitter:description" content="在读完Muut上Frameworkless JavaScript这篇博文后，我遇上了Riot，请一定先阅读该博文！Muut的程序员拿出实际行动编写了Riot，一个类似React的用来构建响应式UI组件的微型库。
+阅读Riot的文档时，令我感触最深的是Riot竟如此容易理解——相比React来说，在Riot里需要学习的术语和概念极少（说实话，和Polymer和Angular等比起来，Riot也是十分">
 
 
 
@@ -413,9 +407,7 @@ srackhamBuilding Apps with Riot, ES6 and Webpack
       
 
       
-        <blockquote><p>原文出处：</p>
-<footer><strong>srackham</strong><cite><a href="http://blog.srackham.com/posts/riot-es6-webpack-apps/" target="_blank" rel="external">Building Apps with Riot, ES6 and Webpack</a></cite></footer></blockquote>
-<p>在读完Muut上<a href="https://muut.com/blog/technology/frameworkless-javascript.html" target="_blank" rel="external">Frameworkless JavaScript</a>这篇博文后，我遇上了<a href="http://riotjs.com/zh/" target="_blank" rel="external">Riot</a>，请一定先阅读该博文！Muut的程序员拿出实际行动编写了<a href="http://riotjs.com/zh/" target="_blank" rel="external">Riot</a>，一个<a href="https://muut.com/blog/technology/riot-2.0/" target="_blank" rel="external">类似React</a>的用来构建响应式UI组件的微型库。</p>
+        <p>在读完Muut上<a href="https://muut.com/blog/technology/frameworkless-javascript.html" target="_blank" rel="external">Frameworkless JavaScript</a>这篇博文后，我遇上了<a href="http://riotjs.com/zh/" target="_blank" rel="external">Riot</a>，请一定先阅读该博文！Muut的程序员拿出实际行动编写了<a href="http://riotjs.com/zh/" target="_blank" rel="external">Riot</a>，一个<a href="https://muut.com/blog/technology/riot-2.0/" target="_blank" rel="external">类似React</a>的用来构建响应式UI组件的微型库。</p>
 <p>阅读Riot的文档时，令我感触最深的是Riot竟如此容易理解——相比React来说，在Riot里需要学习的术语和概念极少（说实话，和Polymer和Angular等比起来，Riot也是十分简单易懂的）。</p>
 <p>为了有助于学习Riot，我把自己用React编写的<a href="https://github.com/srackham/flux-backbone-todo" target="_blank" rel="external">flux-backbone-todo</a>搬运到了用Riot编写的<a href="https://github.com/srackham/riot-todo" target="_blank" rel="external">Riot Todo app</a>上。这篇博文就是我记录这次重构经历的笔记的合集。</p>
 <p>如果觉得文章太长，这里是精简版：</p>
@@ -479,6 +471,8 @@ srackhamBuilding Apps with Riot, ES6 and Webpack
 </ul>
 <p>我不是很喜欢调试程序和设置断点——大多数情况下我仅仅会有策略地在代码中放置暂时性的<code>console.log()</code>。</p>
 <h2 id="未来蓝图"><a href="#未来蓝图" class="headerlink" title="未来蓝图"></a>未来蓝图</h2><p>Riot（类似React）是一个UI库而不是一个框架。这非常棒（相对于大包大揽的框架来说，我更喜欢小而精的库的集合），但是对于具有一定复杂度的应用来说就需要条理清晰的高级的结构（一个体系结构）来提高可伸缩性、可发展性和可维护性。<a href="https://www.npmjs.com/package/flux" target="_blank" rel="external">Flux</a>为类似React的应用增加了体系结构的选择。我喜欢Flux，因为它很容易理解并且它能给人一种很直观的感觉（并非出于任何理论上的信仰）。<a href="https://github.com/srackham/riot-todo" target="_blank" rel="external">Riot Todo app</a>使用了名为<a href="https://github.com/jimsparkman/RiotControl" target="_blank" rel="external">RiotControl</a>的Flux风格的dispatcher（经过轻微修改）来实现Flux体系结构。</p>
+<blockquote><p>原文出处：</p>
+<footer><strong>srackham</strong><cite><a href="http://blog.srackham.com/posts/riot-es6-webpack-apps/" target="_blank" rel="external">Building Apps with Riot, ES6 and Webpack</a></cite></footer></blockquote>
 
       
     </div>
