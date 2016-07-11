@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://chriscindy.top/"/>
-  <updated>2016-07-11T03:25:05.000Z</updated>
+  <updated>2016-07-11T03:26:38.000Z</updated>
   <id>http://chriscindy.top/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://chriscindy.top/2016/07/11/%E8%BD%AC-%E4%BD%BF%E7%94%A8Riot%EF%BC%8CES6%E5%92%8CWebpack%E6%9E%84%E5%BB%BA%E5%BA%94%E7%94%A8/"/>
     <id>http://chriscindy.top/2016/07/11/转-使用Riot，ES6和Webpack构建应用/</id>
     <published>2016-07-11T03:10:52.000Z</published>
-    <updated>2016-07-11T03:25:05.000Z</updated>
+    <updated>2016-07-11T03:26:38.000Z</updated>
     
     <content type="html">&lt;blockquote&gt;&lt;p&gt;原文出处：&lt;/p&gt;
 &lt;footer&gt;&lt;strong&gt;srackham&lt;/strong&gt;&lt;cite&gt;&lt;a href=&quot;http://blog.srackham.com/posts/riot-es6-webpack-apps/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Building Apps with Riot, ES6 and Webpack&lt;/a&gt;&lt;/cite&gt;&lt;/footer&gt;&lt;/blockquote&gt;
@@ -54,7 +54,7 @@
 &lt;li&gt;标签文件需要构建工具（比如Webpack和Browserify）直接使用标签转换器来进行转换。&lt;/li&gt;
 &lt;li&gt;类似ES6的构造方法很棒但它们不是合法的JavaScript并且很可能总是成为持续混乱（语法和语义上）的来源。你可以使用ES6的&lt;em&gt;箭头函数&lt;/em&gt;以几乎相同的简洁程度来获得相同的语义（拥有词法作用域的&lt;code&gt;this&lt;/code&gt;），举例如下：&lt;/li&gt;
 &lt;/ul&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;figcaption&gt;&lt;span&gt;js&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;this.add = (e) =&amp;gt; &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  var input = e.target[0]&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  this.items.push(input.value)&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  input.value = &amp;apos;&amp;apos;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;figcaption&gt;&lt;span&gt;javascript&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;this.add = (e) =&amp;gt; &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  var input = e.target[0]&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  this.items.push(input.value)&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  input.value = &amp;apos;&amp;apos;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;这里有一个使用ES6模板字符串和箭头函数的ES6形式的JavaScript标签文件的&lt;a href=&quot;https://github.com/srackham/riot-todo/blob/0.1.1/src/tags.js&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;例子&lt;/a&gt;。&lt;/p&gt;
 &lt;p&gt;ES6模板字符串提高了标签HTML模板的可读性。相似的，如果你使用的是CoffeeScript，那么你可以使用CoffeeScript块字符串。&lt;a href=&quot;http://facebook.github.io/jsx/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;JSX&lt;/a&gt;是另一种可选项——React的JSX转换器可以经过修改然后生成字符串文本，这样你就可以获得现有的JSX工具的支持。&lt;/p&gt;
 &lt;h2 id=&quot;Riot和React的基本区别&quot;&gt;&lt;a href=&quot;#Riot和React的基本区别&quot; class=&quot;headerlink&quot; title=&quot;Riot和React的基本区别&quot;&gt;&lt;/a&gt;Riot和React的基本区别&lt;/h2&gt;&lt;p&gt;最重要的区别在于UI标记模板是如何声明的：&lt;/p&gt;

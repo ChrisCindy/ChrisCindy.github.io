@@ -102,7 +102,7 @@ srackhamBuilding Apps with Riot, ES6 and Webpack
 srackhamBuilding Apps with Riot, ES6 and Webpack
 在读完Muut上Frameworkless JavaScript这篇博文后，我遇上了Riot，请一定先阅读该博文！Muut的程序员拿出实际行动编写了Riot，一个类似React的用来构建响应式UI组件的微型库。
 阅读Riot的文档时，令我感触最深的是Riot竟如此容易理解——相比React">
-<meta property="og:updated_time" content="2016-07-11T03:25:05.000Z">
+<meta property="og:updated_time" content="2016-07-11T03:26:38.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="[转]使用Riot，ES6和Webpack构建应用">
 <meta name="twitter:description" content="原文出处：
@@ -445,7 +445,7 @@ srackhamBuilding Apps with Riot, ES6 and Webpack
 <li>标签文件需要构建工具（比如Webpack和Browserify）直接使用标签转换器来进行转换。</li>
 <li>类似ES6的构造方法很棒但它们不是合法的JavaScript并且很可能总是成为持续混乱（语法和语义上）的来源。你可以使用ES6的<em>箭头函数</em>以几乎相同的简洁程度来获得相同的语义（拥有词法作用域的<code>this</code>），举例如下：</li>
 </ul>
-<figure class="highlight plain"><figcaption><span>js</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">this.add = (e) =&gt; &#123;</div><div class="line">  var input = e.target[0]</div><div class="line">  this.items.push(input.value)</div><div class="line">  input.value = &apos;&apos;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><figcaption><span>javascript</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">this.add = (e) =&gt; &#123;</div><div class="line">  var input = e.target[0]</div><div class="line">  this.items.push(input.value)</div><div class="line">  input.value = &apos;&apos;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
 <p>这里有一个使用ES6模板字符串和箭头函数的ES6形式的JavaScript标签文件的<a href="https://github.com/srackham/riot-todo/blob/0.1.1/src/tags.js" target="_blank" rel="external">例子</a>。</p>
 <p>ES6模板字符串提高了标签HTML模板的可读性。相似的，如果你使用的是CoffeeScript，那么你可以使用CoffeeScript块字符串。<a href="http://facebook.github.io/jsx/" target="_blank" rel="external">JSX</a>是另一种可选项——React的JSX转换器可以经过修改然后生成字符串文本，这样你就可以获得现有的JSX工具的支持。</p>
 <h2 id="Riot和React的基本区别"><a href="#Riot和React的基本区别" class="headerlink" title="Riot和React的基本区别"></a>Riot和React的基本区别</h2><p>最重要的区别在于UI标记模板是如何声明的：</p>
