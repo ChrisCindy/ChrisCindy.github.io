@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://chriscindy.top/"/>
-  <updated>2016-07-10T08:15:36.000Z</updated>
+  <updated>2016-07-11T02:26:38.000Z</updated>
   <id>http://chriscindy.top/</id>
   
   <author>
@@ -16,18 +16,38 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>composition event</title>
-    <link href="http://chriscindy.top/2016/07/10/composition-event/"/>
-    <id>http://chriscindy.top/2016/07/10/composition-event/</id>
-    <published>2016-07-10T08:15:36.000Z</published>
-    <updated>2016-07-10T08:15:36.000Z</updated>
+    <title>Composition Event</title>
+    <link href="http://chriscindy.top/2016/07/11/Composition-Event/"/>
+    <id>http://chriscindy.top/2016/07/11/Composition-Event/</id>
+    <published>2016-07-11T02:26:38.000Z</published>
+    <updated>2016-07-11T02:26:38.000Z</updated>
     
-    <content type="html"></content>
+    <content type="html">&lt;p&gt;Composition Event，中文译为复合事件，是DOM 3级事件中新添加的一类事件类型，用于处理IME的输入序列。IME（Input Method Editor，输入法编辑器）可以让用户输入在物理键盘上找不到的字符。复合事件就是针对检测和处理这种输入而设计的。也因为以上所述原因，复合事件很少为通常使用拉丁系语言输入的开发者所知（因为拉丁字母都能通过物理键盘输入）。当然，即使是使用非拉丁系语言比如中文作为输入的开发者，也不见得知道复合事件，因为开发中用到该种事件类型的情况比较少见。&lt;/p&gt;
+&lt;p&gt;IME复合系统的工作原理如下：缓存用户的键盘输入，直到一个字符被选中后才确定输入。缓存的键盘输入会暂时展示在输入框中，但不会真正被插入到DOM中。如下图所示。但是如果在复合事件的过程中改变了输入框的值（比如切换了输入法或者直接按下enter键），复合事件将提前结束，同时缓存的键盘输入值将会插入到输入框中。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://ww3.sinaimg.cn/large/72f96cbagw1f5pr65nfcxj20zi09cwfq.jpg&quot; alt=&quot;10:21:17.jpg&quot;&gt;&lt;/p&gt;
+&lt;p&gt;复合事件类型包含以下几种事件：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;compositionstart：当IME的文本复合系统打开时触发。&lt;/li&gt;
+&lt;li&gt;compositionend：在IME的文本复合系统关闭即用户选中了字符并确定输入时触发，表示返回正常键盘的输入状态。&lt;br&gt;-compositionupdate：在compositionstart事件触发后，compositionend事件触发前这段时间内，每次向输入字段中进行输入时均会触发。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;注：input事件将在复合事件后触发。&lt;/p&gt;
+&lt;p&gt;但是，实际情况与理想还是有一定距离的，复合事件的兼容性比较一般。下图是MDN中列出的兼容性表现，详情可见&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/CompositionEvent&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;MDN&lt;/a&gt;:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/72f96cbagw1f5pr91ls0nj21420dg75t.jpg&quot; alt=&quot;10:24:08.jpg&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/72f96cbagw1f5pr973kpuj214s0dtabp.jpg&quot; alt=&quot;10:24:13.jpg&quot;&gt;&lt;/p&gt;
+&lt;p&gt;综上，在使用复合事件处理input相关的问题时，仍然需要慎重。&lt;/p&gt;
+&lt;p&gt;注：本文参考尤雨溪博客中&lt;a href=&quot;http://blog.evanyou.me/2014/01/03/composition-event/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;DOM COMPOSITION EVENTS COMPATIBILITY NOTES&lt;/a&gt;一文。&lt;/p&gt;
+</content>
     
     <summary type="html">
     
+      &lt;p&gt;Composition Event，中文译为复合事件，是DOM 3级事件中新添加的一类事件类型，用于处理IME的输入序列。IME（Input Method Editor，输入法编辑器）可以让用户输入在物理键盘上找不到的字符。复合事件就是针对检测和处理这种输入而设计的。也因为
+    
     </summary>
     
+      <category term="技术研究" scheme="http://chriscindy.top/categories/%E6%8A%80%E6%9C%AF%E7%A0%94%E7%A9%B6/"/>
+    
+    
+      <category term="JavaScript" scheme="http://chriscindy.top/tags/JavaScript/"/>
     
   </entry>
   
