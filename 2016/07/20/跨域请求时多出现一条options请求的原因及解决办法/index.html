@@ -72,7 +72,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Frontend, sunflower" />
+  <meta name="keywords" content="Ajax,HTTP,CORS," />
 
 
 
@@ -90,16 +90,25 @@
 
 
 
-<meta name="description" content="立志成为顶级前端工程师">
-<meta property="og:type" content="website">
-<meta property="og:title" content="标签">
-<meta property="og:url" content="http://chriscindy.top/categories/index.html">
+<meta name="description" content="最近在公司项目中与后端联调时遇到了一个很奇怪的问题，前端发出的DELETE方法的Ajax请求传到服务端就变成了OPTIONS请求。由于服务端没有针对OPTIONS请求作回应，此时返回的http状态码为405，意为“方法不被允许”（Method not allowed），DELETE请求自然也是失败。上网查了一番，原理是触发了W3C规定的跨域请求时的安全机制。
+W3C规范中的定义如下：
+
+To pr">
+<meta property="og:type" content="article">
+<meta property="og:title" content="跨域请求时多出现一条options请求的原因及解决办法">
+<meta property="og:url" content="http://chriscindy.top/2016/07/20/跨域请求时多出现一条options请求的原因及解决办法/index.html">
 <meta property="og:site_name" content="sunflower->FE">
-<meta property="og:description" content="立志成为顶级前端工程师">
-<meta property="og:updated_time" content="2016-07-07T16:23:45.000Z">
+<meta property="og:description" content="最近在公司项目中与后端联调时遇到了一个很奇怪的问题，前端发出的DELETE方法的Ajax请求传到服务端就变成了OPTIONS请求。由于服务端没有针对OPTIONS请求作回应，此时返回的http状态码为405，意为“方法不被允许”（Method not allowed），DELETE请求自然也是失败。上网查了一番，原理是触发了W3C规定的跨域请求时的安全机制。
+W3C规范中的定义如下：
+
+To pr">
+<meta property="og:updated_time" content="2016-07-20T10:19:54.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="标签">
-<meta name="twitter:description" content="立志成为顶级前端工程师">
+<meta name="twitter:title" content="跨域请求时多出现一条options请求的原因及解决办法">
+<meta name="twitter:description" content="最近在公司项目中与后端联调时遇到了一个很奇怪的问题，前端发出的DELETE方法的Ajax请求传到服务端就变成了OPTIONS请求。由于服务端没有针对OPTIONS请求作回应，此时返回的http状态码为405，意为“方法不被允许”（Method not allowed），DELETE请求自然也是失败。上网查了一番，原理是触发了W3C规定的跨域请求时的安全机制。
+W3C规范中的定义如下：
+
+To pr">
 
 
 
@@ -137,16 +146,10 @@
 
 
 
-  <link rel="canonical" href="http://chriscindy.top/categories/"/>
+  <link rel="canonical" href="http://chriscindy.top/2016/07/20/跨域请求时多出现一条options请求的原因及解决办法/"/>
 
 
-  <title>
-  
-
-  
-    分类 | sunflower->FE
-  
-</title>
+  <title> 跨域请求时多出现一条options请求的原因及解决办法 | sunflower->FE </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -186,7 +189,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -316,16 +319,219 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
     
-      <div class="category-all-page">
-        <div class="category-all-title">
-            目前共计 4 个分类
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                跨域请求时多出现一条options请求的原因及解决办法
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-07-20T18:19:34+08:00" content="2016-07-20">
+              2016-07-20
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/解决方案/" itemprop="url" rel="index">
+                    <span itemprop="name">解决方案</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/07/20/跨域请求时多出现一条options请求的原因及解决办法/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/07/20/跨域请求时多出现一条options请求的原因及解决办法/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/07/20/跨域请求时多出现一条options请求的原因及解决办法/" class="leancloud_visitors" data-flag-title="跨域请求时多出现一条options请求的原因及解决办法">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
         </div>
-        <div class="category-all">
-          <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/技术研究/">技术研究</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/生活感悟/">生活感悟</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/解决方案/">解决方案</a><span class="category-list-count">2</span></li></ul>
-        </div>
-      </div>
+      </header>
     
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>最近在公司项目中与后端联调时遇到了一个很奇怪的问题，前端发出的DELETE方法的Ajax请求传到服务端就变成了OPTIONS请求。由于服务端没有针对OPTIONS请求作回应，此时返回的http状态码为405，意为“方法不被允许”（Method not allowed），DELETE请求自然也是失败。上网查了一番，原理是触发了W3C规定的跨域请求时的安全机制。</p>
+<p>W3C规范中的定义如下：</p>
+<blockquote>
+<p>To protect resources against cross-origin requests that could not originate from certain user agents before this specification existed a preflight request is made to ensure that the resource is aware of this specification. The result of this request is stored in a preflight result cache.</p>
+</blockquote>
+<p>大意就是出于安全考虑，保护资源不接受来自特定客户端的跨域请求，存在预请求来提前通知资源。而具体做法呢？看下面：</p>
+<blockquote>
+<p>It gets slightly more complicated if the resource author wants to be able to handle cross-origin requests using methods other than simple methods. In that case the author needs to reply to a preflight request that uses the OPTIONS method and then needs to handle the actual request that uses the desired method (DELETE in this example) and give an appropriate response.<br>服务端想要处理使用简单方法之外的方法进行的跨域请求时，需要对使用OPTIONS方法的预请求进行响应，然后才能处理实际请求。</p>
+</blockquote>
+<p>所谓简单方法，是指：</p>
+<ul>
+<li>只使用 GET, HEAD 或者 POST 请求方法。如果使用 POST 向服务器端传送数据，则数据类型(Content-Type)只能是 application/x-www-form-urlencoded, multipart/form-data 或 text/plain中的一种。</li>
+<li>不会使用自定义请求头（类似于 X-Modified 这种）。</li>
+</ul>
+<p>OPTIONS是HTTP/1.1里的方法，用来获取更多服务器端的信息，是一个不应该对服务器数据造成影响的方法。通过这个方法，客户端可以在采取具体资源请求之前，决定对该资源采取何种必要措施，或者了解服务器的性能。</p>
+<p>到这里，我们对整个情况就很明了了：当Ajax跨域请求时，如果HTTP方法是非简单方法，则客户端即浏览器会发出OPTIONS方法的预请求去询问服务端，在得到允许性质的回应后，才会发送真正的请求；如果服务端对预请求拒绝，则真正的DELETE请求等不会发出。</p>
+<p>看到这里，相信各位也知道如何解决该问题了：服务端对OPTIONS预请求给出允许回应。不过，需要注意的是，不应该满足所有的OPTIONS请求，否则这一安全措施便形同虚设了。最好是建立一套验证机制，对符合条件的客户端请求给出允许回应。至于如何实现，就靠我们的后端小伙伴啦。有兴趣的朋友可以查看MDN上的这篇文档：<a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Access_control_CORS" target="_blank" rel="external">HTTP访问控制(CORS)</a></p>
+<p>其他参考文献：</p>
+<ul>
+<li><a href="http://www.w3.org/TR/cors/" target="_blank" rel="external">W3C Cross-Origin Resource Sharing</a></li>
+<li><a href="http://www.tangshuang.net/2271.html" target="_blank" rel="external">jquery ajax 请求中多出现一次OPTIONS请求及其解决办法</a></li>
+</ul>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/images/wechat.jpg" alt="ChrisCindy WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/images/alipay.jpg" alt="ChrisCindy Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Ajax/" rel="tag">#Ajax</a>
+          
+            <a href="/tags/HTTP/" rel="tag">#HTTP</a>
+          
+            <a href="/tags/CORS/" rel="tag">#CORS</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/07/11/译-使用Riot，ES6和Webpack构建应用/" rel="next" title="[译]使用Riot，ES6和Webpack构建应用">
+                <i class="fa fa-chevron-left"></i> [译]使用Riot，ES6和Webpack构建应用
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <div class="ds-share flat" data-thread-key="2016/07/20/跨域请求时多出现一条options请求的原因及解决办法/"
+     data-title="跨域请求时多出现一条options请求的原因及解决办法"
+     data-content=""
+     data-url="http://chriscindy.top/2016/07/20/跨域请求时多出现一条options请求的原因及解决办法/">
+  <div class="ds-share-inline">
+    <ul  class="ds-share-icons-16">
+
+      <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+      <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+      <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+      <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+      <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+
+    </ul>
+    <div class="ds-share-icons-more">
+    </div>
+  </div>
+</div>
+      
+    </div>
   </div>
 
 
@@ -334,6 +540,14 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/07/20/跨域请求时多出现一条options请求的原因及解决办法/"
+           data-title="跨域请求时多出现一条options请求的原因及解决办法" data-url="http://chriscindy.top/2016/07/20/跨域请求时多出现一条options请求的原因及解决办法/">
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -353,8 +567,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.jpg"
@@ -411,6 +634,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <p class="post-toc-empty">此文章未包含目录</p>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -498,6 +732,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 
