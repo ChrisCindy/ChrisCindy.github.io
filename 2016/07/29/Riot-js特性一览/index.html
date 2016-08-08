@@ -102,7 +102,7 @@ Riot.js简介
 MVP架构
 
 
-支持IE9+？？
+支持IE9+ ？？
 
 
 1.自定义标签
@@ -112,7 +112,7 @@ MVP架构
 
 单向的数据传输： update或unmount都是从 父亲-&amp;gt;孩子
 预编译和缓存表达式，解析更加高效
-预处">
+预">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Riot.js特性一览">
 <meta property="og:url" content="http://chriscindy.top/2016/07/29/Riot-js特性一览/index.html">
@@ -129,7 +129,7 @@ Riot.js简介
 MVP架构
 
 
-支持IE9+？？
+支持IE9+ ？？
 
 
 1.自定义标签
@@ -139,9 +139,9 @@ MVP架构
 
 单向的数据传输： update或unmount都是从 父亲-&amp;gt;孩子
 预编译和缓存表达式，解析更加高效
-预处">
+预">
 <meta property="og:image" content="http://ww3.sinaimg.cn/large/006tNbRwjw1f69ltjvz8mj30jg042jrh.jpg">
-<meta property="og:updated_time" content="2016-07-29T08:35:01.000Z">
+<meta property="og:updated_time" content="2016-08-08T09:41:00.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Riot.js特性一览">
 <meta name="twitter:description" content="注：本文基于Riot.js v2.5.0版本
@@ -156,7 +156,7 @@ Riot.js简介
 MVP架构
 
 
-支持IE9+？？
+支持IE9+ ？？
 
 
 1.自定义标签
@@ -166,7 +166,7 @@ MVP架构
 
 单向的数据传输： update或unmount都是从 父亲-&amp;gt;孩子
 预编译和缓存表达式，解析更加高效
-预处">
+预">
 <meta name="twitter:image" content="http://ww3.sinaimg.cn/large/006tNbRwjw1f69ltjvz8mj30jg042jrh.jpg">
 
 
@@ -491,7 +491,7 @@ MVP架构
 <li><p>MVP架构</p>
 <p><img src="http://ww3.sinaimg.cn/large/006tNbRwjw1f69ltjvz8mj30jg042jrh.jpg" alt="MVP 架构图"></p>
 </li>
-<li><p>支持IE9+？？</p>
+<li><p>支持IE9+ ？？</p>
 </li>
 </ul>
 <h2 id="1-自定义标签"><a href="#1-自定义标签" class="headerlink" title="1.自定义标签"></a>1.自定义标签</h2><ol>
@@ -618,6 +618,11 @@ MVP架构
 <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">first-tag</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">p</span>&gt;</span>First tag<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></div><div class="line">    <span class="keyword">var</span> subRoute = riot.route.create() <span class="comment">// 创建新的路由上下文</span></div><div class="line">    subRoute(<span class="string">'/fruit/*'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">name</span>) </span>&#123;</div><div class="line">      <span class="comment">/* 公用的部分 */</span></div><div class="line">    &#125;)</div><div class="line">  <span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">first-tag</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">second-tag</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">p</span>&gt;</span>Second tag<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></div><div class="line">    <span class="keyword">var</span> subRoute = riot.route.create() <span class="comment">// 创建新的路由上下文</span></div><div class="line">    subRoute(<span class="string">'/fruit/apple'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">name</span>) </span>&#123;</div><div class="line">      <span class="comment">/* 个别的部分 */</span></div><div class="line">    &#125;)</div><div class="line">  <span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">second-tag</span>&gt;</span></div></pre></td></tr></table></figure>
 </li>
 <li><p><code>riot.route(to[, title, shouldReplace])</code></p>
+<p> 在内部实现中，</p>
+<ul>
+<li>如果没有 <code>shouldReplace</code>, 将使用 <code>history.pushState()</code>.</li>
+<li>如果有 <code>shouldReplace</code>, 将使用<code>history.replaceState()</code>.</li>
+</ul>
 </li>
 <li><p><code>riot.route.start()</code></p>
 <p>开始监听路由变化，需要手动调用</p>
@@ -635,7 +640,7 @@ MVP架构
 <li><p><code>riot.route.parser(parser[, secondParser])</code></p>
 </li>
 <li><p>其他，路由优先级等</p>
-</li>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">riot.route(<span class="string">'/fruit/apple'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123; <span class="comment">/* */</span> &#125;) <span class="comment">// 路由-B (1)</span></div><div class="line">riot.route(<span class="string">'/fruit/orange'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123; <span class="comment">/* */</span> &#125;) <span class="comment">// 路由-C (2)</span></div><div class="line">riot.route(<span class="string">'/fruit/*'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">name</span>) </span>&#123; <span class="comment">/* */</span> &#125;) <span class="comment">// 路由-A (3)</span></div><div class="line"></div><div class="line">riot.route(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123; <span class="comment">/* */</span> &#125;) <span class="comment">// 路由-X (3)</span></div><div class="line">riot.route(<span class="string">'/fruit/*'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123; <span class="comment">/* */</span> &#125;) <span class="comment">// 路由-Y (1)</span></div><div class="line">riot.route(<span class="string">'/sweet/*'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123; <span class="comment">/* */</span> &#125;) <span class="comment">// 路由-Z (2)</span></div></pre></td></tr></table></figure></li>
 </ol>
 
       
