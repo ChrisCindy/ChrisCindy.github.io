@@ -4,6 +4,95 @@
   
     
     <entry>
+      <title><![CDATA[Babel 6 特性总结]]></title>
+      <url>http://chriscindy.top/2016/08/22/Babel-6-%E7%89%B9%E6%80%A7%E6%80%BB%E7%BB%93/</url>
+      <content type="html"><![CDATA[<h3 id="0-改进"><a href="#0-改进" class="headerlink" title="0. 改进"></a>0. 改进</h3><ul>
+<li><p>模块化</p>
+</li>
+<li><p>可选的插件</p>
+</li>
+<li><p>预设</p>
+</li>
+<li><p>性能改进</p>
+</li>
+<li><p>插件 API</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// Babel 5</span></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="function"><span class="keyword">function</span> (<span class="params"> &#123;Plugin, types: t&#125; </span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> <span class="keyword">new</span> Plugin(<span class="string">'ast-transform'</span>, &#123;</div><div class="line">        visitor: &#123; ... &#125;</div><div class="line">    &#125;);</div><div class="line">&#125;</div><div class="line">                      </div><div class="line"><span class="comment">// Babel 6</span></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="function"><span class="keyword">function</span> (<span class="params"> &#123; types: t&#125; </span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> &#123;</div><div class="line">        visitor: &#123; ... &#125;</div><div class="line">    &#125;;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="1-安装-Babel-6"><a href="#1-安装-Babel-6" class="headerlink" title="1.安装 Babel 6"></a>1.安装 Babel 6</h3><p><code>npm install</code></p>
+<ul>
+<li><p><strong>babel-cli</strong></p>
+<ul>
+<li><p>usage:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">babel app.js</div></pre></td></tr></table></figure>
+</li>
+<li><p>command: </p>
+<ul>
+<li>-o –out-file</li>
+<li>-d –out-dir</li>
+<li>-w –watch</li>
+<li>–source-maps</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>babel-register</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//index.js</span></div><div class="line"><span class="built_in">console</span>.log(<span class="string">'Hello World!'</span>);</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//register.js</span></div><div class="line"><span class="built_in">require</span>(<span class="string">"babel-register"</span>);</div><div class="line"><span class="built_in">require</span>(<span class="string">"./index.js"</span>);</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">node register.js</div></pre></td></tr></table></figure>
+<p>注：生产环境不适用 </p>
+</li>
+<li><p><strong>babel-node</strong></p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  "scripts": &#123;</div><div class="line">    //"script-name": "node index.js"</div><div class="line">    "script-name": "babel-node index.js"</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>command:</p>
+<ul>
+<li>–presets</li>
+<li>–plugins</li>
+<li>–ignore</li>
+</ul>
+<p>注：生产环境不适用 </p>
+</li>
+<li><p><strong>babel-core</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> babel = <span class="built_in">require</span>(<span class="string">"babel-core"</span>);</div><div class="line"></div><div class="line">babel.transform(<span class="string">"code();"</span>, options);</div><div class="line"><span class="comment">// =&gt; &#123; code, map, ast &#125;</span></div><div class="line"></div><div class="line">babel.transformFile(<span class="string">"filename.js"</span>, options, <span class="function"><span class="keyword">function</span>(<span class="params">err, result</span>) </span>&#123;</div><div class="line">  result; <span class="comment">// =&gt; &#123; code, map, ast &#125;</span></div><div class="line">&#125;);</div><div class="line"></div><div class="line">babel.transformFileSync(<span class="string">"filename.js"</span>, options);</div><div class="line"><span class="comment">// =&gt; &#123; code, map, ast &#125;</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="2-配置-Babel-6"><a href="#2-配置-Babel-6" class="headerlink" title="2. 配置 Babel 6"></a>2. 配置 Babel 6</h3><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">//.babelrc</div><div class="line"></div><div class="line">&#123;</div><div class="line">  "presets": [],</div><div class="line">  "plugins": []</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line">//or package.json</div><div class="line">&#123;</div><div class="line">  ...</div><div class="line">  "babel":&#123;</div><div class="line">    "presets": [],</div><div class="line">  	"plugins": []</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li><p>presets</p>
+<ul>
+<li>babel-preset-es2015</li>
+<li>babel-preset-react</li>
+<li>babel-preset-stage-x(x=0,1,2,3)</li>
+</ul>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  <span class="attr">"presets"</span>: [</div><div class="line">    <span class="string">"es2015"</span>,</div><div class="line">    <span class="string">"react"</span>,</div><div class="line">    <span class="string">"stage-2"</span></div><div class="line">  ],</div><div class="line">  <span class="attr">"plugins"</span>: []</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>plugins</p>
+<ul>
+<li>babel-plugin-transform-es2015-classes</li>
+<li>babel-plugin-transform-es2015-arrow-functions</li>
+<li>…</li>
+</ul>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">   <span class="attr">"plugins"</span>: [</div><div class="line">     <span class="string">"transform-es2015-classes"</span>,</div><div class="line">     <span class="string">"transform-es2015-arrow-functions"</span></div><div class="line">   ]</div><div class="line"> &#125;</div></pre></td></tr></table></figure>
+<ul>
+<li><p>loose mode</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    <span class="attr">"plugins"</span>: [</div><div class="line">      //<span class="string">"transform-es2015-classes"</span></div><div class="line">      [<span class="string">"transform-es2015-classes"</span>, &#123; <span class="attr">"loose"</span>: <span class="literal">true</span> &#125;]</div><div class="line">    ]</div><div class="line">  &#125;</div></pre></td></tr></table></figure>
+<p><a href="https://mp.weixin.qq.com/s?__biz=MzI3NTE2NjYxNw==&amp;mid=2650600240&amp;idx=1&amp;sn=88f53bf78b5b174acd6805fe7026cd66&amp;scene=1&amp;srcid=0816pFmqA5bQYhJUHdBBMDuq&amp;key=305bc10ec50ec19bea029543ffd48645f5bec6aeefc9ecf044a7e08d510f51dd27c850d970a291e06e17bcfa70f438e0&amp;ascene=0&amp;uin=MTkxMDY2NDA2MQ%3D%3D&amp;devicetype=iMac+MacBookPro12%2C1+OSX+OSX+10.11.5+build(15F34" target="_blank" rel="external">扩展—— Babel 6 loose</a>&amp;version=11020201&amp;pass_ticket=eUYpNbnbXM9RBSMCUPMk%2FYHjU3v29WWpWF5gQJ9FeU6LHqIZ0eAx6rz%2FawLCrm9c)</p>
+</li>
+</ul>
+</li>
+<li><p>基于环境自定义 Babel</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  <span class="attr">"presets"</span>: [<span class="string">"es2015"</span>],</div><div class="line">  <span class="attr">"plugins"</span>: [],</div><div class="line">  <span class="attr">"env"</span>: &#123;</div><div class="line">    <span class="attr">"development"</span>: &#123;</div><div class="line">      <span class="attr">"plugins"</span>: [...]</div><div class="line">    &#125;,</div><div class="line">    <span class="attr">"production"</span>: &#123;</div><div class="line">      <span class="attr">"plugins"</span>: [...]</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><code>env</code> : <code>process.env.BABEL_ENV</code> or <code>process.env.NODE_env</code></p>
+</li>
+</ul>
+<h3 id="3-Webpack"><a href="#3-Webpack" class="headerlink" title="3. Webpack"></a>3. Webpack</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//webpack.config.js</span></div><div class="line"><span class="keyword">var</span> path = <span class="built_in">require</span>(<span class="string">'path'</span>);</div><div class="line">    ···</div><div class="line">    <span class="built_in">module</span>.exports = &#123;</div><div class="line">        ···</div><div class="line">        <span class="built_in">module</span>: &#123;</div><div class="line">            loaders: [</div><div class="line">                &#123;</div><div class="line">                    loader: <span class="string">'babel-loader'</span>,</div><div class="line">                    test: path.resolve(__dirname, <span class="string">'js'</span>),</div><div class="line">                    query: &#123;</div><div class="line">                        presets: [<span class="string">'es2015'</span>],</div><div class="line">                    &#125;,</div><div class="line">                &#125;</div><div class="line">            ]</div><div class="line">        &#125;,</div><div class="line">        ···</div><div class="line">    &#125;;</div></pre></td></tr></table></figure>
+<ul>
+<li>tree-shaking</li>
+</ul>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[swiftype搜索服务更换为Local Serach]]></title>
       <url>http://chriscindy.top/2016/08/10/swiftype%E6%90%9C%E7%B4%A2%E6%9C%8D%E5%8A%A1%E6%9B%B4%E6%8D%A2%E4%B8%BALocal%20Serach/</url>
       <content type="html"><![CDATA[<p>突然发现博客的搜索服务无法使用，查之发现是因为服务提供商swiftype目前已经没有了免费账户的选项，15天试用期结束后如果不付费将无法继续使用。可以选择的账户类型如下：</p>

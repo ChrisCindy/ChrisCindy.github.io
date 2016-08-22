@@ -72,7 +72,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="JavaScript," />
+  <meta name="keywords" content="Babel," />
 
 
 
@@ -90,20 +90,46 @@
 
 
 
-<meta name="description" content="Composition Event，中文译为复合事件，是DOM 3级事件中新添加的一类事件类型，用于处理IME的输入序列。IME（Input Method Editor，输入法编辑器）可以让用户输入在物理键盘上找不到的字符。复合事件就是针对检测和处理这种输入而设计的。也因为以上所述原因，复合事件很少为通常使用拉丁系语言输入的开发者所知（因为拉丁字母都能通过物理键盘输入）。当然，即使是使用非拉丁系语">
+<meta name="description" content="0. 改进
+模块化
+
+可选的插件
+
+预设
+
+性能改进
+
+插件 API
+12345678910111213// Babel 5export default function ( &amp;#123;Plugin, types: t&amp;#125; ) &amp;#123;    return new Plugin(&apos;ast-transform&apos;, &amp;#123;        visitor: &amp;#123; ... &amp;#">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Composition Event">
-<meta property="og:url" content="http://chriscindy.top/2016/07/11/Composition-Event/index.html">
+<meta property="og:title" content="Babel 6 特性总结">
+<meta property="og:url" content="http://chriscindy.top/2016/08/22/Babel-6-特性总结/index.html">
 <meta property="og:site_name" content="sunflower->FE">
-<meta property="og:description" content="Composition Event，中文译为复合事件，是DOM 3级事件中新添加的一类事件类型，用于处理IME的输入序列。IME（Input Method Editor，输入法编辑器）可以让用户输入在物理键盘上找不到的字符。复合事件就是针对检测和处理这种输入而设计的。也因为以上所述原因，复合事件很少为通常使用拉丁系语言输入的开发者所知（因为拉丁字母都能通过物理键盘输入）。当然，即使是使用非拉丁系语">
-<meta property="og:image" content="http://ww3.sinaimg.cn/large/72f96cbagw1f5pr65nfcxj20zi09cwfq.jpg">
-<meta property="og:image" content="http://ww1.sinaimg.cn/large/72f96cbagw1f5pr91ls0nj21420dg75t.jpg">
-<meta property="og:image" content="http://ww1.sinaimg.cn/large/72f96cbagw1f5pr973kpuj214s0dtabp.jpg">
-<meta property="og:updated_time" content="2016-07-11T02:26:38.000Z">
+<meta property="og:description" content="0. 改进
+模块化
+
+可选的插件
+
+预设
+
+性能改进
+
+插件 API
+12345678910111213// Babel 5export default function ( &amp;#123;Plugin, types: t&amp;#125; ) &amp;#123;    return new Plugin(&apos;ast-transform&apos;, &amp;#123;        visitor: &amp;#123; ... &amp;#">
+<meta property="og:updated_time" content="2016-08-22T09:35:49.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Composition Event">
-<meta name="twitter:description" content="Composition Event，中文译为复合事件，是DOM 3级事件中新添加的一类事件类型，用于处理IME的输入序列。IME（Input Method Editor，输入法编辑器）可以让用户输入在物理键盘上找不到的字符。复合事件就是针对检测和处理这种输入而设计的。也因为以上所述原因，复合事件很少为通常使用拉丁系语言输入的开发者所知（因为拉丁字母都能通过物理键盘输入）。当然，即使是使用非拉丁系语">
-<meta name="twitter:image" content="http://ww3.sinaimg.cn/large/72f96cbagw1f5pr65nfcxj20zi09cwfq.jpg">
+<meta name="twitter:title" content="Babel 6 特性总结">
+<meta name="twitter:description" content="0. 改进
+模块化
+
+可选的插件
+
+预设
+
+性能改进
+
+插件 API
+12345678910111213// Babel 5export default function ( &amp;#123;Plugin, types: t&amp;#125; ) &amp;#123;    return new Plugin(&apos;ast-transform&apos;, &amp;#123;        visitor: &amp;#123; ... &amp;#">
 
 
 
@@ -147,10 +173,10 @@
 
 
 
-  <link rel="canonical" href="http://chriscindy.top/2016/07/11/Composition-Event/"/>
+  <link rel="canonical" href="http://chriscindy.top/2016/08/22/Babel-6-特性总结/"/>
 
 
-  <title> Composition Event | sunflower->FE </title>
+  <title> Babel 6 特性总结 | sunflower->FE </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -332,7 +358,7 @@
             
             
               
-                Composition Event
+                Babel 6 特性总结
               
             
           </h1>
@@ -344,8 +370,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-07-11T10:26:38+08:00" content="2016-07-11">
-              2016-07-11
+            <time itemprop="dateCreated" datetime="2016-08-22T17:33:53+08:00" content="2016-08-22">
+              2016-08-22
             </time>
           </span>
 
@@ -358,8 +384,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/技术研究/" itemprop="url" rel="index">
-                    <span itemprop="name">技术研究</span>
+                  <a href="/categories/前端工具/" itemprop="url" rel="index">
+                    <span itemprop="name">前端工具</span>
                   </a>
                 </span>
 
@@ -374,8 +400,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/07/11/Composition-Event/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/07/11/Composition-Event/" itemprop="commentsCount"></span>
+                <a href="/2016/08/22/Babel-6-特性总结/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/08/22/Babel-6-特性总结/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -385,7 +411,7 @@
 
           
           
-             <span id="/2016/07/11/Composition-Event/" class="leancloud_visitors" data-flag-title="Composition Event">
+             <span id="/2016/08/22/Babel-6-特性总结/" class="leancloud_visitors" data-flag-title="Babel 6 特性总结">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -407,20 +433,89 @@
       
 
       
-        <p>Composition Event，中文译为复合事件，是DOM 3级事件中新添加的一类事件类型，用于处理IME的输入序列。IME（Input Method Editor，输入法编辑器）可以让用户输入在物理键盘上找不到的字符。复合事件就是针对检测和处理这种输入而设计的。也因为以上所述原因，复合事件很少为通常使用拉丁系语言输入的开发者所知（因为拉丁字母都能通过物理键盘输入）。当然，即使是使用非拉丁系语言比如中文作为输入的开发者，也不见得知道复合事件，因为开发中用到该种事件类型的情况比较少见。</p>
-<p>IME复合系统的工作原理如下：缓存用户的键盘输入，直到一个字符被选中后才确定输入。缓存的键盘输入会暂时展示在输入框中，但不会真正被插入到DOM中。如下图所示。但是如果在复合事件的过程中改变了输入框的值（比如切换了输入法或者直接按下enter键），复合事件将提前结束，同时缓存的键盘输入值将会插入到输入框中。</p>
-<p><img src="http://ww3.sinaimg.cn/large/72f96cbagw1f5pr65nfcxj20zi09cwfq.jpg" alt="10:21:17.jpg"></p>
-<p>复合事件类型包含以下几种事件：</p>
-<ul>
-<li>compositionstart：当IME的文本复合系统打开时触发。</li>
-<li>compositionend：在IME的文本复合系统关闭即用户选中了字符并确定输入时触发，表示返回正常键盘的输入状态。<br>-compositionupdate：在compositionstart事件触发后，compositionend事件触发前这段时间内，每次向输入字段中进行输入时均会触发。</li>
+        <h3 id="0-改进"><a href="#0-改进" class="headerlink" title="0. 改进"></a>0. 改进</h3><ul>
+<li><p>模块化</p>
+</li>
+<li><p>可选的插件</p>
+</li>
+<li><p>预设</p>
+</li>
+<li><p>性能改进</p>
+</li>
+<li><p>插件 API</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// Babel 5</span></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="function"><span class="keyword">function</span> (<span class="params"> &#123;Plugin, types: t&#125; </span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> <span class="keyword">new</span> Plugin(<span class="string">'ast-transform'</span>, &#123;</div><div class="line">        visitor: &#123; ... &#125;</div><div class="line">    &#125;);</div><div class="line">&#125;</div><div class="line">                      </div><div class="line"><span class="comment">// Babel 6</span></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="function"><span class="keyword">function</span> (<span class="params"> &#123; types: t&#125; </span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> &#123;</div><div class="line">        visitor: &#123; ... &#125;</div><div class="line">    &#125;;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
 </ul>
-<p>注：input事件将在复合事件后触发。</p>
-<p>但是，实际情况与理想还是有一定距离的，复合事件的兼容性比较一般。下图是MDN中列出的兼容性表现，详情可见<a href="https://developer.mozilla.org/en-US/docs/Web/API/CompositionEvent" target="_blank" rel="external">MDN</a>:</p>
-<p><img src="http://ww1.sinaimg.cn/large/72f96cbagw1f5pr91ls0nj21420dg75t.jpg" alt="10:24:08.jpg"></p>
-<p><img src="http://ww1.sinaimg.cn/large/72f96cbagw1f5pr973kpuj214s0dtabp.jpg" alt="10:24:13.jpg"></p>
-<p>综上，在使用复合事件处理input相关的问题时，仍然需要慎重。</p>
-<p>注：本文参考尤雨溪博客中<a href="http://blog.evanyou.me/2014/01/03/composition-event/" target="_blank" rel="external">DOM COMPOSITION EVENTS COMPATIBILITY NOTES</a>一文。</p>
+<h3 id="1-安装-Babel-6"><a href="#1-安装-Babel-6" class="headerlink" title="1.安装 Babel 6"></a>1.安装 Babel 6</h3><p><code>npm install</code></p>
+<ul>
+<li><p><strong>babel-cli</strong></p>
+<ul>
+<li><p>usage:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">babel app.js</div></pre></td></tr></table></figure>
+</li>
+<li><p>command: </p>
+<ul>
+<li>-o –out-file</li>
+<li>-d –out-dir</li>
+<li>-w –watch</li>
+<li>–source-maps</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>babel-register</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//index.js</span></div><div class="line"><span class="built_in">console</span>.log(<span class="string">'Hello World!'</span>);</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//register.js</span></div><div class="line"><span class="built_in">require</span>(<span class="string">"babel-register"</span>);</div><div class="line"><span class="built_in">require</span>(<span class="string">"./index.js"</span>);</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">node register.js</div></pre></td></tr></table></figure>
+<p>注：生产环境不适用 </p>
+</li>
+<li><p><strong>babel-node</strong></p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  "scripts": &#123;</div><div class="line">    //"script-name": "node index.js"</div><div class="line">    "script-name": "babel-node index.js"</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>command:</p>
+<ul>
+<li>–presets</li>
+<li>–plugins</li>
+<li>–ignore</li>
+</ul>
+<p>注：生产环境不适用 </p>
+</li>
+<li><p><strong>babel-core</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> babel = <span class="built_in">require</span>(<span class="string">"babel-core"</span>);</div><div class="line"></div><div class="line">babel.transform(<span class="string">"code();"</span>, options);</div><div class="line"><span class="comment">// =&gt; &#123; code, map, ast &#125;</span></div><div class="line"></div><div class="line">babel.transformFile(<span class="string">"filename.js"</span>, options, <span class="function"><span class="keyword">function</span>(<span class="params">err, result</span>) </span>&#123;</div><div class="line">  result; <span class="comment">// =&gt; &#123; code, map, ast &#125;</span></div><div class="line">&#125;);</div><div class="line"></div><div class="line">babel.transformFileSync(<span class="string">"filename.js"</span>, options);</div><div class="line"><span class="comment">// =&gt; &#123; code, map, ast &#125;</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="2-配置-Babel-6"><a href="#2-配置-Babel-6" class="headerlink" title="2. 配置 Babel 6"></a>2. 配置 Babel 6</h3><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">//.babelrc</div><div class="line"></div><div class="line">&#123;</div><div class="line">  "presets": [],</div><div class="line">  "plugins": []</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line">//or package.json</div><div class="line">&#123;</div><div class="line">  ...</div><div class="line">  "babel":&#123;</div><div class="line">    "presets": [],</div><div class="line">  	"plugins": []</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li><p>presets</p>
+<ul>
+<li>babel-preset-es2015</li>
+<li>babel-preset-react</li>
+<li>babel-preset-stage-x(x=0,1,2,3)</li>
+</ul>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  <span class="attr">"presets"</span>: [</div><div class="line">    <span class="string">"es2015"</span>,</div><div class="line">    <span class="string">"react"</span>,</div><div class="line">    <span class="string">"stage-2"</span></div><div class="line">  ],</div><div class="line">  <span class="attr">"plugins"</span>: []</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>plugins</p>
+<ul>
+<li>babel-plugin-transform-es2015-classes</li>
+<li>babel-plugin-transform-es2015-arrow-functions</li>
+<li>…</li>
+</ul>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">   <span class="attr">"plugins"</span>: [</div><div class="line">     <span class="string">"transform-es2015-classes"</span>,</div><div class="line">     <span class="string">"transform-es2015-arrow-functions"</span></div><div class="line">   ]</div><div class="line"> &#125;</div></pre></td></tr></table></figure>
+<ul>
+<li><p>loose mode</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    <span class="attr">"plugins"</span>: [</div><div class="line">      //<span class="string">"transform-es2015-classes"</span></div><div class="line">      [<span class="string">"transform-es2015-classes"</span>, &#123; <span class="attr">"loose"</span>: <span class="literal">true</span> &#125;]</div><div class="line">    ]</div><div class="line">  &#125;</div></pre></td></tr></table></figure>
+<p><a href="https://mp.weixin.qq.com/s?__biz=MzI3NTE2NjYxNw==&amp;mid=2650600240&amp;idx=1&amp;sn=88f53bf78b5b174acd6805fe7026cd66&amp;scene=1&amp;srcid=0816pFmqA5bQYhJUHdBBMDuq&amp;key=305bc10ec50ec19bea029543ffd48645f5bec6aeefc9ecf044a7e08d510f51dd27c850d970a291e06e17bcfa70f438e0&amp;ascene=0&amp;uin=MTkxMDY2NDA2MQ%3D%3D&amp;devicetype=iMac+MacBookPro12%2C1+OSX+OSX+10.11.5+build(15F34" target="_blank" rel="external">扩展—— Babel 6 loose</a>&amp;version=11020201&amp;pass_ticket=eUYpNbnbXM9RBSMCUPMk%2FYHjU3v29WWpWF5gQJ9FeU6LHqIZ0eAx6rz%2FawLCrm9c)</p>
+</li>
+</ul>
+</li>
+<li><p>基于环境自定义 Babel</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  <span class="attr">"presets"</span>: [<span class="string">"es2015"</span>],</div><div class="line">  <span class="attr">"plugins"</span>: [],</div><div class="line">  <span class="attr">"env"</span>: &#123;</div><div class="line">    <span class="attr">"development"</span>: &#123;</div><div class="line">      <span class="attr">"plugins"</span>: [...]</div><div class="line">    &#125;,</div><div class="line">    <span class="attr">"production"</span>: &#123;</div><div class="line">      <span class="attr">"plugins"</span>: [...]</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><code>env</code> : <code>process.env.BABEL_ENV</code> or <code>process.env.NODE_env</code></p>
+</li>
+</ul>
+<h3 id="3-Webpack"><a href="#3-Webpack" class="headerlink" title="3. Webpack"></a>3. Webpack</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//webpack.config.js</span></div><div class="line"><span class="keyword">var</span> path = <span class="built_in">require</span>(<span class="string">'path'</span>);</div><div class="line">    ···</div><div class="line">    <span class="built_in">module</span>.exports = &#123;</div><div class="line">        ···</div><div class="line">        <span class="built_in">module</span>: &#123;</div><div class="line">            loaders: [</div><div class="line">                &#123;</div><div class="line">                    loader: <span class="string">'babel-loader'</span>,</div><div class="line">                    test: path.resolve(__dirname, <span class="string">'js'</span>),</div><div class="line">                    query: &#123;</div><div class="line">                        presets: [<span class="string">'es2015'</span>],</div><div class="line">                    &#125;,</div><div class="line">                &#125;</div><div class="line">            ]</div><div class="line">        &#125;,</div><div class="line">        ···</div><div class="line">    &#125;;</div></pre></td></tr></table></figure>
+<ul>
+<li>tree-shaking</li>
+</ul>
 
       
     </div>
@@ -464,7 +559,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/JavaScript/" rel="tag">#JavaScript</a>
+            <a href="/tags/Babel/" rel="tag">#Babel</a>
           
         </div>
       
@@ -473,17 +568,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/07/08/两个Git帐号如何在一台电脑上共存/" rel="next" title="两个Git帐号如何在一台电脑上共存">
-                <i class="fa fa-chevron-left"></i> 两个Git帐号如何在一台电脑上共存
+              <a href="/2016/08/10/swiftype搜索服务更换为Local Serach/" rel="next" title="swiftype搜索服务更换为Local Serach">
+                <i class="fa fa-chevron-left"></i> swiftype搜索服务更换为Local Serach
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/07/11/译-使用Riot，ES6和Webpack构建应用/" rel="prev" title="[译]使用Riot，ES6和Webpack构建应用">
-                [译]使用Riot，ES6和Webpack构建应用 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -498,10 +589,10 @@
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2016/07/11/Composition-Event/"
-     data-title="Composition Event"
+        <div class="ds-share flat" data-thread-key="2016/08/22/Babel-6-特性总结/"
+     data-title="Babel 6 特性总结"
      data-content=""
-     data-url="http://chriscindy.top/2016/07/11/Composition-Event/">
+     data-url="http://chriscindy.top/2016/08/22/Babel-6-特性总结/">
   <div class="ds-share-inline">
     <ul  class="ds-share-icons-16">
 
@@ -528,8 +619,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/07/11/Composition-Event/"
-           data-title="Composition Event" data-url="http://chriscindy.top/2016/07/11/Composition-Event/">
+      <div class="ds-thread" data-thread-key="2016/08/22/Babel-6-特性总结/"
+           data-title="Babel 6 特性总结" data-url="http://chriscindy.top/2016/08/22/Babel-6-特性总结/">
       </div>
     
   </div>
@@ -627,7 +718,7 @@
               
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#0-改进"><span class="nav-number">1.</span> <span class="nav-text">0. 改进</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-安装-Babel-6"><span class="nav-number">2.</span> <span class="nav-text">1.安装 Babel 6</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-配置-Babel-6"><span class="nav-number">3.</span> <span class="nav-text">2. 配置 Babel 6</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-Webpack"><span class="nav-number">4.</span> <span class="nav-text">3. Webpack</span></a></li></ol></div>
             
           </div>
         </section>
