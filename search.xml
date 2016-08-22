@@ -4,6 +4,44 @@
   
     
     <entry>
+      <title><![CDATA[babel-rigster 和 babel-node 的使用]]></title>
+      <url>http://chriscindy.top/2016/08/22/babel-rigster-%E5%92%8C-babel-node-%E7%9A%84%E4%BD%BF%E7%94%A8/</url>
+      <content type="html"><![CDATA[<p>Babel 6 中 <code>babel-register</code> 和 <code>babel-node</code> 两个模块是开发时非常好用的转码工具。先来看一下如何使用：</p>
+<h4 id="1-babel-register"><a href="#1-babel-register" class="headerlink" title="1. babel-register"></a>1. babel-register</h4><ul>
+<li><p>安装：<code>npm install babel-register</code></p>
+</li>
+<li><p>作用：<code>babel-register</code> 实际上为<code>require</code>加了一个钩子（hook），之后所有被 node 引用的 <code>.es6</code>、<code>.es</code>、<code>.jsx</code> 以及 <code>.js</code> 文件都会先被 Babel 转码。</p>
+</li>
+<li><p>使用示例：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//index.js</span></div><div class="line"><span class="built_in">console</span>.log(<span class="string">'Hello World!'</span>);</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//register.js</span></div><div class="line"><span class="built_in">require</span>(<span class="string">"babel-register"</span>);</div><div class="line"><span class="built_in">require</span>(<span class="string">"./index.js"</span>);</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">node register.js</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="2-babel-node"><a href="#2-babel-node" class="headerlink" title="2. babel-node"></a>2. babel-node</h4><ul>
+<li><p>安装：<code>npm install babel-node</code></p>
+</li>
+<li><p>作用：替代 CLI 中的 <code>node</code> 命令，可以直接运行采用 ES6 语法编写的代码。</p>
+</li>
+<li><p>使用示例：</p>
+<ul>
+<li><p>在 npm <code>scripts</code> 中：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  "scripts": &#123;</div><div class="line">    //"script-name": "node main.js"</div><div class="line">    "script-name": "babel-node main.js"</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>在命令行中：</p>
+<ul>
+<li>全局安装 <code>babel-node</code>：<code>babel-node main.js</code></li>
+<li>本地安装 <code>babel-node</code>：<code>./node_modules/.bin/babel-node main.js</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="3-使用局限"><a href="#3-使用局限" class="headerlink" title="3. 使用局限"></a>3. 使用局限</h4><p>尽管 <code>babel-register</code> 和 <code>babel-node</code> 都非常好用，但是由于二者都是实时转码，因而性能上会有一定影响。官方建议将二者仅置于开发环境下使用。而在正式生产环境中部署时，预先编译代码是值得推荐的做法。</p>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[Babel 6 特性总结]]></title>
       <url>http://chriscindy.top/2016/08/22/Babel-6-%E7%89%B9%E6%80%A7%E6%80%BB%E7%BB%93/</url>
       <content type="html"><![CDATA[<h3 id="0-改进"><a href="#0-改进" class="headerlink" title="0. 改进"></a>0. 改进</h3><ul>

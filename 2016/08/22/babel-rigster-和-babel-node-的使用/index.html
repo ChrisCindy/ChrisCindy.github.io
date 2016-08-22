@@ -72,7 +72,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="JavaScript," />
+  <meta name="keywords" content="Babel," />
 
 
 
@@ -90,20 +90,28 @@
 
 
 
-<meta name="description" content="Composition Event，中文译为复合事件，是DOM 3级事件中新添加的一类事件类型，用于处理IME的输入序列。IME（Input Method Editor，输入法编辑器）可以让用户输入在物理键盘上找不到的字符。复合事件就是针对检测和处理这种输入而设计的。也因为以上所述原因，复合事件很少为通常使用拉丁系语言输入的开发者所知（因为拉丁字母都能通过物理键盘输入）。当然，即使是使用非拉丁系语">
+<meta name="description" content="Babel 6 中 babel-register 和 babel-node 两个模块是开发时非常好用的转码工具。先来看一下如何使用：
+1. babel-register
+安装：npm install babel-register
+
+作用：babel-register 实际上为require加了一个钩子（hook），之后所有被 node 引用的 .es6、.es、.jsx 以及 .js 文件都会先被">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Composition Event">
-<meta property="og:url" content="http://chriscindy.top/2016/07/11/Composition-Event/index.html">
+<meta property="og:title" content="babel-rigster 和 babel-node 的使用">
+<meta property="og:url" content="http://chriscindy.top/2016/08/22/babel-rigster-和-babel-node-的使用/index.html">
 <meta property="og:site_name" content="sunflower->FE">
-<meta property="og:description" content="Composition Event，中文译为复合事件，是DOM 3级事件中新添加的一类事件类型，用于处理IME的输入序列。IME（Input Method Editor，输入法编辑器）可以让用户输入在物理键盘上找不到的字符。复合事件就是针对检测和处理这种输入而设计的。也因为以上所述原因，复合事件很少为通常使用拉丁系语言输入的开发者所知（因为拉丁字母都能通过物理键盘输入）。当然，即使是使用非拉丁系语">
-<meta property="og:image" content="http://ww3.sinaimg.cn/large/72f96cbagw1f5pr65nfcxj20zi09cwfq.jpg">
-<meta property="og:image" content="http://ww1.sinaimg.cn/large/72f96cbagw1f5pr91ls0nj21420dg75t.jpg">
-<meta property="og:image" content="http://ww1.sinaimg.cn/large/72f96cbagw1f5pr973kpuj214s0dtabp.jpg">
-<meta property="og:updated_time" content="2016-07-11T02:26:38.000Z">
+<meta property="og:description" content="Babel 6 中 babel-register 和 babel-node 两个模块是开发时非常好用的转码工具。先来看一下如何使用：
+1. babel-register
+安装：npm install babel-register
+
+作用：babel-register 实际上为require加了一个钩子（hook），之后所有被 node 引用的 .es6、.es、.jsx 以及 .js 文件都会先被">
+<meta property="og:updated_time" content="2016-08-22T09:39:08.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Composition Event">
-<meta name="twitter:description" content="Composition Event，中文译为复合事件，是DOM 3级事件中新添加的一类事件类型，用于处理IME的输入序列。IME（Input Method Editor，输入法编辑器）可以让用户输入在物理键盘上找不到的字符。复合事件就是针对检测和处理这种输入而设计的。也因为以上所述原因，复合事件很少为通常使用拉丁系语言输入的开发者所知（因为拉丁字母都能通过物理键盘输入）。当然，即使是使用非拉丁系语">
-<meta name="twitter:image" content="http://ww3.sinaimg.cn/large/72f96cbagw1f5pr65nfcxj20zi09cwfq.jpg">
+<meta name="twitter:title" content="babel-rigster 和 babel-node 的使用">
+<meta name="twitter:description" content="Babel 6 中 babel-register 和 babel-node 两个模块是开发时非常好用的转码工具。先来看一下如何使用：
+1. babel-register
+安装：npm install babel-register
+
+作用：babel-register 实际上为require加了一个钩子（hook），之后所有被 node 引用的 .es6、.es、.jsx 以及 .js 文件都会先被">
 
 
 
@@ -147,10 +155,10 @@
 
 
 
-  <link rel="canonical" href="http://chriscindy.top/2016/07/11/Composition-Event/"/>
+  <link rel="canonical" href="http://chriscindy.top/2016/08/22/babel-rigster-和-babel-node-的使用/"/>
 
 
-  <title> Composition Event | sunflower->FE </title>
+  <title> babel-rigster 和 babel-node 的使用 | sunflower->FE </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -332,7 +340,7 @@
             
             
               
-                Composition Event
+                babel-rigster 和 babel-node 的使用
               
             
           </h1>
@@ -344,8 +352,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-07-11T10:26:38+08:00" content="2016-07-11">
-              2016-07-11
+            <time itemprop="dateCreated" datetime="2016-08-22T17:37:28+08:00" content="2016-08-22">
+              2016-08-22
             </time>
           </span>
 
@@ -358,8 +366,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/技术研究/" itemprop="url" rel="index">
-                    <span itemprop="name">技术研究</span>
+                  <a href="/categories/技术使用/" itemprop="url" rel="index">
+                    <span itemprop="name">技术使用</span>
                   </a>
                 </span>
 
@@ -374,8 +382,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/07/11/Composition-Event/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/07/11/Composition-Event/" itemprop="commentsCount"></span>
+                <a href="/2016/08/22/babel-rigster-和-babel-node-的使用/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/08/22/babel-rigster-和-babel-node-的使用/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -385,7 +393,7 @@
 
           
           
-             <span id="/2016/07/11/Composition-Event/" class="leancloud_visitors" data-flag-title="Composition Event">
+             <span id="/2016/08/22/babel-rigster-和-babel-node-的使用/" class="leancloud_visitors" data-flag-title="babel-rigster 和 babel-node 的使用">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -407,20 +415,38 @@
       
 
       
-        <p>Composition Event，中文译为复合事件，是DOM 3级事件中新添加的一类事件类型，用于处理IME的输入序列。IME（Input Method Editor，输入法编辑器）可以让用户输入在物理键盘上找不到的字符。复合事件就是针对检测和处理这种输入而设计的。也因为以上所述原因，复合事件很少为通常使用拉丁系语言输入的开发者所知（因为拉丁字母都能通过物理键盘输入）。当然，即使是使用非拉丁系语言比如中文作为输入的开发者，也不见得知道复合事件，因为开发中用到该种事件类型的情况比较少见。</p>
-<p>IME复合系统的工作原理如下：缓存用户的键盘输入，直到一个字符被选中后才确定输入。缓存的键盘输入会暂时展示在输入框中，但不会真正被插入到DOM中。如下图所示。但是如果在复合事件的过程中改变了输入框的值（比如切换了输入法或者直接按下enter键），复合事件将提前结束，同时缓存的键盘输入值将会插入到输入框中。</p>
-<p><img src="http://ww3.sinaimg.cn/large/72f96cbagw1f5pr65nfcxj20zi09cwfq.jpg" alt="10:21:17.jpg"></p>
-<p>复合事件类型包含以下几种事件：</p>
-<ul>
-<li>compositionstart：当IME的文本复合系统打开时触发。</li>
-<li>compositionend：在IME的文本复合系统关闭即用户选中了字符并确定输入时触发，表示返回正常键盘的输入状态。<br>-compositionupdate：在compositionstart事件触发后，compositionend事件触发前这段时间内，每次向输入字段中进行输入时均会触发。</li>
+        <p>Babel 6 中 <code>babel-register</code> 和 <code>babel-node</code> 两个模块是开发时非常好用的转码工具。先来看一下如何使用：</p>
+<h4 id="1-babel-register"><a href="#1-babel-register" class="headerlink" title="1. babel-register"></a>1. babel-register</h4><ul>
+<li><p>安装：<code>npm install babel-register</code></p>
+</li>
+<li><p>作用：<code>babel-register</code> 实际上为<code>require</code>加了一个钩子（hook），之后所有被 node 引用的 <code>.es6</code>、<code>.es</code>、<code>.jsx</code> 以及 <code>.js</code> 文件都会先被 Babel 转码。</p>
+</li>
+<li><p>使用示例：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//index.js</span></div><div class="line"><span class="built_in">console</span>.log(<span class="string">'Hello World!'</span>);</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//register.js</span></div><div class="line"><span class="built_in">require</span>(<span class="string">"babel-register"</span>);</div><div class="line"><span class="built_in">require</span>(<span class="string">"./index.js"</span>);</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">node register.js</div></pre></td></tr></table></figure>
+</li>
 </ul>
-<p>注：input事件将在复合事件后触发。</p>
-<p>但是，实际情况与理想还是有一定距离的，复合事件的兼容性比较一般。下图是MDN中列出的兼容性表现，详情可见<a href="https://developer.mozilla.org/en-US/docs/Web/API/CompositionEvent" target="_blank" rel="external">MDN</a>:</p>
-<p><img src="http://ww1.sinaimg.cn/large/72f96cbagw1f5pr91ls0nj21420dg75t.jpg" alt="10:24:08.jpg"></p>
-<p><img src="http://ww1.sinaimg.cn/large/72f96cbagw1f5pr973kpuj214s0dtabp.jpg" alt="10:24:13.jpg"></p>
-<p>综上，在使用复合事件处理input相关的问题时，仍然需要慎重。</p>
-<p>注：本文参考尤雨溪博客中<a href="http://blog.evanyou.me/2014/01/03/composition-event/" target="_blank" rel="external">DOM COMPOSITION EVENTS COMPATIBILITY NOTES</a>一文。</p>
+<h4 id="2-babel-node"><a href="#2-babel-node" class="headerlink" title="2. babel-node"></a>2. babel-node</h4><ul>
+<li><p>安装：<code>npm install babel-node</code></p>
+</li>
+<li><p>作用：替代 CLI 中的 <code>node</code> 命令，可以直接运行采用 ES6 语法编写的代码。</p>
+</li>
+<li><p>使用示例：</p>
+<ul>
+<li><p>在 npm <code>scripts</code> 中：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  "scripts": &#123;</div><div class="line">    //"script-name": "node main.js"</div><div class="line">    "script-name": "babel-node main.js"</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>在命令行中：</p>
+<ul>
+<li>全局安装 <code>babel-node</code>：<code>babel-node main.js</code></li>
+<li>本地安装 <code>babel-node</code>：<code>./node_modules/.bin/babel-node main.js</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="3-使用局限"><a href="#3-使用局限" class="headerlink" title="3. 使用局限"></a>3. 使用局限</h4><p>尽管 <code>babel-register</code> 和 <code>babel-node</code> 都非常好用，但是由于二者都是实时转码，因而性能上会有一定影响。官方建议将二者仅置于开发环境下使用。而在正式生产环境中部署时，预先编译代码是值得推荐的做法。</p>
 
       
     </div>
@@ -464,7 +490,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/JavaScript/" rel="tag">#JavaScript</a>
+            <a href="/tags/Babel/" rel="tag">#Babel</a>
           
         </div>
       
@@ -473,17 +499,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/07/08/两个Git帐号如何在一台电脑上共存/" rel="next" title="两个Git帐号如何在一台电脑上共存">
-                <i class="fa fa-chevron-left"></i> 两个Git帐号如何在一台电脑上共存
+              <a href="/2016/08/22/Babel-6-特性总结/" rel="next" title="Babel 6 特性总结">
+                <i class="fa fa-chevron-left"></i> Babel 6 特性总结
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/07/11/译-使用Riot，ES6和Webpack构建应用/" rel="prev" title="[译]使用Riot，ES6和Webpack构建应用">
-                [译]使用Riot，ES6和Webpack构建应用 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -498,10 +520,10 @@
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2016/07/11/Composition-Event/"
-     data-title="Composition Event"
+        <div class="ds-share flat" data-thread-key="2016/08/22/babel-rigster-和-babel-node-的使用/"
+     data-title="babel-rigster 和 babel-node 的使用"
      data-content=""
-     data-url="http://chriscindy.top/2016/07/11/Composition-Event/">
+     data-url="http://chriscindy.top/2016/08/22/babel-rigster-和-babel-node-的使用/">
   <div class="ds-share-inline">
     <ul  class="ds-share-icons-16">
 
@@ -528,8 +550,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/07/11/Composition-Event/"
-           data-title="Composition Event" data-url="http://chriscindy.top/2016/07/11/Composition-Event/">
+      <div class="ds-thread" data-thread-key="2016/08/22/babel-rigster-和-babel-node-的使用/"
+           data-title="babel-rigster 和 babel-node 的使用" data-url="http://chriscindy.top/2016/08/22/babel-rigster-和-babel-node-的使用/">
       </div>
     
   </div>
@@ -627,7 +649,7 @@
               
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-babel-register"><span class="nav-number">1.</span> <span class="nav-text">1. babel-register</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-babel-node"><span class="nav-number">2.</span> <span class="nav-text">2. babel-node</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-使用局限"><span class="nav-number">3.</span> <span class="nav-text">3. 使用局限</span></a></li></ol></div>
             
           </div>
         </section>

@@ -5,7 +5,7 @@
     
   <url>
     <loc>http://chriscindy.top/2016/08/22/Babel-6-%E7%89%B9%E6%80%A7%E6%80%BB%E7%BB%93/</loc>
-    <lastmod>2016-08-22T09:35:49.000Z</lastmod>
+    <lastmod>2016-08-22T09:39:14.000Z</lastmod>
     <data>
         <display>
         <title>Babel 6 特性总结</title>
@@ -16,7 +16,27 @@
          
            
              
-              <breadCrumb title="前端工具" url="http://chriscindy.top/categories/%E5%89%8D%E7%AB%AF%E5%B7%A5%E5%85%B7/"/>
+              <breadCrumb title="技术使用" url="http://chriscindy.top/categories/%E6%8A%80%E6%9C%AF%E4%BD%BF%E7%94%A8/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://chriscindy.top/2016/08/22/babel-rigster-%E5%92%8C-babel-node-%E7%9A%84%E4%BD%BF%E7%94%A8/</loc>
+    <lastmod>2016-08-22T09:39:08.000Z</lastmod>
+    <data>
+        <display>
+        <title>babel-rigster 和 babel-node 的使用</title>
+        <pubTime>2016-08-22T09:37:28.000Z</pubTime>
+        
+        <tag>Babel</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术使用" url="http://chriscindy.top/categories/%E6%8A%80%E6%9C%AF%E4%BD%BF%E7%94%A8/"/>
           
         </display>
     </data>
