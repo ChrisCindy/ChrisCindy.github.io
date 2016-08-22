@@ -90,25 +90,19 @@
 
 
 
-<meta name="description" content="最近在公司项目中与后端联调时遇到了一个很奇怪的问题，前端发出的DELETE方法的Ajax请求传到服务端就变成了OPTIONS请求。由于服务端没有针对OPTIONS请求作回应，此时返回的http状态码为405，意为“方法不被允许”（Method not allowed），DELETE请求自然也是失败。上网查了一番，原理是触发了W3C规定的跨域请求时的安全机制。
-W3C规范中的定义如下：
-
-To pr">
+<meta name="description" content="最近在公司项目中与后端联调时遇到了一个很奇怪的问题，前端发出的 DELETE 方法的 Ajax 请求传到服务端就变成了 OPTIONS 请求。由于服务端没有针对 OPTIONS 请求作回应，此时返回的 http 状态码为 405，意为“方法不被允许”（Method not allowed），DELETE 请求自然也是失败。上网查了一番，原理是触发了 W3C 规定的跨域请求时的安全机制。
+W3C 规">
 <meta property="og:type" content="article">
 <meta property="og:title" content="跨域请求时多出现一条OPTIONS请求的原因及解决办法">
 <meta property="og:url" content="http://chriscindy.top/2016/07/20/跨域请求时多出现一条options请求的原因及解决办法/index.html">
 <meta property="og:site_name" content="sunflower->FE">
-<meta property="og:description" content="最近在公司项目中与后端联调时遇到了一个很奇怪的问题，前端发出的DELETE方法的Ajax请求传到服务端就变成了OPTIONS请求。由于服务端没有针对OPTIONS请求作回应，此时返回的http状态码为405，意为“方法不被允许”（Method not allowed），DELETE请求自然也是失败。上网查了一番，原理是触发了W3C规定的跨域请求时的安全机制。
-W3C规范中的定义如下：
-
-To pr">
-<meta property="og:updated_time" content="2016-07-21T03:54:30.000Z">
+<meta property="og:description" content="最近在公司项目中与后端联调时遇到了一个很奇怪的问题，前端发出的 DELETE 方法的 Ajax 请求传到服务端就变成了 OPTIONS 请求。由于服务端没有针对 OPTIONS 请求作回应，此时返回的 http 状态码为 405，意为“方法不被允许”（Method not allowed），DELETE 请求自然也是失败。上网查了一番，原理是触发了 W3C 规定的跨域请求时的安全机制。
+W3C 规">
+<meta property="og:updated_time" content="2016-08-22T09:48:41.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="跨域请求时多出现一条OPTIONS请求的原因及解决办法">
-<meta name="twitter:description" content="最近在公司项目中与后端联调时遇到了一个很奇怪的问题，前端发出的DELETE方法的Ajax请求传到服务端就变成了OPTIONS请求。由于服务端没有针对OPTIONS请求作回应，此时返回的http状态码为405，意为“方法不被允许”（Method not allowed），DELETE请求自然也是失败。上网查了一番，原理是触发了W3C规定的跨域请求时的安全机制。
-W3C规范中的定义如下：
-
-To pr">
+<meta name="twitter:description" content="最近在公司项目中与后端联调时遇到了一个很奇怪的问题，前端发出的 DELETE 方法的 Ajax 请求传到服务端就变成了 OPTIONS 请求。由于服务端没有针对 OPTIONS 请求作回应，此时返回的 http 状态码为 405，意为“方法不被允许”（Method not allowed），DELETE 请求自然也是失败。上网查了一番，原理是触发了 W3C 规定的跨域请求时的安全机制。
+W3C 规">
 
 
 
@@ -412,8 +406,8 @@ To pr">
       
 
       
-        <p>最近在公司项目中与后端联调时遇到了一个很奇怪的问题，前端发出的DELETE方法的Ajax请求传到服务端就变成了OPTIONS请求。由于服务端没有针对OPTIONS请求作回应，此时返回的http状态码为405，意为“方法不被允许”（Method not allowed），DELETE请求自然也是失败。上网查了一番，原理是触发了W3C规定的跨域请求时的安全机制。</p>
-<p>W3C规范中的定义如下：</p>
+        <p>最近在公司项目中与后端联调时遇到了一个很奇怪的问题，前端发出的 DELETE 方法的 Ajax 请求传到服务端就变成了 OPTIONS 请求。由于服务端没有针对 OPTIONS 请求作回应，此时返回的 http 状态码为 405，意为“方法不被允许”（Method not allowed），DELETE 请求自然也是失败。上网查了一番，原理是触发了 W3C 规定的跨域请求时的安全机制。</p>
+<p>W3C 规范中的定义如下：</p>
 <blockquote>
 <p>To protect resources against cross-origin requests that could not originate from certain user agents before this specification existed a preflight request is made to ensure that the resource is aware of this specification. The result of this request is stored in a preflight result cache.</p>
 </blockquote>
@@ -426,13 +420,13 @@ To pr">
 <li>只使用 GET, HEAD 或者 POST 请求方法。如果使用 POST 向服务器端传送数据，则数据类型(Content-Type)只能是 application/x-www-form-urlencoded, multipart/form-data 或 text/plain中的一种。</li>
 <li>不会使用自定义请求头（类似于 X-Modified 这种）。</li>
 </ul>
-<p>OPTIONS是HTTP/1.1里的方法，用来获取更多服务器端的信息，是一个不应该对服务器数据造成影响的方法。通过这个方法，客户端可以在采取具体资源请求之前，决定对该资源采取何种必要措施，或者了解服务器的性能。</p>
-<p>到这里，我们对整个情况就很明了了：当Ajax跨域请求时，如果HTTP方法是非简单方法，则客户端即浏览器会发出OPTIONS方法的预请求去询问服务端，在得到允许性质的回应后，才会发送真正的请求；如果服务端对预请求拒绝，则真正的DELETE请求等不会发出。</p>
-<p>看到这里，相信各位也知道如何解决该问题了：服务端对OPTIONS预请求给出允许回应。不过，需要注意的是，不应该满足所有的OPTIONS请求，否则这一安全措施便形同虚设了。最好是建立一套验证机制，对符合条件的客户端请求给出允许回应。至于如何实现，就靠我们的后端小伙伴啦。有兴趣的朋友可以查看MDN上的这篇文档：<a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Access_control_CORS" target="_blank" rel="external">HTTP访问控制(CORS)</a></p>
+<p>OPTIONS 是 HTTP/1.1 里的方法，用来获取更多服务器端的信息，是一个不应该对服务器数据造成影响的方法。通过这个方法，客户端可以在采取具体资源请求之前，决定对该资源采取何种必要措施，或者了解服务器的性能。</p>
+<p>到这里，我们对整个情况就很明了了：当 Ajax 跨域请求时，如果 HTTP 方法是非简单方法，则客户端即浏览器会发出 OPTIONS 方法的预请求去询问服务端，在得到允许性质的回应后，才会发送真正的请求；如果服务端对预请求拒绝，则真正的 DELETE 请求等不会发出。</p>
+<p>看到这里，相信各位也知道如何解决该问题了：服务端对 OPTIONS 预请求给出允许回应。不过，需要注意的是，不应该满足所有的 OPTIONS 请求，否则这一安全措施便形同虚设了。最好是建立一套验证机制，对符合条件的客户端请求给出允许回应。至于如何实现，就靠我们的后端小伙伴啦。有兴趣的朋友可以查看 MDN 上的这篇文档：<a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Access_control_CORS" target="_blank" rel="external">HTTP访问控制(CORS)</a></p>
 <p>其他参考文献：</p>
 <ul>
 <li><a href="http://www.w3.org/TR/cors/" target="_blank" rel="external">W3C Cross-Origin Resource Sharing</a></li>
-<li><a href="http://www.tangshuang.net/2271.html" target="_blank" rel="external">jquery ajax 请求中多出现一次OPTIONS请求及其解决办法</a></li>
+<li><a href="http://www.tangshuang.net/2271.html" target="_blank" rel="external">jquery ajax 请求中多出现一次 OPTIONS 请求及其解决办法</a></li>
 </ul>
 
       

@@ -90,19 +90,19 @@
 
 
 
-<meta name="description" content="Composition Event，中文译为复合事件，是DOM 3级事件中新添加的一类事件类型，用于处理IME的输入序列。IME（Input Method Editor，输入法编辑器）可以让用户输入在物理键盘上找不到的字符。复合事件就是针对检测和处理这种输入而设计的。也因为以上所述原因，复合事件很少为通常使用拉丁系语言输入的开发者所知（因为拉丁字母都能通过物理键盘输入）。当然，即使是使用非拉丁系语">
+<meta name="description" content="Composition Event，中文译为复合事件，是 DOM 3 级事件中新添加的一类事件类型，用于处理 IME 的输入序列。IME（Input Method Editor，输入法编辑器）可以让用户输入在物理键盘上找不到的字符。复合事件就是针对检测和处理这种输入而设计的。也因为以上所述原因，复合事件很少为通常使用拉丁系语言输入的开发者所知（因为拉丁字母都能通过物理键盘输入）。当然，即使是使用非">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Composition Event">
 <meta property="og:url" content="http://chriscindy.top/2016/07/11/Composition-Event/index.html">
 <meta property="og:site_name" content="sunflower->FE">
-<meta property="og:description" content="Composition Event，中文译为复合事件，是DOM 3级事件中新添加的一类事件类型，用于处理IME的输入序列。IME（Input Method Editor，输入法编辑器）可以让用户输入在物理键盘上找不到的字符。复合事件就是针对检测和处理这种输入而设计的。也因为以上所述原因，复合事件很少为通常使用拉丁系语言输入的开发者所知（因为拉丁字母都能通过物理键盘输入）。当然，即使是使用非拉丁系语">
+<meta property="og:description" content="Composition Event，中文译为复合事件，是 DOM 3 级事件中新添加的一类事件类型，用于处理 IME 的输入序列。IME（Input Method Editor，输入法编辑器）可以让用户输入在物理键盘上找不到的字符。复合事件就是针对检测和处理这种输入而设计的。也因为以上所述原因，复合事件很少为通常使用拉丁系语言输入的开发者所知（因为拉丁字母都能通过物理键盘输入）。当然，即使是使用非">
 <meta property="og:image" content="http://ww3.sinaimg.cn/large/72f96cbagw1f5pr65nfcxj20zi09cwfq.jpg">
 <meta property="og:image" content="http://ww1.sinaimg.cn/large/72f96cbagw1f5pr91ls0nj21420dg75t.jpg">
 <meta property="og:image" content="http://ww1.sinaimg.cn/large/72f96cbagw1f5pr973kpuj214s0dtabp.jpg">
-<meta property="og:updated_time" content="2016-07-11T02:26:38.000Z">
+<meta property="og:updated_time" content="2016-08-22T10:10:38.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Composition Event">
-<meta name="twitter:description" content="Composition Event，中文译为复合事件，是DOM 3级事件中新添加的一类事件类型，用于处理IME的输入序列。IME（Input Method Editor，输入法编辑器）可以让用户输入在物理键盘上找不到的字符。复合事件就是针对检测和处理这种输入而设计的。也因为以上所述原因，复合事件很少为通常使用拉丁系语言输入的开发者所知（因为拉丁字母都能通过物理键盘输入）。当然，即使是使用非拉丁系语">
+<meta name="twitter:description" content="Composition Event，中文译为复合事件，是 DOM 3 级事件中新添加的一类事件类型，用于处理 IME 的输入序列。IME（Input Method Editor，输入法编辑器）可以让用户输入在物理键盘上找不到的字符。复合事件就是针对检测和处理这种输入而设计的。也因为以上所述原因，复合事件很少为通常使用拉丁系语言输入的开发者所知（因为拉丁字母都能通过物理键盘输入）。当然，即使是使用非">
 <meta name="twitter:image" content="http://ww3.sinaimg.cn/large/72f96cbagw1f5pr65nfcxj20zi09cwfq.jpg">
 
 
@@ -407,20 +407,20 @@
       
 
       
-        <p>Composition Event，中文译为复合事件，是DOM 3级事件中新添加的一类事件类型，用于处理IME的输入序列。IME（Input Method Editor，输入法编辑器）可以让用户输入在物理键盘上找不到的字符。复合事件就是针对检测和处理这种输入而设计的。也因为以上所述原因，复合事件很少为通常使用拉丁系语言输入的开发者所知（因为拉丁字母都能通过物理键盘输入）。当然，即使是使用非拉丁系语言比如中文作为输入的开发者，也不见得知道复合事件，因为开发中用到该种事件类型的情况比较少见。</p>
-<p>IME复合系统的工作原理如下：缓存用户的键盘输入，直到一个字符被选中后才确定输入。缓存的键盘输入会暂时展示在输入框中，但不会真正被插入到DOM中。如下图所示。但是如果在复合事件的过程中改变了输入框的值（比如切换了输入法或者直接按下enter键），复合事件将提前结束，同时缓存的键盘输入值将会插入到输入框中。</p>
+        <p>Composition Event，中文译为复合事件，是 DOM 3 级事件中新添加的一类事件类型，用于处理 IME 的输入序列。IME（Input Method Editor，输入法编辑器）可以让用户输入在物理键盘上找不到的字符。复合事件就是针对检测和处理这种输入而设计的。也因为以上所述原因，复合事件很少为通常使用拉丁系语言输入的开发者所知（因为拉丁字母都能通过物理键盘输入）。当然，即使是使用非拉丁系语言比如中文作为输入的开发者，也不见得知道复合事件，因为开发中用到该种事件类型的情况比较少见。</p>
+<p>IME 复合系统的工作原理如下：缓存用户的键盘输入，直到一个字符被选中后才确定输入。缓存的键盘输入会暂时展示在输入框中，但不会真正被插入到 DOM 中。如下图所示。但是如果在复合事件的过程中改变了输入框的值（比如切换了输入法或者直接按下 enter 键），复合事件将提前结束，同时缓存的键盘输入值将会插入到输入框中。</p>
 <p><img src="http://ww3.sinaimg.cn/large/72f96cbagw1f5pr65nfcxj20zi09cwfq.jpg" alt="10:21:17.jpg"></p>
 <p>复合事件类型包含以下几种事件：</p>
 <ul>
-<li>compositionstart：当IME的文本复合系统打开时触发。</li>
-<li>compositionend：在IME的文本复合系统关闭即用户选中了字符并确定输入时触发，表示返回正常键盘的输入状态。<br>-compositionupdate：在compositionstart事件触发后，compositionend事件触发前这段时间内，每次向输入字段中进行输入时均会触发。</li>
+<li>compositionstart：当 IME 的文本复合系统打开时触发。</li>
+<li>compositionend：在 IME 的文本复合系统关闭即用户选中了字符并确定输入时触发，表示返回正常键盘的输入状态。<br>-compositionupdate：在 compositionstart 事件触发后，compositionend 事件触发前这段时间内，每次向输入字段中进行输入时均会触发。</li>
 </ul>
-<p>注：input事件将在复合事件后触发。</p>
-<p>但是，实际情况与理想还是有一定距离的，复合事件的兼容性比较一般。下图是MDN中列出的兼容性表现，详情可见<a href="https://developer.mozilla.org/en-US/docs/Web/API/CompositionEvent" target="_blank" rel="external">MDN</a>:</p>
+<p>注：input 事件将在复合事件后触发。</p>
+<p>但是，实际情况与理想还是有一定距离的，复合事件的兼容性比较一般。下图是 MDN 中列出的兼容性表现，详情可见 <a href="https://developer.mozilla.org/en-US/docs/Web/API/CompositionEvent" target="_blank" rel="external">MDN</a>:</p>
 <p><img src="http://ww1.sinaimg.cn/large/72f96cbagw1f5pr91ls0nj21420dg75t.jpg" alt="10:24:08.jpg"></p>
 <p><img src="http://ww1.sinaimg.cn/large/72f96cbagw1f5pr973kpuj214s0dtabp.jpg" alt="10:24:13.jpg"></p>
-<p>综上，在使用复合事件处理input相关的问题时，仍然需要慎重。</p>
-<p>注：本文参考尤雨溪博客中<a href="http://blog.evanyou.me/2014/01/03/composition-event/" target="_blank" rel="external">DOM COMPOSITION EVENTS COMPATIBILITY NOTES</a>一文。</p>
+<p>综上，在使用复合事件处理 input 相关的问题时，仍然需要慎重。</p>
+<p>注：本文参考尤雨溪博客中 <a href="http://blog.evanyou.me/2014/01/03/composition-event/" target="_blank" rel="external">DOM COMPOSITION EVENTS COMPATIBILITY NOTES</a> 一文。</p>
 
       
     </div>
