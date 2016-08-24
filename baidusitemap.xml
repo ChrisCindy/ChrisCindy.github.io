@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>http://chriscindy.top/2016/08/22/%E9%87%87%E7%94%A8gulp%E4%BC%98%E5%8C%96hexo%E5%8D%9A%E5%AE%A2%E6%89%93%E5%BC%80%E9%80%9F%E5%BA%A6/</loc>
+    <lastmod>2016-08-24T03:34:32.000Z</lastmod>
+    <data>
+        <display>
+        <title>采用gulp优化hexohexo博客打开速度</title>
+        <pubTime>2016-08-22T09:42:36.000Z</pubTime>
+        
+        <tag>博客搭建</tag>
+         
+         
+           
+             
+              <breadCrumb title="学以致用" url="http://chriscindy.top/categories/%E5%AD%A6%E4%BB%A5%E8%87%B4%E7%94%A8/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://chriscindy.top/2016/08/22/Babel-6%E7%89%B9%E6%80%A7%E6%80%BB%E7%BB%93/</loc>
     <lastmod>2016-08-24T03:20:57.000Z</lastmod>
     <data>
@@ -57,26 +77,6 @@
            
              
               <breadCrumb title="解决方案" url="http://chriscindy.top/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://chriscindy.top/2016/08/22/%E9%87%87%E7%94%A8gulp%E4%BC%98%E5%8C%96%E6%9C%AC%E5%8D%9A%E5%AE%A2%E6%89%93%E5%BC%80%E9%80%9F%E5%BA%A6/</loc>
-    <lastmod>2016-08-22T10:15:59.000Z</lastmod>
-    <data>
-        <display>
-        <title>采用gulp优化本博客打开速度</title>
-        <pubTime>2016-08-22T09:42:36.000Z</pubTime>
-        
-        <tag>博客搭建</tag>
-         
-         
-           
-             
-              <breadCrumb title="学以致用" url="http://chriscindy.top/categories/%E5%AD%A6%E4%BB%A5%E8%87%B4%E7%94%A8/"/>
           
         </display>
     </data>
