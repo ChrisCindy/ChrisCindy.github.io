@@ -72,7 +72,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Frontend, sunflower" />
+  <meta name="keywords" content="DOM," />
 
 
 
@@ -90,15 +90,42 @@
 
 
 
-<meta name="description" content="立志成为顶级JavaScript技术栈开发者">
-<meta property="og:type" content="website">
-<meta property="og:title" content="sunflower->FE">
-<meta property="og:url" content="http://chriscindy.top/tags/HTTP/index.html">
+<meta name="description" content="MutationObserver
+MutationObserver 给开发者们提供了一种能在某个范围内的 DOM 树发生变化时作出适当反应的能力.该 API 设计用来替换掉在 DOM 3 事件规范中引入的 Mutation 事件。
+——MDN
+
+1. 概述
+监视 DOM 变动的接口
+当监视的 DOM 发生变动时 MutationObserver 将收到通知并触发事先设定好的回调函数。
+
+类似于事件">
+<meta property="og:type" content="article">
+<meta property="og:title" content="深入MutationObserver">
+<meta property="og:url" content="http://chriscindy.top/2016/09/08/深入MutationObserver/index.html">
 <meta property="og:site_name" content="sunflower->FE">
-<meta property="og:description" content="立志成为顶级JavaScript技术栈开发者">
+<meta property="og:description" content="MutationObserver
+MutationObserver 给开发者们提供了一种能在某个范围内的 DOM 树发生变化时作出适当反应的能力.该 API 设计用来替换掉在 DOM 3 事件规范中引入的 Mutation 事件。
+——MDN
+
+1. 概述
+监视 DOM 变动的接口
+当监视的 DOM 发生变动时 MutationObserver 将收到通知并触发事先设定好的回调函数。
+
+类似于事件">
+<meta property="og:image" content="http://ww3.sinaimg.cn/large/801b780ajw1f7lc2hbpxjj21kw0m6dka.jpg">
+<meta property="og:updated_time" content="2016-09-08T02:45:07.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="sunflower->FE">
-<meta name="twitter:description" content="立志成为顶级JavaScript技术栈开发者">
+<meta name="twitter:title" content="深入MutationObserver">
+<meta name="twitter:description" content="MutationObserver
+MutationObserver 给开发者们提供了一种能在某个范围内的 DOM 树发生变化时作出适当反应的能力.该 API 设计用来替换掉在 DOM 3 事件规范中引入的 Mutation 事件。
+——MDN
+
+1. 概述
+监视 DOM 变动的接口
+当监视的 DOM 发生变动时 MutationObserver 将收到通知并触发事先设定好的回调函数。
+
+类似于事件">
+<meta name="twitter:image" content="http://ww3.sinaimg.cn/large/801b780ajw1f7lc2hbpxjj21kw0m6dka.jpg">
 
 
 
@@ -142,10 +169,10 @@
 
 
 
-  <link rel="canonical" href="http://chriscindy.top/tags/HTTP/"/>
+  <link rel="canonical" href="http://chriscindy.top/2016/09/08/深入MutationObserver/"/>
 
 
-  <title> 标签: HTTP | sunflower->FE </title>
+  <title> 深入MutationObserver | sunflower->FE </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -185,7 +212,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -306,46 +333,334 @@
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-collapse">
-    <div class="collection-title">
-      <h2 >
-        HTTP
-        <small>标签</small>
-      </h2>
-    </div>
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
 
     
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                深入MutationObserver
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-09-08T10:42:04+08:00" content="2016-09-08">
+              2016-09-08
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/技术研究/" itemprop="url" rel="index">
+                    <span itemprop="name">技术研究</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/09/08/深入MutationObserver/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/08/深入MutationObserver/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/09/08/深入MutationObserver/" class="leancloud_visitors" data-flag-title="深入MutationObserver">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
       
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+      
+        <h1 id="MutationObserver"><a href="#MutationObserver" class="headerlink" title="MutationObserver"></a>MutationObserver</h1><blockquote>
+<p>MutationObserver 给开发者们提供了一种能在某个范围内的 DOM 树发生变化时作出适当反应的能力.该 API 设计用来替换掉在 DOM 3 事件规范中引入的 Mutation 事件。</p>
+<p>——MDN</p>
+</blockquote>
+<h2 id="1-概述"><a href="#1-概述" class="headerlink" title="1. 概述"></a>1. 概述</h2><ul>
+<li><p>监视 DOM 变动的接口</p>
+<p>当监视的 DOM 发生变动时 MutationObserver 将收到通知并触发事先设定好的回调函数。</p>
+</li>
+<li><p>类似于事件，但是异步触发</p>
+<p>添加监视时，MutationObserver 上的 observer 函数与 addEventListener 有相似之处，但不同于后者的同步触发，MutationObserver 是异步触发，此举是为了避免 DOM 频繁变动导致回调函数被频繁调用，造成浏览器卡顿。</p>
+</li>
+</ul>
+<h2 id="2-MutationObserver-构造函数"><a href="#2-MutationObserver-构造函数" class="headerlink" title="2. MutationObserver 构造函数"></a>2. MutationObserver 构造函数</h2><p>该构造函数用于实例化一个新的 MutaionObserver ，同时指定触发 DOM 变动时的回调函数：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> observer = <span class="keyword">new</span> MutationObserver(callback);</div></pre></td></tr></table></figure>
+<p>callback，即回调函数接收两个参数，第一个参数是一个包含了所有 <code>MutationRecord</code> 对象（后文会介绍，别急）的数组，第二个参数则是这个MutationObserver 实例本身。</p>
+<h2 id="3-MutationObserver-实例方法"><a href="#3-MutationObserver-实例方法" class="headerlink" title="3. MutationObserver 实例方法"></a>3. MutationObserver 实例方法</h2><h4 id="3-1-Observe-Node-target-optional-MutationObserverInit-options"><a href="#3-1-Observe-Node-target-optional-MutationObserverInit-options" class="headerlink" title="3.1 Observe(Node target, optional MutationObserverInit options);"></a>3.1 <code>Observe(Node target, optional MutationObserverInit options);</code></h4><p>给 MutationObserver 实例添加要观察的 DOM 节点，并可通过一个可选的 options 参数来配置观察哪些变动，该 options 为一个名为 <code>MutationObserverInit</code> 的对象。</p>
+<p>以下是 <code>MutationObserverInit</code> 对象的各属性及其描述：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">属性</th>
+<th style="text-align:left">类型</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">childList</td>
+<td style="text-align:left">Boolean</td>
+<td style="text-align:left">是否观察子节点的变动</td>
+</tr>
+<tr>
+<td style="text-align:left">attributes</td>
+<td style="text-align:left">Boolean</td>
+<td style="text-align:left">是否观察属性的变动</td>
+</tr>
+<tr>
+<td style="text-align:left">characterData</td>
+<td style="text-align:left">Boolean</td>
+<td style="text-align:left">是否节点内容或节点文本的变动</td>
+</tr>
+<tr>
+<td style="text-align:left">subtree</td>
+<td style="text-align:left">Boolean</td>
+<td style="text-align:left">是否观察所有后代节点的变动</td>
+</tr>
+<tr>
+<td style="text-align:left">attributeOldValue</td>
+<td style="text-align:left">Boolean</td>
+<td style="text-align:left">观察 attributes 变动时，是否记录变动前的属性值</td>
+</tr>
+<tr>
+<td style="text-align:left">characterDataOldValue</td>
+<td style="text-align:left">Boolean</td>
+<td style="text-align:left">观察 characterData 变动时，是否记录变动前的属性值</td>
+</tr>
+<tr>
+<td style="text-align:left">attributeFilter</td>
+<td style="text-align:left">Array</td>
+<td style="text-align:left">表示需要观察的特定属性（比如[‘class’,’src’]），不在此数组中的属性变化时将被忽略</td>
+</tr>
+</tbody>
+</table>
+<p>注：</p>
+<ul>
+<li>不能单独观察 subtree 变动，必须同时指定 childList、attributes 和 characterData 中的一种或多种。</li>
+<li>为同一个 DOM 节点多次添加同一个 MutationObserver 是无效的，回调函数将只被触发一次。但如果指定不同的 options 对象（即观察不同的变动），即被视为不同的 MutationObserver。（是不是感觉跟 addEventListener 确实很像？）</li>
+</ul>
+<h4 id="3-2-disconnect"><a href="#3-2-disconnect" class="headerlink" title="3.2  disconnect();"></a>3.2  <code>disconnect();</code></h4><p>该方法用来停止观察。后续如果 DOM 节点发生变动将不再触发回调函数。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">observer.disconnect();</div></pre></td></tr></table></figure>
+<p>继续类比，<code>disconnect</code> 函数和 <code>removeEventListener</code>大致类似，除了 <code>disconnect</code> 函数比较粗暴（无法传参配置），会把该 MutationObserver 实例上所有的观察都停止。</p>
+<h4 id="3-3-takeRecords"><a href="#3-3-takeRecords" class="headerlink" title="3.3  takeRecords();"></a>3.3  <code>takeRecords();</code></h4><p>该方法用来清除变动记录，返回一个包含了 <code>MutationRecord</code> 对象的数组。<code>MutationRecord</code> 又出现了。它是啥？</p>
+<p>实际上，DOM 每次发生变化，就会生成一条变动记录，这个变动记录对应一个 <code>MutationRecord</code> 对象。以下是 <code>MutationRecord</code> 对象的各属性及其描述：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">属性</th>
+<th style="text-align:left">类型</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">type</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">根据变动类型，值为 attributes， characterData 或  childList</td>
+</tr>
+<tr>
+<td style="text-align:left">target</td>
+<td style="text-align:left">Node</td>
+<td style="text-align:left">发生变动的DOM节点</td>
+</tr>
+<tr>
+<td style="text-align:left">addedNodes</td>
+<td style="text-align:left">NodeList</td>
+<td style="text-align:left">被添加的节点，或者为 null</td>
+</tr>
+<tr>
+<td style="text-align:left">removedNodes</td>
+<td style="text-align:left">NodeList</td>
+<td style="text-align:left">被删除的节点，或者为 null</td>
+</tr>
+<tr>
+<td style="text-align:left">previousSibling</td>
+<td style="text-align:left">Node</td>
+<td style="text-align:left">被添加或被删除的节点的前一个兄弟节点，或者为 null</td>
+</tr>
+<tr>
+<td style="text-align:left">nextSibling</td>
+<td style="text-align:left">Node</td>
+<td style="text-align:left">被添加或被删除的节点的后一个兄弟节点，或者为 null</td>
+</tr>
+<tr>
+<td style="text-align:left">attributeName</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">发生变更的属性的本地名称，或者为 null</td>
+</tr>
+<tr>
+<td style="text-align:left">attributeNamespace</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">发生变更的属性的命名空间，或者为 null</td>
+</tr>
+<tr>
+<td style="text-align:left">oldValue</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">如果 type 为 attributes，则返回该属性变化之前的属性值；如果 type 为 characterData，则返回该节点变化之前的文本数据；如果 type为 childList，则返回 null</td>
+</tr>
+</tbody>
+</table>
+<p>前面我们说 MutationObserver 异步处理触发，实际上它的原理就是等待一个脚本任务完成，将这个过程中产生的所有变动记录即所有的 <code>MutationRecord</code> 对象存储到一个数组中，最后再统一处理这个数组。而这个包含了所有变动记录的数组，也将成为回调函数的第一个参数。下面是一个回调函数处理该数组的示例：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> observer = <span class="keyword">new</span> MutationObserver(<span class="function"><span class="keyword">function</span>(<span class="params">mutations</span>) </span>&#123;</div><div class="line">  mutations.forEach(<span class="function"><span class="keyword">function</span>(<span class="params">mutation</span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(mutation.type);</div><div class="line">  &#125;);    </div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<h2 id="4-兼容性"><a href="#4-兼容性" class="headerlink" title="4. 兼容性"></a>4. 兼容性</h2><p>MutationObserver 在 DOM Level 4 中被引入，其兼容性如下图所示：</p>
+<p><img src="http://ww3.sinaimg.cn/large/801b780ajw1f7lc2hbpxjj21kw0m6dka.jpg" alt=""> </p>
+<blockquote>
+<p>参考文献：</p>
+<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/MutationObserver" target="_blank" rel="external">MDN MutationObserver</a></p>
+<p><a href="http://javascript.ruanyifeng.com/dom/mutationobserver.html" target="_blank" rel="external">《JavaScript 标准参考教程（alpha）》—— MutationObserver</a></p>
+</blockquote>
 
-      <h1 class="post-title">
+      
+    </div>
+
+    <div>
+      
         
-            <a class="post-title-link" href="/2016/07/20/跨域请求时多出现一条options请求的原因及解决办法/" itemprop="url">
-              
-                <span itemprop="name">跨域请求时多出现一条OPTIONS请求的原因及解决办法</span>
-              
-            </a>
+
+      
+    </div>
+
+    <div>
+      
         
-      </h1>
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/images/wechat.jpg" alt="ChrisCindy WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/images/alipay.jpg" alt="ChrisCindy Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-07-20T18:19:34+08:00"
-              content="2016-07-20" >
-          07-20
-        </time>
-      </div>
 
-    </header>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/DOM/" rel="tag">#DOM</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/08/22/采用gulp优化hexo博客打开速度/" rel="next" title="采用gulp优化hexohexo博客打开速度">
+                <i class="fa fa-chevron-left"></i> 采用gulp优化hexohexo博客打开速度
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </article>
 
 
-    
-  </div>
 
-  
+    <div class="post-spread">
+      
+        <div class="ds-share flat" data-thread-key="2016/09/08/深入MutationObserver/"
+     data-title="深入MutationObserver"
+     data-content=""
+     data-url="http://chriscindy.top/2016/09/08/深入MutationObserver/">
+  <div class="ds-share-inline">
+    <ul  class="ds-share-icons-16">
+
+      <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+      <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+      <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+      <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+      <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+
+    </ul>
+    <div class="ds-share-icons-more">
+    </div>
+  </div>
+</div>
+      
+    </div>
+  </div>
 
 
           </div>
@@ -353,6 +668,14 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/09/08/深入MutationObserver/"
+           data-title="深入MutationObserver" data-url="http://chriscindy.top/2016/09/08/深入MutationObserver/">
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -372,8 +695,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.jpg"
@@ -430,6 +762,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#MutationObserver"><span class="nav-number">1.</span> <span class="nav-text">MutationObserver</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-概述"><span class="nav-number">1.1.</span> <span class="nav-text">1. 概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-MutationObserver-构造函数"><span class="nav-number">1.2.</span> <span class="nav-text">2. MutationObserver 构造函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-MutationObserver-实例方法"><span class="nav-number">1.3.</span> <span class="nav-text">3. MutationObserver 实例方法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-Observe-Node-target-optional-MutationObserverInit-options"><span class="nav-number">1.3.0.1.</span> <span class="nav-text">3.1 Observe(Node target, optional MutationObserverInit options);</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-2-disconnect"><span class="nav-number">1.3.0.2.</span> <span class="nav-text">3.2  disconnect();</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-3-takeRecords"><span class="nav-number">1.3.0.3.</span> <span class="nav-text">3.3  takeRecords();</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-兼容性"><span class="nav-number">1.4.</span> <span class="nav-text">4. 兼容性</span></a></li></ol></li></ol></div>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -533,6 +876,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 
