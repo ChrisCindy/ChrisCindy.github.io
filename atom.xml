@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://chriscindy.top/"/>
-  <updated>2016-09-08T03:01:25.000Z</updated>
+  <updated>2016-09-08T08:57:28.000Z</updated>
   <id>http://chriscindy.top/</id>
   
   <author>
@@ -16,11 +16,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>深入MutationObserver</title>
-    <link href="http://chriscindy.top/2016/09/08/%E6%B7%B1%E5%85%A5MutationObserver/"/>
-    <id>http://chriscindy.top/2016/09/08/深入MutationObserver/</id>
+    <title>深入 MutationObserver</title>
+    <link href="http://chriscindy.top/2016/09/08/%E6%B7%B1%E5%85%A5%20MutationObserver/"/>
+    <id>http://chriscindy.top/2016/09/08/深入 MutationObserver/</id>
     <published>2016-09-08T02:42:04.000Z</published>
-    <updated>2016-09-08T03:01:25.000Z</updated>
+    <updated>2016-09-08T08:57:28.000Z</updated>
     
     <content type="html">&lt;blockquote&gt;
 &lt;p&gt;MutationObserver 给开发者们提供了一种能在某个范围内的 DOM 树发生变化时作出适当反应的能力。该 API 设计用来替换掉在 DOM 3 事件规范中引入的 Mutation 事件。&lt;/p&gt;
@@ -179,11 +179,11 @@
   </entry>
   
   <entry>
-    <title>采用gulp优化hexo博客打开速度</title>
-    <link href="http://chriscindy.top/2016/08/22/%E9%87%87%E7%94%A8gulp%E4%BC%98%E5%8C%96hexo%E5%8D%9A%E5%AE%A2%E6%89%93%E5%BC%80%E9%80%9F%E5%BA%A6/"/>
-    <id>http://chriscindy.top/2016/08/22/采用gulp优化hexo博客打开速度/</id>
+    <title>采用 gulp 优化 hexo 博客打开速度</title>
+    <link href="http://chriscindy.top/2016/08/22/%E9%87%87%E7%94%A8%20gulp%20%E4%BC%98%E5%8C%96%20hexo%20%E5%8D%9A%E5%AE%A2%E6%89%93%E5%BC%80%E9%80%9F%E5%BA%A6/"/>
+    <id>http://chriscindy.top/2016/08/22/采用 gulp 优化 hexo 博客打开速度/</id>
     <published>2016-08-22T09:42:36.000Z</published>
-    <updated>2016-09-08T08:53:07.000Z</updated>
+    <updated>2016-09-08T08:54:56.000Z</updated>
     
     <content type="html">&lt;p&gt;博客搭建这么久了发现并没有进行过优化，首页虽然打开速度勉强能够接受，但是 github 和 coding 提供的空间有限，是时候优化一下了。基本思路是采用 gulp 进行代码的压缩等。先占个坑，等最近有空搞一下。&lt;/p&gt;
 </content>
@@ -203,11 +203,11 @@
   </entry>
   
   <entry>
-    <title>babel-rigster和babel-node的使用</title>
-    <link href="http://chriscindy.top/2016/08/22/babel-rigster%E5%92%8Cbabel-node%E7%9A%84%E4%BD%BF%E7%94%A8/"/>
-    <id>http://chriscindy.top/2016/08/22/babel-rigster和babel-node的使用/</id>
+    <title>babel-rigster 和 babel-node 的使用</title>
+    <link href="http://chriscindy.top/2016/08/22/babel-rigster%20%E5%92%8C%20babel-node%20%E7%9A%84%E4%BD%BF%E7%94%A8/"/>
+    <id>http://chriscindy.top/2016/08/22/babel-rigster 和 babel-node 的使用/</id>
     <published>2016-08-22T09:37:28.000Z</published>
-    <updated>2016-08-22T10:15:37.000Z</updated>
+    <updated>2016-09-08T08:56:28.000Z</updated>
     
     <content type="html">&lt;p&gt;Babel 6 中 &lt;code&gt;babel-register&lt;/code&gt; 和 &lt;code&gt;babel-node&lt;/code&gt; 两个模块是开发时非常好用的转码工具。先来看一下如何使用：&lt;/p&gt;
 &lt;h4 id=&quot;1-babel-register&quot;&gt;&lt;a href=&quot;#1-babel-register&quot; class=&quot;headerlink&quot; title=&quot;1. babel-register&quot;&gt;&lt;/a&gt;1. babel-register&lt;/h4&gt;&lt;ul&gt;
@@ -258,11 +258,11 @@
   </entry>
   
   <entry>
-    <title>Babel 6特性总结</title>
-    <link href="http://chriscindy.top/2016/08/22/Babel-6%E7%89%B9%E6%80%A7%E6%80%BB%E7%BB%93/"/>
-    <id>http://chriscindy.top/2016/08/22/Babel-6特性总结/</id>
+    <title>Babel 6 特性总结</title>
+    <link href="http://chriscindy.top/2016/08/22/Babel%206%20%E7%89%B9%E6%80%A7%E6%80%BB%E7%BB%93/"/>
+    <id>http://chriscindy.top/2016/08/22/Babel 6 特性总结/</id>
     <published>2016-08-22T09:33:53.000Z</published>
-    <updated>2016-08-24T03:20:57.000Z</updated>
+    <updated>2016-09-08T08:57:32.000Z</updated>
     
     <content type="html">&lt;h3 id=&quot;0-改进&quot;&gt;&lt;a href=&quot;#0-改进&quot; class=&quot;headerlink&quot; title=&quot;0. 改进&quot;&gt;&lt;/a&gt;0. 改进&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;&lt;p&gt;模块化&lt;/p&gt;
@@ -369,11 +369,11 @@
   </entry>
   
   <entry>
-    <title>swiftype搜索服务更换为Local Search</title>
-    <link href="http://chriscindy.top/2016/08/10/swiftype%E6%90%9C%E7%B4%A2%E6%9C%8D%E5%8A%A1%E6%9B%B4%E6%8D%A2%E4%B8%BALocal%20Serach/"/>
-    <id>http://chriscindy.top/2016/08/10/swiftype搜索服务更换为Local Serach/</id>
+    <title>swiftype 搜索服务更换为 Local Search</title>
+    <link href="http://chriscindy.top/2016/08/10/swiftype%20%E6%90%9C%E7%B4%A2%E6%9C%8D%E5%8A%A1%E6%9B%B4%E6%8D%A2%E4%B8%BA%20Local%20Search/"/>
+    <id>http://chriscindy.top/2016/08/10/swiftype 搜索服务更换为 Local Search/</id>
     <published>2016-08-10T06:49:15.000Z</published>
-    <updated>2016-09-08T08:53:40.000Z</updated>
+    <updated>2016-09-08T08:57:43.000Z</updated>
     
     <content type="html">&lt;p&gt;突然发现博客的搜索服务无法使用，查之发现是因为服务提供商 swiftype 目前已经没有了免费账户的选项，15 天试用期结束后如果不付费将无法继续使用。可以选择的账户类型如下：&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;http://ww4.sinaimg.cn/large/006tKfTcjw1f6onlf2wwxj31kw0qgaf1.jpg&quot; alt=&quot;swiftype.jpg&quot;&gt;&lt;/p&gt;
@@ -407,11 +407,11 @@
   </entry>
   
   <entry>
-    <title>Babel 6的loose模式</title>
-    <link href="http://chriscindy.top/2016/08/10/Babel-6%E7%9A%84loose%E6%A8%A1%E5%BC%8F/"/>
-    <id>http://chriscindy.top/2016/08/10/Babel-6的loose模式/</id>
+    <title>Babel 6 的 loose 模式</title>
+    <link href="http://chriscindy.top/2016/08/10/Babel%206%20%E7%9A%84%20loose%20%E6%A8%A1%E5%BC%8F/"/>
+    <id>http://chriscindy.top/2016/08/10/Babel 6 的 loose 模式/</id>
     <published>2016-08-10T06:32:49.000Z</published>
-    <updated>2016-08-22T10:14:48.000Z</updated>
+    <updated>2016-09-08T08:56:38.000Z</updated>
     
     <content type="html">&lt;p&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/006tKfTcjw1f6omyfzq3qj31kw0pu7av.jpg&quot; alt=&quot;babel.png&quot;&gt;&lt;/p&gt;
 &lt;h3 id=&quot;1-前言&quot;&gt;&lt;a href=&quot;#1-前言&quot; class=&quot;headerlink&quot; title=&quot;1.前言&quot;&gt;&lt;/a&gt;1.前言&lt;/h3&gt;&lt;p&gt;Babel 的 loose 模式将 ES6 代码转译成 ES5 代码，loose 模式是不太忠实于 ES6 语义的。这篇文章解释了它是怎么工作的以及它的优点与缺点（剧透：通常是不推荐的）。&lt;/p&gt;
@@ -481,11 +481,11 @@
   </entry>
   
   <entry>
-    <title>Riot.js特性一览</title>
-    <link href="http://chriscindy.top/2016/07/29/Riot-js%E7%89%B9%E6%80%A7%E4%B8%80%E8%A7%88/"/>
-    <id>http://chriscindy.top/2016/07/29/Riot-js特性一览/</id>
+    <title>Riot.js 特性一览</title>
+    <link href="http://chriscindy.top/2016/07/29/Riot.js%20%E7%89%B9%E6%80%A7%E4%B8%80%E8%A7%88/"/>
+    <id>http://chriscindy.top/2016/07/29/Riot.js 特性一览/</id>
     <published>2016-07-29T08:11:36.000Z</published>
-    <updated>2016-08-22T10:18:59.000Z</updated>
+    <updated>2016-09-08T08:57:37.000Z</updated>
     
     <content type="html">&lt;blockquote&gt;
 &lt;p&gt;注：本文基于Riot.js v2.5.0版本&lt;/p&gt;
@@ -623,21 +623,21 @@
 &lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// 精确匹配 `/fruit`&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;riot.route(&lt;span class=&quot;string&quot;&gt;&#39;/fruit&#39;&lt;/span&gt;, &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;name&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(&lt;span class=&quot;string&quot;&gt;&#39;The list of fruits&#39;&lt;/span&gt;)&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;)&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// 如果 url 变成 `/blog/2015-09/01`,&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// 回调的参数将被捕捉成 &#39;2015&#39;, &#39;09&#39; 和 &#39;01&#39;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;riot.route(&lt;span class=&quot;string&quot;&gt;&#39;/blog/*-*/*&#39;&lt;/span&gt;, &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;year, month, date&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(&lt;span class=&quot;string&quot;&gt;&#39;The page of &#39;&lt;/span&gt; + year + &lt;span class=&quot;string&quot;&gt;&#39;-&#39;&lt;/span&gt; + month + &lt;span class=&quot;string&quot;&gt;&#39;-&#39;&lt;/span&gt; date)&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;)&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;code&gt;riot.route.create()&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;返回一个新的路由上下文&lt;/p&gt;
+&lt;p&gt;   返回一个新的路由上下文&lt;/p&gt;
 &lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;11&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;12&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;13&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;14&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;15&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;16&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;17&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;18&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;19&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;first-tag&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;p&lt;/span&gt;&amp;gt;&lt;/span&gt;First tag&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;p&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;script&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;javascript&quot;&gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; subRoute = riot.route.create() &lt;span class=&quot;comment&quot;&gt;// 创建新的路由上下文&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    subRoute(&lt;span class=&quot;string&quot;&gt;&#39;/fruit/*&#39;&lt;/span&gt;, &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;name&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;      &lt;span class=&quot;comment&quot;&gt;/* 公用的部分 */&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &amp;#125;)&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;script&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;first-tag&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;second-tag&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;p&lt;/span&gt;&amp;gt;&lt;/span&gt;Second tag&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;p&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;script&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;javascript&quot;&gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; subRoute = riot.route.create() &lt;span class=&quot;comment&quot;&gt;// 创建新的路由上下文&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    subRoute(&lt;span class=&quot;string&quot;&gt;&#39;/fruit/apple&#39;&lt;/span&gt;, &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;name&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;      &lt;span class=&quot;comment&quot;&gt;/* 个别的部分 */&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &amp;#125;)&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;script&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;second-tag&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;code&gt;riot.route(to[, title, shouldReplace])&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt; 在内部实现中，&lt;/p&gt;
-&lt;ul&gt;
+&lt;pre&gt;&lt;code&gt;在内部实现中，
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
 &lt;li&gt;如果没有 &lt;code&gt;shouldReplace&lt;/code&gt;, 将使用 &lt;code&gt;history.pushState()&lt;/code&gt;.&lt;/li&gt;
 &lt;li&gt;如果有 &lt;code&gt;shouldReplace&lt;/code&gt;, 将使用&lt;code&gt;history.replaceState()&lt;/code&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;code&gt;riot.route.start()&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;开始监听路由变化，需要手动调用&lt;/p&gt;
+&lt;p&gt;   开始监听路由变化，需要手动调用&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;code&gt;riot.route.start(autoExec)&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;riot.route.start(true) &amp;lt;=&amp;gt; riot.route.start()+riot.route.exec()&lt;/p&gt;
+&lt;p&gt;   riot.route.start(true) &amp;lt;=&amp;gt; riot.route.start()+riot.route.exec()&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;code&gt;riot.route.stop()&lt;/code&gt;&lt;/p&gt;
 &lt;/li&gt;
@@ -670,11 +670,11 @@
   </entry>
   
   <entry>
-    <title>跨域请求时多出现一条OPTIONS请求的原因及解决办法</title>
-    <link href="http://chriscindy.top/2016/07/20/%E8%B7%A8%E5%9F%9F%E8%AF%B7%E6%B1%82%E6%97%B6%E5%A4%9A%E5%87%BA%E7%8E%B0%E4%B8%80%E6%9D%A1options%E8%AF%B7%E6%B1%82%E7%9A%84%E5%8E%9F%E5%9B%A0%E5%8F%8A%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/"/>
-    <id>http://chriscindy.top/2016/07/20/跨域请求时多出现一条options请求的原因及解决办法/</id>
+    <title>跨域请求时多出现一条 OPTIONS 请求的原因及解决办法</title>
+    <link href="http://chriscindy.top/2016/07/20/%E8%B7%A8%E5%9F%9F%E8%AF%B7%E6%B1%82%E6%97%B6%E5%A4%9A%E5%87%BA%E7%8E%B0%E4%B8%80%E6%9D%A1%20OPTIONS%20%E8%AF%B7%E6%B1%82%E7%9A%84%E5%8E%9F%E5%9B%A0%E5%8F%8A%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/"/>
+    <id>http://chriscindy.top/2016/07/20/跨域请求时多出现一条 OPTIONS 请求的原因及解决办法/</id>
     <published>2016-07-20T10:19:34.000Z</published>
-    <updated>2016-08-22T09:48:41.000Z</updated>
+    <updated>2016-09-08T08:55:15.000Z</updated>
     
     <content type="html">&lt;p&gt;最近在公司项目中与后端联调时遇到了一个很奇怪的问题，前端发出的 DELETE 方法的 Ajax 请求传到服务端就变成了 OPTIONS 请求。由于服务端没有针对 OPTIONS 请求作回应，此时返回的 http 状态码为 405，意为“方法不被允许”（Method not allowed），DELETE 请求自然也是失败。上网查了一番，原理是触发了 W3C 规定的跨域请求时的安全机制。&lt;/p&gt;
 &lt;p&gt;W3C 规范中的定义如下：&lt;/p&gt;
@@ -718,11 +718,11 @@
   </entry>
   
   <entry>
-    <title>[译]使用Riot，ES6和Webpack构建应用</title>
-    <link href="http://chriscindy.top/2016/07/11/%E8%AF%91-%E4%BD%BF%E7%94%A8Riot%EF%BC%8CES6%E5%92%8CWebpack%E6%9E%84%E5%BB%BA%E5%BA%94%E7%94%A8/"/>
-    <id>http://chriscindy.top/2016/07/11/译-使用Riot，ES6和Webpack构建应用/</id>
+    <title>[译]使用 Riot，ES6 和 Webpack 构建应用</title>
+    <link href="http://chriscindy.top/2016/07/11/%E8%AF%91-%E4%BD%BF%E7%94%A8%20Riot%EF%BC%8CES6%20%E5%92%8C%20Webpack%20%E6%9E%84%E5%BB%BA%E5%BA%94%E7%94%A8/"/>
+    <id>http://chriscindy.top/2016/07/11/译-使用 Riot，ES6 和 Webpack 构建应用/</id>
     <published>2016-07-11T03:10:52.000Z</published>
-    <updated>2016-08-22T10:03:38.000Z</updated>
+    <updated>2016-09-08T08:55:57.000Z</updated>
     
     <content type="html">&lt;p&gt;在读完 Muut 上 &lt;a href=&quot;https://muut.com/blog/technology/frameworkless-javascript.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Frameworkless JavaScript&lt;/a&gt; 这篇博文后，我遇上了 &lt;a href=&quot;http://riotjs.com/zh/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Riot&lt;/a&gt;，请一定先阅读该博文！Muut 的程序员拿出实际行动编写了 &lt;a href=&quot;http://riotjs.com/zh/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Riot&lt;/a&gt;，一个 &lt;a href=&quot;https://muut.com/blog/technology/riot-2.0/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;类似React&lt;/a&gt; 的用来构建响应式UI组件的微型库。&lt;/p&gt;
 &lt;p&gt;阅读Riot的文档时，令我感触最深的是 Riot 竟如此容易理解——相比 React 来说，在 Riot 里需要学习的术语和概念极少（说实话，和 Polymer 和 Angular 等比起来，Riot 也是十分简单易懂的）。&lt;/p&gt;
@@ -843,11 +843,11 @@
   </entry>
   
   <entry>
-    <title>两个Git帐号如何在一台电脑上共存</title>
-    <link href="http://chriscindy.top/2016/07/08/%E4%B8%A4%E4%B8%AAGit%E5%B8%90%E5%8F%B7%E5%A6%82%E4%BD%95%E5%9C%A8%E4%B8%80%E5%8F%B0%E7%94%B5%E8%84%91%E4%B8%8A%E5%85%B1%E5%AD%98/"/>
-    <id>http://chriscindy.top/2016/07/08/两个Git帐号如何在一台电脑上共存/</id>
+    <title>两个 Git 帐号如何在一台电脑上共存</title>
+    <link href="http://chriscindy.top/2016/07/08/%E4%B8%A4%E4%B8%AA%20Git%20%E5%B8%90%E5%8F%B7%E5%A6%82%E4%BD%95%E5%9C%A8%E4%B8%80%E5%8F%B0%E7%94%B5%E8%84%91%E4%B8%8A%E5%85%B1%E5%AD%98/"/>
+    <id>http://chriscindy.top/2016/07/08/两个 Git 帐号如何在一台电脑上共存/</id>
     <published>2016-07-08T08:11:59.000Z</published>
-    <updated>2016-08-22T09:52:21.000Z</updated>
+    <updated>2016-09-08T08:55:43.000Z</updated>
     
     <content type="html">&lt;p&gt;相信很多开发者都会遇到在自己的电脑上使用不止一个 git 帐号的情况。一个一般是自己的 github 帐号，另一个则是公司的 git 帐号，比如 gitlab、bitbucket 等。如果采用 https 方式通信，那么 git 帐号间不会有冲突，但你在每次 pull、push 的时候都要输入帐号密码，十分繁琐。而且当代码库达到十分庞大的规模时，如果仍然采用 https 方式，在 git pull 时可能出现超时不响应的情况，此时只能采用 ssh 方式。ssh 在配置完 ssh key 后使用起来很方便，但是 git 帐号间可能出现冲突，这时候该如何解决呢？&lt;br&gt;配置 ssh key 的方式此处不再赘述，假设 &lt;code&gt;.ssh&lt;/code&gt; 文件夹下有 id_rsa、id_rsa.pub、didi_id_rsa、didi_id_rsa.pub，分别对应个人 github 帐号私钥公钥以及公司 git 帐号私钥公钥。如果不进行设置，使用 github 账号时没有问题，但是使用公司账号时，由于默认情况下私钥存放在 &lt;code&gt;id_rsa&lt;/code&gt; 文件中，因此 git 仍会尝试用 id_rsa 中而不是 didi_id_rsa 中的私钥去与服务器上添加的公钥进行比对，自然而然会报错。通常这种情况下 git 会让你输入密码，笔者连续三次输入密码错误（其实根本不知道该密码为何物），报错，Permission denied。&lt;br&gt;网络上的解决方案普遍为在 ssh 的配置文件中加入以下字段：&lt;/p&gt;
 &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;Host github.com&lt;/div&gt;&lt;div class=&quot;line&quot;&gt; hostname gitlab.zjut.com&lt;/div&gt;&lt;div class=&quot;line&quot;&gt; User Boy-A&lt;/div&gt;&lt;div class=&quot;line&quot;&gt; IdentityFile /User/&amp;lt;yourusername&amp;gt;/.ssh/id_rsa&lt;/div&gt;&lt;div class=&quot;line&quot;&gt; &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;Host git.xiaojukeji.com&lt;/div&gt;&lt;div class=&quot;line&quot;&gt; hostname git.xiaojukeji.com&lt;/div&gt;&lt;div class=&quot;line&quot;&gt; User Boy-B&lt;/div&gt;&lt;div class=&quot;line&quot;&gt; IdentityFile /User/&amp;lt;yourusername&amp;gt;/.ssh/didi_id_rsa&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;

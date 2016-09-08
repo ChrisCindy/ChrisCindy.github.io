@@ -113,8 +113,8 @@ MVP 架构
 单向的数据传输： update 或 unmount 都是从 父亲-&amp;gt;孩子
 预编译和缓存表达式，">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Riot.js特性一览">
-<meta property="og:url" content="http://chriscindy.top/2016/07/29/Riot-js特性一览/index.html">
+<meta property="og:title" content="Riot.js 特性一览">
+<meta property="og:url" content="http://chriscindy.top/2016/07/29/Riot.js 特性一览/index.html">
 <meta property="og:site_name" content="sunflower->FE">
 <meta property="og:description" content="注：本文基于Riot.js v2.5.0版本
 
@@ -139,9 +139,9 @@ MVP 架构
 单向的数据传输： update 或 unmount 都是从 父亲-&amp;gt;孩子
 预编译和缓存表达式，">
 <meta property="og:image" content="http://ww3.sinaimg.cn/large/006tNbRwjw1f69ltjvz8mj30jg042jrh.jpg">
-<meta property="og:updated_time" content="2016-08-22T10:18:59.000Z">
+<meta property="og:updated_time" content="2016-09-08T08:57:37.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Riot.js特性一览">
+<meta name="twitter:title" content="Riot.js 特性一览">
 <meta name="twitter:description" content="注：本文基于Riot.js v2.5.0版本
 
 Riot.js简介
@@ -208,10 +208,10 @@ MVP 架构
 
 
 
-  <link rel="canonical" href="http://chriscindy.top/2016/07/29/Riot-js特性一览/"/>
+  <link rel="canonical" href="http://chriscindy.top/2016/07/29/Riot.js 特性一览/"/>
 
 
-  <title> Riot.js特性一览 | sunflower->FE </title>
+  <title> Riot.js 特性一览 | sunflower->FE </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -393,7 +393,7 @@ MVP 架构
             
             
               
-                Riot.js特性一览
+                Riot.js 特性一览
               
             
           </h1>
@@ -435,8 +435,8 @@ MVP 架构
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/07/29/Riot-js特性一览/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/07/29/Riot-js特性一览/" itemprop="commentsCount"></span>
+                <a href="/2016/07/29/Riot.js 特性一览/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/07/29/Riot.js 特性一览/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -446,7 +446,7 @@ MVP 架构
 
           
           
-             <span id="/2016/07/29/Riot-js特性一览/" class="leancloud_visitors" data-flag-title="Riot.js特性一览">
+             <span id="/2016/07/29/Riot.js 特性一览/" class="leancloud_visitors" data-flag-title="Riot.js 特性一览">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -604,21 +604,21 @@ MVP 架构
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 精确匹配 `/fruit`</span></div><div class="line">riot.route(<span class="string">'/fruit'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">name</span>) </span>&#123;</div><div class="line">  <span class="built_in">console</span>.log(<span class="string">'The list of fruits'</span>)</div><div class="line">&#125;)</div><div class="line"></div><div class="line"><span class="comment">// 如果 url 变成 `/blog/2015-09/01`,</span></div><div class="line"><span class="comment">// 回调的参数将被捕捉成 '2015', '09' 和 '01'</span></div><div class="line">riot.route(<span class="string">'/blog/*-*/*'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">year, month, date</span>) </span>&#123;</div><div class="line">  <span class="built_in">console</span>.log(<span class="string">'The page of '</span> + year + <span class="string">'-'</span> + month + <span class="string">'-'</span> date)</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
 </li>
 <li><p><code>riot.route.create()</code></p>
-<p>返回一个新的路由上下文</p>
+<p>   返回一个新的路由上下文</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">first-tag</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">p</span>&gt;</span>First tag<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></div><div class="line">    <span class="keyword">var</span> subRoute = riot.route.create() <span class="comment">// 创建新的路由上下文</span></div><div class="line">    subRoute(<span class="string">'/fruit/*'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">name</span>) </span>&#123;</div><div class="line">      <span class="comment">/* 公用的部分 */</span></div><div class="line">    &#125;)</div><div class="line">  <span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">first-tag</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">second-tag</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">p</span>&gt;</span>Second tag<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></div><div class="line">    <span class="keyword">var</span> subRoute = riot.route.create() <span class="comment">// 创建新的路由上下文</span></div><div class="line">    subRoute(<span class="string">'/fruit/apple'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">name</span>) </span>&#123;</div><div class="line">      <span class="comment">/* 个别的部分 */</span></div><div class="line">    &#125;)</div><div class="line">  <span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">second-tag</span>&gt;</span></div></pre></td></tr></table></figure>
 </li>
 <li><p><code>riot.route(to[, title, shouldReplace])</code></p>
-<p> 在内部实现中，</p>
-<ul>
+<pre><code>在内部实现中，
+</code></pre><ul>
 <li>如果没有 <code>shouldReplace</code>, 将使用 <code>history.pushState()</code>.</li>
 <li>如果有 <code>shouldReplace</code>, 将使用<code>history.replaceState()</code>.</li>
 </ul>
 </li>
 <li><p><code>riot.route.start()</code></p>
-<p>开始监听路由变化，需要手动调用</p>
+<p>   开始监听路由变化，需要手动调用</p>
 </li>
 <li><p><code>riot.route.start(autoExec)</code></p>
-<p>riot.route.start(true) &lt;=&gt; riot.route.start()+riot.route.exec()</p>
+<p>   riot.route.start(true) &lt;=&gt; riot.route.start()+riot.route.exec()</p>
 </li>
 <li><p><code>riot.route.stop()</code></p>
 </li>
@@ -684,16 +684,16 @@ MVP 架构
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/07/20/跨域请求时多出现一条options请求的原因及解决办法/" rel="next" title="跨域请求时多出现一条OPTIONS请求的原因及解决办法">
-                <i class="fa fa-chevron-left"></i> 跨域请求时多出现一条OPTIONS请求的原因及解决办法
+              <a href="/2016/07/20/跨域请求时多出现一条 OPTIONS 请求的原因及解决办法/" rel="next" title="跨域请求时多出现一条 OPTIONS 请求的原因及解决办法">
+                <i class="fa fa-chevron-left"></i> 跨域请求时多出现一条 OPTIONS 请求的原因及解决办法
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/08/10/Babel-6的loose模式/" rel="prev" title="Babel 6的loose模式">
-                Babel 6的loose模式 <i class="fa fa-chevron-right"></i>
+              <a href="/2016/08/10/Babel 6 的 loose 模式/" rel="prev" title="Babel 6 的 loose 模式">
+                Babel 6 的 loose 模式 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -709,10 +709,10 @@ MVP 架构
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2016/07/29/Riot-js特性一览/"
-     data-title="Riot.js特性一览"
+        <div class="ds-share flat" data-thread-key="2016/07/29/Riot.js 特性一览/"
+     data-title="Riot.js 特性一览"
      data-content=""
-     data-url="http://chriscindy.top/2016/07/29/Riot-js特性一览/">
+     data-url="http://chriscindy.top/2016/07/29/Riot.js 特性一览/">
   <div class="ds-share-inline">
     <ul  class="ds-share-icons-16">
 
@@ -739,8 +739,8 @@ MVP 架构
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/07/29/Riot-js特性一览/"
-           data-title="Riot.js特性一览" data-url="http://chriscindy.top/2016/07/29/Riot-js特性一览/">
+      <div class="ds-thread" data-thread-key="2016/07/29/Riot.js 特性一览/"
+           data-title="Riot.js 特性一览" data-url="http://chriscindy.top/2016/07/29/Riot.js 特性一览/">
       </div>
     
   </div>

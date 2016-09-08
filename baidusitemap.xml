@@ -4,11 +4,11 @@
 
     
   <url>
-    <loc>http://chriscindy.top/2016/08/10/swiftype%E6%90%9C%E7%B4%A2%E6%9C%8D%E5%8A%A1%E6%9B%B4%E6%8D%A2%E4%B8%BALocal%20Serach/</loc>
-    <lastmod>2016-09-08T08:53:40.000Z</lastmod>
+    <loc>http://chriscindy.top/2016/08/10/swiftype%20%E6%90%9C%E7%B4%A2%E6%9C%8D%E5%8A%A1%E6%9B%B4%E6%8D%A2%E4%B8%BA%20Local%20Search/</loc>
+    <lastmod>2016-09-08T08:57:43.000Z</lastmod>
     <data>
         <display>
-        <title>swiftype搜索服务更换为Local Search</title>
+        <title>swiftype 搜索服务更换为 Local Search</title>
         <pubTime>2016-08-10T06:49:15.000Z</pubTime>
         
         <tag>博客搭建</tag>
@@ -24,71 +24,11 @@
 
     
   <url>
-    <loc>http://chriscindy.top/2016/08/22/%E9%87%87%E7%94%A8gulp%E4%BC%98%E5%8C%96hexo%E5%8D%9A%E5%AE%A2%E6%89%93%E5%BC%80%E9%80%9F%E5%BA%A6/</loc>
-    <lastmod>2016-09-08T08:53:07.000Z</lastmod>
+    <loc>http://chriscindy.top/2016/07/29/Riot.js%20%E7%89%B9%E6%80%A7%E4%B8%80%E8%A7%88/</loc>
+    <lastmod>2016-09-08T08:57:37.000Z</lastmod>
     <data>
         <display>
-        <title>采用gulp优化hexo博客打开速度</title>
-        <pubTime>2016-08-22T09:42:36.000Z</pubTime>
-        
-        <tag>博客搭建</tag>
-         
-         
-           
-             
-              <breadCrumb title="学以致用" url="http://chriscindy.top/categories/%E5%AD%A6%E4%BB%A5%E8%87%B4%E7%94%A8/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://chriscindy.top/2016/09/08/%E6%B7%B1%E5%85%A5MutationObserver/</loc>
-    <lastmod>2016-09-08T03:01:25.000Z</lastmod>
-    <data>
-        <display>
-        <title>深入MutationObserver</title>
-        <pubTime>2016-09-08T02:42:04.000Z</pubTime>
-        
-        <tag>DOM</tag>
-         
-         
-           
-             
-              <breadCrumb title="技术研究" url="http://chriscindy.top/categories/%E6%8A%80%E6%9C%AF%E7%A0%94%E7%A9%B6/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://chriscindy.top/2016/08/22/Babel-6%E7%89%B9%E6%80%A7%E6%80%BB%E7%BB%93/</loc>
-    <lastmod>2016-08-24T03:20:57.000Z</lastmod>
-    <data>
-        <display>
-        <title>Babel 6特性总结</title>
-        <pubTime>2016-08-22T09:33:53.000Z</pubTime>
-        
-        <tag>Babel</tag>
-         
-         
-           
-             
-              <breadCrumb title="技术使用" url="http://chriscindy.top/categories/%E6%8A%80%E6%9C%AF%E4%BD%BF%E7%94%A8/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://chriscindy.top/2016/07/29/Riot-js%E7%89%B9%E6%80%A7%E4%B8%80%E8%A7%88/</loc>
-    <lastmod>2016-08-22T10:18:59.000Z</lastmod>
-    <data>
-        <display>
-        <title>Riot.js特性一览</title>
+        <title>Riot.js 特性一览</title>
         <pubTime>2016-07-29T08:11:36.000Z</pubTime>
         
         <tag>Riot.js</tag>
@@ -104,11 +44,71 @@
 
     
   <url>
-    <loc>http://chriscindy.top/2016/08/22/babel-rigster%E5%92%8Cbabel-node%E7%9A%84%E4%BD%BF%E7%94%A8/</loc>
-    <lastmod>2016-08-22T10:15:37.000Z</lastmod>
+    <loc>http://chriscindy.top/2016/08/22/Babel%206%20%E7%89%B9%E6%80%A7%E6%80%BB%E7%BB%93/</loc>
+    <lastmod>2016-09-08T08:57:32.000Z</lastmod>
     <data>
         <display>
-        <title>babel-rigster和babel-node的使用</title>
+        <title>Babel 6 特性总结</title>
+        <pubTime>2016-08-22T09:33:53.000Z</pubTime>
+        
+        <tag>Babel</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术使用" url="http://chriscindy.top/categories/%E6%8A%80%E6%9C%AF%E4%BD%BF%E7%94%A8/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://chriscindy.top/2016/09/08/%E6%B7%B1%E5%85%A5%20MutationObserver/</loc>
+    <lastmod>2016-09-08T08:57:28.000Z</lastmod>
+    <data>
+        <display>
+        <title>深入 MutationObserver</title>
+        <pubTime>2016-09-08T02:42:04.000Z</pubTime>
+        
+        <tag>DOM</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术研究" url="http://chriscindy.top/categories/%E6%8A%80%E6%9C%AF%E7%A0%94%E7%A9%B6/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://chriscindy.top/2016/08/10/Babel%206%20%E7%9A%84%20loose%20%E6%A8%A1%E5%BC%8F/</loc>
+    <lastmod>2016-09-08T08:56:38.000Z</lastmod>
+    <data>
+        <display>
+        <title>Babel 6 的 loose 模式</title>
+        <pubTime>2016-08-10T06:32:49.000Z</pubTime>
+        
+        <tag>Babel</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术研究" url="http://chriscindy.top/categories/%E6%8A%80%E6%9C%AF%E7%A0%94%E7%A9%B6/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://chriscindy.top/2016/08/22/babel-rigster%20%E5%92%8C%20babel-node%20%E7%9A%84%E4%BD%BF%E7%94%A8/</loc>
+    <lastmod>2016-09-08T08:56:28.000Z</lastmod>
+    <data>
+        <display>
+        <title>babel-rigster 和 babel-node 的使用</title>
         <pubTime>2016-08-22T09:37:28.000Z</pubTime>
         
         <tag>Babel</tag>
@@ -117,6 +117,90 @@
            
              
               <breadCrumb title="技术使用" url="http://chriscindy.top/categories/%E6%8A%80%E6%9C%AF%E4%BD%BF%E7%94%A8/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://chriscindy.top/2016/07/11/%E8%AF%91-%E4%BD%BF%E7%94%A8%20Riot%EF%BC%8CES6%20%E5%92%8C%20Webpack%20%E6%9E%84%E5%BB%BA%E5%BA%94%E7%94%A8/</loc>
+    <lastmod>2016-09-08T08:55:57.000Z</lastmod>
+    <data>
+        <display>
+        <title>[译]使用 Riot，ES6 和 Webpack 构建应用</title>
+        <pubTime>2016-07-11T03:10:52.000Z</pubTime>
+        
+        <tag>Riot.js</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术研究" url="http://chriscindy.top/categories/%E6%8A%80%E6%9C%AF%E7%A0%94%E7%A9%B6/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://chriscindy.top/2016/07/08/%E4%B8%A4%E4%B8%AA%20Git%20%E5%B8%90%E5%8F%B7%E5%A6%82%E4%BD%95%E5%9C%A8%E4%B8%80%E5%8F%B0%E7%94%B5%E8%84%91%E4%B8%8A%E5%85%B1%E5%AD%98/</loc>
+    <lastmod>2016-09-08T08:55:43.000Z</lastmod>
+    <data>
+        <display>
+        <title>两个 Git 帐号如何在一台电脑上共存</title>
+        <pubTime>2016-07-08T08:11:59.000Z</pubTime>
+        
+        <tag>Git</tag>
+         
+         
+           
+             
+              <breadCrumb title="解决方案" url="http://chriscindy.top/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://chriscindy.top/2016/07/20/%E8%B7%A8%E5%9F%9F%E8%AF%B7%E6%B1%82%E6%97%B6%E5%A4%9A%E5%87%BA%E7%8E%B0%E4%B8%80%E6%9D%A1%20OPTIONS%20%E8%AF%B7%E6%B1%82%E7%9A%84%E5%8E%9F%E5%9B%A0%E5%8F%8A%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</loc>
+    <lastmod>2016-09-08T08:55:15.000Z</lastmod>
+    <data>
+        <display>
+        <title>跨域请求时多出现一条 OPTIONS 请求的原因及解决办法</title>
+        <pubTime>2016-07-20T10:19:34.000Z</pubTime>
+        
+        <tag>Ajax</tag>
+         
+        <tag>HTTP</tag>
+         
+        <tag>CORS</tag>
+         
+         
+           
+             
+              <breadCrumb title="解决方案" url="http://chriscindy.top/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://chriscindy.top/2016/08/22/%E9%87%87%E7%94%A8%20gulp%20%E4%BC%98%E5%8C%96%20hexo%20%E5%8D%9A%E5%AE%A2%E6%89%93%E5%BC%80%E9%80%9F%E5%BA%A6/</loc>
+    <lastmod>2016-09-08T08:54:56.000Z</lastmod>
+    <data>
+        <display>
+        <title>采用 gulp 优化 hexo 博客打开速度</title>
+        <pubTime>2016-08-22T09:42:36.000Z</pubTime>
+        
+        <tag>博客搭建</tag>
+         
+         
+           
+             
+              <breadCrumb title="学以致用" url="http://chriscindy.top/categories/%E5%AD%A6%E4%BB%A5%E8%87%B4%E7%94%A8/"/>
           
         </display>
     </data>
@@ -144,26 +228,6 @@
 
     
   <url>
-    <loc>http://chriscindy.top/2016/08/10/Babel-6%E7%9A%84loose%E6%A8%A1%E5%BC%8F/</loc>
-    <lastmod>2016-08-22T10:14:48.000Z</lastmod>
-    <data>
-        <display>
-        <title>Babel 6的loose模式</title>
-        <pubTime>2016-08-10T06:32:49.000Z</pubTime>
-        
-        <tag>Babel</tag>
-         
-         
-           
-             
-              <breadCrumb title="技术研究" url="http://chriscindy.top/categories/%E6%8A%80%E6%9C%AF%E7%A0%94%E7%A9%B6/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://chriscindy.top/2016/07/11/Composition-Event/</loc>
     <lastmod>2016-08-22T10:10:38.000Z</lastmod>
     <data>
@@ -177,70 +241,6 @@
            
              
               <breadCrumb title="技术研究" url="http://chriscindy.top/categories/%E6%8A%80%E6%9C%AF%E7%A0%94%E7%A9%B6/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://chriscindy.top/2016/07/11/%E8%AF%91-%E4%BD%BF%E7%94%A8Riot%EF%BC%8CES6%E5%92%8CWebpack%E6%9E%84%E5%BB%BA%E5%BA%94%E7%94%A8/</loc>
-    <lastmod>2016-08-22T10:03:38.000Z</lastmod>
-    <data>
-        <display>
-        <title>[译]使用Riot，ES6和Webpack构建应用</title>
-        <pubTime>2016-07-11T03:10:52.000Z</pubTime>
-        
-        <tag>Riot.js</tag>
-         
-         
-           
-             
-              <breadCrumb title="技术研究" url="http://chriscindy.top/categories/%E6%8A%80%E6%9C%AF%E7%A0%94%E7%A9%B6/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://chriscindy.top/2016/07/08/%E4%B8%A4%E4%B8%AAGit%E5%B8%90%E5%8F%B7%E5%A6%82%E4%BD%95%E5%9C%A8%E4%B8%80%E5%8F%B0%E7%94%B5%E8%84%91%E4%B8%8A%E5%85%B1%E5%AD%98/</loc>
-    <lastmod>2016-08-22T09:52:21.000Z</lastmod>
-    <data>
-        <display>
-        <title>两个Git帐号如何在一台电脑上共存</title>
-        <pubTime>2016-07-08T08:11:59.000Z</pubTime>
-        
-        <tag>Git</tag>
-         
-         
-           
-             
-              <breadCrumb title="解决方案" url="http://chriscindy.top/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://chriscindy.top/2016/07/20/%E8%B7%A8%E5%9F%9F%E8%AF%B7%E6%B1%82%E6%97%B6%E5%A4%9A%E5%87%BA%E7%8E%B0%E4%B8%80%E6%9D%A1options%E8%AF%B7%E6%B1%82%E7%9A%84%E5%8E%9F%E5%9B%A0%E5%8F%8A%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</loc>
-    <lastmod>2016-08-22T09:48:41.000Z</lastmod>
-    <data>
-        <display>
-        <title>跨域请求时多出现一条OPTIONS请求的原因及解决办法</title>
-        <pubTime>2016-07-20T10:19:34.000Z</pubTime>
-        
-        <tag>Ajax</tag>
-         
-        <tag>HTTP</tag>
-         
-        <tag>CORS</tag>
-         
-         
-           
-             
-              <breadCrumb title="解决方案" url="http://chriscindy.top/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
           
         </display>
     </data>

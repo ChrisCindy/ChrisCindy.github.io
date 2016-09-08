@@ -72,7 +72,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Ajax,HTTP,CORS," />
+  <meta name="keywords" content="Babel," />
 
 
 
@@ -90,19 +90,46 @@
 
 
 
-<meta name="description" content="最近在公司项目中与后端联调时遇到了一个很奇怪的问题，前端发出的 DELETE 方法的 Ajax 请求传到服务端就变成了 OPTIONS 请求。由于服务端没有针对 OPTIONS 请求作回应，此时返回的 http 状态码为 405，意为“方法不被允许”（Method not allowed），DELETE 请求自然也是失败。上网查了一番，原理是触发了 W3C 规定的跨域请求时的安全机制。
-W3C 规">
+<meta name="description" content="0. 改进
+模块化
+
+可选的插件
+
+预设
+
+性能改进
+
+插件 API
+12345678910111213// Babel 5export default function ( &amp;#123;Plugin, types: t&amp;#125; ) &amp;#123;    return new Plugin(&apos;ast-transform&apos;, &amp;#123;        visitor: &amp;#123; ... &amp;#">
 <meta property="og:type" content="article">
-<meta property="og:title" content="跨域请求时多出现一条OPTIONS请求的原因及解决办法">
-<meta property="og:url" content="http://chriscindy.top/2016/07/20/跨域请求时多出现一条options请求的原因及解决办法/index.html">
+<meta property="og:title" content="Babel 6 特性总结">
+<meta property="og:url" content="http://chriscindy.top/2016/08/22/Babel 6 特性总结/index.html">
 <meta property="og:site_name" content="sunflower->FE">
-<meta property="og:description" content="最近在公司项目中与后端联调时遇到了一个很奇怪的问题，前端发出的 DELETE 方法的 Ajax 请求传到服务端就变成了 OPTIONS 请求。由于服务端没有针对 OPTIONS 请求作回应，此时返回的 http 状态码为 405，意为“方法不被允许”（Method not allowed），DELETE 请求自然也是失败。上网查了一番，原理是触发了 W3C 规定的跨域请求时的安全机制。
-W3C 规">
-<meta property="og:updated_time" content="2016-08-22T09:48:41.000Z">
+<meta property="og:description" content="0. 改进
+模块化
+
+可选的插件
+
+预设
+
+性能改进
+
+插件 API
+12345678910111213// Babel 5export default function ( &amp;#123;Plugin, types: t&amp;#125; ) &amp;#123;    return new Plugin(&apos;ast-transform&apos;, &amp;#123;        visitor: &amp;#123; ... &amp;#">
+<meta property="og:updated_time" content="2016-09-08T08:57:32.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="跨域请求时多出现一条OPTIONS请求的原因及解决办法">
-<meta name="twitter:description" content="最近在公司项目中与后端联调时遇到了一个很奇怪的问题，前端发出的 DELETE 方法的 Ajax 请求传到服务端就变成了 OPTIONS 请求。由于服务端没有针对 OPTIONS 请求作回应，此时返回的 http 状态码为 405，意为“方法不被允许”（Method not allowed），DELETE 请求自然也是失败。上网查了一番，原理是触发了 W3C 规定的跨域请求时的安全机制。
-W3C 规">
+<meta name="twitter:title" content="Babel 6 特性总结">
+<meta name="twitter:description" content="0. 改进
+模块化
+
+可选的插件
+
+预设
+
+性能改进
+
+插件 API
+12345678910111213// Babel 5export default function ( &amp;#123;Plugin, types: t&amp;#125; ) &amp;#123;    return new Plugin(&apos;ast-transform&apos;, &amp;#123;        visitor: &amp;#123; ... &amp;#">
 
 
 
@@ -146,10 +173,10 @@ W3C 规">
 
 
 
-  <link rel="canonical" href="http://chriscindy.top/2016/07/20/跨域请求时多出现一条options请求的原因及解决办法/"/>
+  <link rel="canonical" href="http://chriscindy.top/2016/08/22/Babel 6 特性总结/"/>
 
 
-  <title> 跨域请求时多出现一条OPTIONS请求的原因及解决办法 | sunflower->FE </title>
+  <title> Babel 6 特性总结 | sunflower->FE </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -331,7 +358,7 @@ W3C 规">
             
             
               
-                跨域请求时多出现一条OPTIONS请求的原因及解决办法
+                Babel 6 特性总结
               
             
           </h1>
@@ -343,8 +370,8 @@ W3C 规">
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-07-20T18:19:34+08:00" content="2016-07-20">
-              2016-07-20
+            <time itemprop="dateCreated" datetime="2016-08-22T17:33:53+08:00" content="2016-08-22">
+              2016-08-22
             </time>
           </span>
 
@@ -357,8 +384,8 @@ W3C 规">
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/解决方案/" itemprop="url" rel="index">
-                    <span itemprop="name">解决方案</span>
+                  <a href="/categories/技术使用/" itemprop="url" rel="index">
+                    <span itemprop="name">技术使用</span>
                   </a>
                 </span>
 
@@ -373,8 +400,8 @@ W3C 规">
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/07/20/跨域请求时多出现一条options请求的原因及解决办法/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/07/20/跨域请求时多出现一条options请求的原因及解决办法/" itemprop="commentsCount"></span>
+                <a href="/2016/08/22/Babel 6 特性总结/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/08/22/Babel 6 特性总结/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -384,7 +411,7 @@ W3C 规">
 
           
           
-             <span id="/2016/07/20/跨域请求时多出现一条options请求的原因及解决办法/" class="leancloud_visitors" data-flag-title="跨域请求时多出现一条OPTIONS请求的原因及解决办法">
+             <span id="/2016/08/22/Babel 6 特性总结/" class="leancloud_visitors" data-flag-title="Babel 6 特性总结">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -406,27 +433,88 @@ W3C 规">
       
 
       
-        <p>最近在公司项目中与后端联调时遇到了一个很奇怪的问题，前端发出的 DELETE 方法的 Ajax 请求传到服务端就变成了 OPTIONS 请求。由于服务端没有针对 OPTIONS 请求作回应，此时返回的 http 状态码为 405，意为“方法不被允许”（Method not allowed），DELETE 请求自然也是失败。上网查了一番，原理是触发了 W3C 规定的跨域请求时的安全机制。</p>
-<p>W3C 规范中的定义如下：</p>
-<blockquote>
-<p>To protect resources against cross-origin requests that could not originate from certain user agents before this specification existed a preflight request is made to ensure that the resource is aware of this specification. The result of this request is stored in a preflight result cache.</p>
-</blockquote>
-<p>大意就是出于安全考虑，保护资源不接受来自特定客户端的跨域请求，存在预请求来提前通知资源。而具体做法呢？看下面：</p>
-<blockquote>
-<p>It gets slightly more complicated if the resource author wants to be able to handle cross-origin requests using methods other than simple methods. In that case the author needs to reply to a preflight request that uses the OPTIONS method and then needs to handle the actual request that uses the desired method (DELETE in this example) and give an appropriate response.<br>服务端想要处理使用简单方法之外的方法进行的跨域请求时，需要对使用OPTIONS方法的预请求进行响应，然后才能处理实际请求。</p>
-</blockquote>
-<p>所谓简单方法，是指：</p>
-<ul>
-<li>只使用 GET, HEAD 或者 POST 请求方法。如果使用 POST 向服务器端传送数据，则数据类型(Content-Type)只能是 application/x-www-form-urlencoded, multipart/form-data 或 text/plain中的一种。</li>
-<li>不会使用自定义请求头（类似于 X-Modified 这种）。</li>
+        <h3 id="0-改进"><a href="#0-改进" class="headerlink" title="0. 改进"></a>0. 改进</h3><ul>
+<li><p>模块化</p>
+</li>
+<li><p>可选的插件</p>
+</li>
+<li><p>预设</p>
+</li>
+<li><p>性能改进</p>
+</li>
+<li><p>插件 API</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// Babel 5</span></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="function"><span class="keyword">function</span> (<span class="params"> &#123;Plugin, types: t&#125; </span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> <span class="keyword">new</span> Plugin(<span class="string">'ast-transform'</span>, &#123;</div><div class="line">        visitor: &#123; ... &#125;</div><div class="line">    &#125;);</div><div class="line">&#125;</div><div class="line">                      </div><div class="line"><span class="comment">// Babel 6</span></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="function"><span class="keyword">function</span> (<span class="params"> &#123; types: t&#125; </span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> &#123;</div><div class="line">        visitor: &#123; ... &#125;</div><div class="line">    &#125;;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
 </ul>
-<p>OPTIONS 是 HTTP/1.1 里的方法，用来获取更多服务器端的信息，是一个不应该对服务器数据造成影响的方法。通过这个方法，客户端可以在采取具体资源请求之前，决定对该资源采取何种必要措施，或者了解服务器的性能。</p>
-<p>到这里，我们对整个情况就很明了了：当 Ajax 跨域请求时，如果 HTTP 方法是非简单方法，则客户端即浏览器会发出 OPTIONS 方法的预请求去询问服务端，在得到允许性质的回应后，才会发送真正的请求；如果服务端对预请求拒绝，则真正的 DELETE 请求等不会发出。</p>
-<p>看到这里，相信各位也知道如何解决该问题了：服务端对 OPTIONS 预请求给出允许回应。不过，需要注意的是，不应该满足所有的 OPTIONS 请求，否则这一安全措施便形同虚设了。最好是建立一套验证机制，对符合条件的客户端请求给出允许回应。至于如何实现，就靠我们的后端小伙伴啦。有兴趣的朋友可以查看 MDN 上的这篇文档：<a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Access_control_CORS" target="_blank" rel="external">HTTP访问控制(CORS)</a></p>
-<p>其他参考文献：</p>
+<h3 id="1-安装-Babel-6"><a href="#1-安装-Babel-6" class="headerlink" title="1.安装 Babel 6"></a>1.安装 Babel 6</h3><p><code>npm install</code></p>
 <ul>
-<li><a href="http://www.w3.org/TR/cors/" target="_blank" rel="external">W3C Cross-Origin Resource Sharing</a></li>
-<li><a href="http://www.tangshuang.net/2271.html" target="_blank" rel="external">jquery ajax 请求中多出现一次 OPTIONS 请求及其解决办法</a></li>
+<li><p><strong>babel-cli</strong></p>
+<ul>
+<li><p>usage:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">babel app.js</div></pre></td></tr></table></figure>
+</li>
+<li><p>command: </p>
+<ul>
+<li>-o –out-file</li>
+<li>-d –out-dir</li>
+<li>-w –watch</li>
+<li>–source-maps</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>babel-register</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//index.js</span></div><div class="line"><span class="built_in">console</span>.log(<span class="string">'Hello World!'</span>);</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//register.js</span></div><div class="line"><span class="built_in">require</span>(<span class="string">"babel-register"</span>);</div><div class="line"><span class="built_in">require</span>(<span class="string">"./index.js"</span>);</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">node register.js</div></pre></td></tr></table></figure>
+<p>注：生产环境不适用 </p>
+</li>
+<li><p><strong>babel-node</strong></p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  "scripts": &#123;</div><div class="line">    //"script-name": "node index.js"</div><div class="line">    "script-name": "babel-node index.js"</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>command:</p>
+<ul>
+<li>–presets</li>
+<li>–plugins</li>
+<li>–ignore</li>
+</ul>
+<p>注：生产环境不适用 </p>
+</li>
+<li><p><strong>babel-core</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> babel = <span class="built_in">require</span>(<span class="string">"babel-core"</span>);</div><div class="line"></div><div class="line">babel.transform(<span class="string">"code();"</span>, options);</div><div class="line"><span class="comment">// =&gt; &#123; code, map, ast &#125;</span></div><div class="line"></div><div class="line">babel.transformFile(<span class="string">"filename.js"</span>, options, <span class="function"><span class="keyword">function</span>(<span class="params">err, result</span>) </span>&#123;</div><div class="line">  result; <span class="comment">// =&gt; &#123; code, map, ast &#125;</span></div><div class="line">&#125;);</div><div class="line"></div><div class="line">babel.transformFileSync(<span class="string">"filename.js"</span>, options);</div><div class="line"><span class="comment">// =&gt; &#123; code, map, ast &#125;</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="2-配置-Babel-6"><a href="#2-配置-Babel-6" class="headerlink" title="2. 配置 Babel 6"></a>2. 配置 Babel 6</h3><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">//.babelrc</div><div class="line"></div><div class="line">&#123;</div><div class="line">  "presets": [],</div><div class="line">  "plugins": []</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line">//or package.json</div><div class="line">&#123;</div><div class="line">  ...</div><div class="line">  "babel":&#123;</div><div class="line">    "presets": [],</div><div class="line">  	"plugins": []</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li><p>presets</p>
+<ul>
+<li>babel-preset-es2015</li>
+<li>babel-preset-react</li>
+<li>babel-preset-stage-x(x=0,1,2,3)</li>
+</ul>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  <span class="attr">"presets"</span>: [</div><div class="line">    <span class="string">"es2015"</span>,</div><div class="line">    <span class="string">"react"</span>,</div><div class="line">    <span class="string">"stage-2"</span></div><div class="line">  ],</div><div class="line">  <span class="attr">"plugins"</span>: []</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>plugins</p>
+<ul>
+<li>babel-plugin-transform-es2015-classes</li>
+<li>babel-plugin-transform-es2015-arrow-functions</li>
+<li>…</li>
+</ul>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">   <span class="attr">"plugins"</span>: [</div><div class="line">     <span class="string">"transform-es2015-classes"</span>,</div><div class="line">     <span class="string">"transform-es2015-arrow-functions"</span></div><div class="line">   ]</div><div class="line"> &#125;</div></pre></td></tr></table></figure>
+<ul>
+<li><p>loose mode</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    <span class="attr">"plugins"</span>: [</div><div class="line">      //<span class="string">"transform-es2015-classes"</span></div><div class="line">      [<span class="string">"transform-es2015-classes"</span>, &#123; <span class="attr">"loose"</span>: <span class="literal">true</span> &#125;]</div><div class="line">    ]</div><div class="line">  &#125;</div></pre></td></tr></table></figure>
+<p><a href="https://mp.weixin.qq.com/s?__biz=MzI3NTE2NjYxNw==&amp;mid=2650600240&amp;idx=1&amp;sn=88f53bf78b5b174acd6805fe7026cd66&amp;scene=1&amp;srcid=0816pFmqA5bQYhJUHdBBMDuq&amp;key=305bc10ec50ec19bea029543ffd48645f5bec6aeefc9ecf044a7e08d510f51dd27c850d970a291e06e17bcfa70f438e0&amp;ascene=0&amp;uin=MTkxMDY2NDA2MQ%3D%3D&amp;devicetype=iMac+MacBookPro12%2C1+OSX+OSX+10.11.5+build(15F34" target="_blank" rel="external">扩展—— Babel 6 loose</a>&amp;version=11020201&amp;pass_ticket=eUYpNbnbXM9RBSMCUPMk%2FYHjU3v29WWpWF5gQJ9FeU6LHqIZ0eAx6rz%2FawLCrm9c)</p>
+</li>
+</ul>
+</li>
+<li><p>基于环境自定义 Babel</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  <span class="attr">"presets"</span>: [<span class="string">"es2015"</span>],</div><div class="line">  <span class="attr">"plugins"</span>: [],</div><div class="line">  <span class="attr">"env"</span>: &#123;</div><div class="line">    <span class="attr">"development"</span>: &#123;</div><div class="line">      <span class="attr">"plugins"</span>: [...]</div><div class="line">    &#125;,</div><div class="line">    <span class="attr">"production"</span>: &#123;</div><div class="line">      <span class="attr">"plugins"</span>: [...]</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><code>env</code> : <code>process.env.BABEL_ENV</code> or <code>process.env.NODE_env</code></p>
+</li>
+</ul>
+<h3 id="3-Webpack"><a href="#3-Webpack" class="headerlink" title="3. Webpack"></a>3. Webpack</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//webpack.config.js</span></div><div class="line"><span class="keyword">var</span> path = <span class="built_in">require</span>(<span class="string">'path'</span>);</div><div class="line">    ···</div><div class="line">    <span class="built_in">module</span>.exports = &#123;</div><div class="line">        ···</div><div class="line">        <span class="built_in">module</span>: &#123;</div><div class="line">            loaders: [</div><div class="line">                &#123;</div><div class="line">                    loader: <span class="string">'babel-loader'</span>,</div><div class="line">                    test: path.resolve(__dirname, <span class="string">'js'</span>),</div><div class="line">                    query: &#123;</div><div class="line">                        presets: [<span class="string">'es2015'</span>],</div><div class="line">                    &#125;,</div><div class="line">                &#125;</div><div class="line">            ]</div><div class="line">        &#125;,</div><div class="line">        ···</div><div class="line">    &#125;;</div></pre></td></tr></table></figure>
+<ul>
+<li>tree-shaking</li>
 </ul>
 
       
@@ -471,11 +559,7 @@ W3C 规">
       
         <div class="post-tags">
           
-            <a href="/tags/Ajax/" rel="tag">#Ajax</a>
-          
-            <a href="/tags/HTTP/" rel="tag">#HTTP</a>
-          
-            <a href="/tags/CORS/" rel="tag">#CORS</a>
+            <a href="/tags/Babel/" rel="tag">#Babel</a>
           
         </div>
       
@@ -484,16 +568,16 @@ W3C 规">
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/07/11/译-使用Riot，ES6和Webpack构建应用/" rel="next" title="[译]使用Riot，ES6和Webpack构建应用">
-                <i class="fa fa-chevron-left"></i> [译]使用Riot，ES6和Webpack构建应用
+              <a href="/2016/08/10/swiftype 搜索服务更换为 Local Search/" rel="next" title="swiftype 搜索服务更换为 Local Search">
+                <i class="fa fa-chevron-left"></i> swiftype 搜索服务更换为 Local Search
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/07/29/Riot-js特性一览/" rel="prev" title="Riot.js特性一览">
-                Riot.js特性一览 <i class="fa fa-chevron-right"></i>
+              <a href="/2016/08/22/babel-rigster 和 babel-node 的使用/" rel="prev" title="babel-rigster 和 babel-node 的使用">
+                babel-rigster 和 babel-node 的使用 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -509,10 +593,10 @@ W3C 规">
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2016/07/20/跨域请求时多出现一条options请求的原因及解决办法/"
-     data-title="跨域请求时多出现一条OPTIONS请求的原因及解决办法"
+        <div class="ds-share flat" data-thread-key="2016/08/22/Babel 6 特性总结/"
+     data-title="Babel 6 特性总结"
      data-content=""
-     data-url="http://chriscindy.top/2016/07/20/跨域请求时多出现一条options请求的原因及解决办法/">
+     data-url="http://chriscindy.top/2016/08/22/Babel 6 特性总结/">
   <div class="ds-share-inline">
     <ul  class="ds-share-icons-16">
 
@@ -539,8 +623,8 @@ W3C 规">
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/07/20/跨域请求时多出现一条options请求的原因及解决办法/"
-           data-title="跨域请求时多出现一条OPTIONS请求的原因及解决办法" data-url="http://chriscindy.top/2016/07/20/跨域请求时多出现一条options请求的原因及解决办法/">
+      <div class="ds-thread" data-thread-key="2016/08/22/Babel 6 特性总结/"
+           data-title="Babel 6 特性总结" data-url="http://chriscindy.top/2016/08/22/Babel 6 特性总结/">
       </div>
     
   </div>
@@ -638,7 +722,7 @@ W3C 规">
               
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#0-改进"><span class="nav-number">1.</span> <span class="nav-text">0. 改进</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-安装-Babel-6"><span class="nav-number">2.</span> <span class="nav-text">1.安装 Babel 6</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-配置-Babel-6"><span class="nav-number">3.</span> <span class="nav-text">2. 配置 Babel 6</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-Webpack"><span class="nav-number">4.</span> <span class="nav-text">3. Webpack</span></a></li></ol></div>
             
           </div>
         </section>

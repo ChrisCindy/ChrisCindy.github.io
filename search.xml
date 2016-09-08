@@ -4,8 +4,8 @@
   
     
     <entry>
-      <title><![CDATA[深入MutationObserver]]></title>
-      <url>http://chriscindy.top/2016/09/08/%E6%B7%B1%E5%85%A5MutationObserver/</url>
+      <title><![CDATA[深入 MutationObserver]]></title>
+      <url>http://chriscindy.top/2016/09/08/%E6%B7%B1%E5%85%A5%20MutationObserver/</url>
       <content type="html"><![CDATA[<blockquote>
 <p>MutationObserver 给开发者们提供了一种能在某个范围内的 DOM 树发生变化时作出适当反应的能力。该 API 设计用来替换掉在 DOM 3 事件规范中引入的 Mutation 事件。</p>
 <p>——MDN</p>
@@ -148,15 +148,15 @@
     </entry>
     
     <entry>
-      <title><![CDATA[采用gulp优化hexo博客打开速度]]></title>
-      <url>http://chriscindy.top/2016/08/22/%E9%87%87%E7%94%A8gulp%E4%BC%98%E5%8C%96hexo%E5%8D%9A%E5%AE%A2%E6%89%93%E5%BC%80%E9%80%9F%E5%BA%A6/</url>
+      <title><![CDATA[采用 gulp 优化 hexo 博客打开速度]]></title>
+      <url>http://chriscindy.top/2016/08/22/%E9%87%87%E7%94%A8%20gulp%20%E4%BC%98%E5%8C%96%20hexo%20%E5%8D%9A%E5%AE%A2%E6%89%93%E5%BC%80%E9%80%9F%E5%BA%A6/</url>
       <content type="html"><![CDATA[<p>博客搭建这么久了发现并没有进行过优化，首页虽然打开速度勉强能够接受，但是 github 和 coding 提供的空间有限，是时候优化一下了。基本思路是采用 gulp 进行代码的压缩等。先占个坑，等最近有空搞一下。</p>
 ]]></content>
     </entry>
     
     <entry>
-      <title><![CDATA[babel-rigster和babel-node的使用]]></title>
-      <url>http://chriscindy.top/2016/08/22/babel-rigster%E5%92%8Cbabel-node%E7%9A%84%E4%BD%BF%E7%94%A8/</url>
+      <title><![CDATA[babel-rigster 和 babel-node 的使用]]></title>
+      <url>http://chriscindy.top/2016/08/22/babel-rigster%20%E5%92%8C%20babel-node%20%E7%9A%84%E4%BD%BF%E7%94%A8/</url>
       <content type="html"><![CDATA[<p>Babel 6 中 <code>babel-register</code> 和 <code>babel-node</code> 两个模块是开发时非常好用的转码工具。先来看一下如何使用：</p>
 <h4 id="1-babel-register"><a href="#1-babel-register" class="headerlink" title="1. babel-register"></a>1. babel-register</h4><ul>
 <li><p>安装：<code>npm install babel-register</code></p>
@@ -193,8 +193,8 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Babel 6特性总结]]></title>
-      <url>http://chriscindy.top/2016/08/22/Babel-6%E7%89%B9%E6%80%A7%E6%80%BB%E7%BB%93/</url>
+      <title><![CDATA[Babel 6 特性总结]]></title>
+      <url>http://chriscindy.top/2016/08/22/Babel%206%20%E7%89%B9%E6%80%A7%E6%80%BB%E7%BB%93/</url>
       <content type="html"><![CDATA[<h3 id="0-改进"><a href="#0-改进" class="headerlink" title="0. 改进"></a>0. 改进</h3><ul>
 <li><p>模块化</p>
 </li>
@@ -282,8 +282,8 @@
     </entry>
     
     <entry>
-      <title><![CDATA[swiftype搜索服务更换为Local Search]]></title>
-      <url>http://chriscindy.top/2016/08/10/swiftype%E6%90%9C%E7%B4%A2%E6%9C%8D%E5%8A%A1%E6%9B%B4%E6%8D%A2%E4%B8%BALocal%20Serach/</url>
+      <title><![CDATA[swiftype 搜索服务更换为 Local Search]]></title>
+      <url>http://chriscindy.top/2016/08/10/swiftype%20%E6%90%9C%E7%B4%A2%E6%9C%8D%E5%8A%A1%E6%9B%B4%E6%8D%A2%E4%B8%BA%20Local%20Search/</url>
       <content type="html"><![CDATA[<p>突然发现博客的搜索服务无法使用，查之发现是因为服务提供商 swiftype 目前已经没有了免费账户的选项，15 天试用期结束后如果不付费将无法继续使用。可以选择的账户类型如下：</p>
 <p><img src="http://ww4.sinaimg.cn/large/006tKfTcjw1f6onlf2wwxj31kw0qgaf1.jpg" alt="swiftype.jpg"></p>
 <p>恕我直言，这是完全不让我们这种小博客用户使用的节奏啊。既然 swiftype 已经无法继续使用，我们只能另寻他路。</p>
@@ -303,8 +303,8 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Babel 6的loose模式]]></title>
-      <url>http://chriscindy.top/2016/08/10/Babel-6%E7%9A%84loose%E6%A8%A1%E5%BC%8F/</url>
+      <title><![CDATA[Babel 6 的 loose 模式]]></title>
+      <url>http://chriscindy.top/2016/08/10/Babel%206%20%E7%9A%84%20loose%20%E6%A8%A1%E5%BC%8F/</url>
       <content type="html"><![CDATA[<p><img src="http://ww1.sinaimg.cn/large/006tKfTcjw1f6omyfzq3qj31kw0pu7av.jpg" alt="babel.png"></p>
 <h3 id="1-前言"><a href="#1-前言" class="headerlink" title="1.前言"></a>1.前言</h3><p>Babel 的 loose 模式将 ES6 代码转译成 ES5 代码，loose 模式是不太忠实于 ES6 语义的。这篇文章解释了它是怎么工作的以及它的优点与缺点（剧透：通常是不推荐的）。</p>
 <p>在这之前，我们先简单了解一下 Babel 中的一些基础知识：</p>
@@ -360,8 +360,8 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Riot.js特性一览]]></title>
-      <url>http://chriscindy.top/2016/07/29/Riot-js%E7%89%B9%E6%80%A7%E4%B8%80%E8%A7%88/</url>
+      <title><![CDATA[Riot.js 特性一览]]></title>
+      <url>http://chriscindy.top/2016/07/29/Riot.js%20%E7%89%B9%E6%80%A7%E4%B8%80%E8%A7%88/</url>
       <content type="html"><![CDATA[<blockquote>
 <p>注：本文基于Riot.js v2.5.0版本</p>
 </blockquote>
@@ -498,21 +498,21 @@
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 精确匹配 `/fruit`</span></div><div class="line">riot.route(<span class="string">'/fruit'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">name</span>) </span>&#123;</div><div class="line">  <span class="built_in">console</span>.log(<span class="string">'The list of fruits'</span>)</div><div class="line">&#125;)</div><div class="line"></div><div class="line"><span class="comment">// 如果 url 变成 `/blog/2015-09/01`,</span></div><div class="line"><span class="comment">// 回调的参数将被捕捉成 '2015', '09' 和 '01'</span></div><div class="line">riot.route(<span class="string">'/blog/*-*/*'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">year, month, date</span>) </span>&#123;</div><div class="line">  <span class="built_in">console</span>.log(<span class="string">'The page of '</span> + year + <span class="string">'-'</span> + month + <span class="string">'-'</span> date)</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
 </li>
 <li><p><code>riot.route.create()</code></p>
-<p>返回一个新的路由上下文</p>
+<p>   返回一个新的路由上下文</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">first-tag</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">p</span>&gt;</span>First tag<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></div><div class="line">    <span class="keyword">var</span> subRoute = riot.route.create() <span class="comment">// 创建新的路由上下文</span></div><div class="line">    subRoute(<span class="string">'/fruit/*'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">name</span>) </span>&#123;</div><div class="line">      <span class="comment">/* 公用的部分 */</span></div><div class="line">    &#125;)</div><div class="line">  <span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">first-tag</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">second-tag</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">p</span>&gt;</span>Second tag<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></div><div class="line">    <span class="keyword">var</span> subRoute = riot.route.create() <span class="comment">// 创建新的路由上下文</span></div><div class="line">    subRoute(<span class="string">'/fruit/apple'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">name</span>) </span>&#123;</div><div class="line">      <span class="comment">/* 个别的部分 */</span></div><div class="line">    &#125;)</div><div class="line">  <span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">second-tag</span>&gt;</span></div></pre></td></tr></table></figure>
 </li>
 <li><p><code>riot.route(to[, title, shouldReplace])</code></p>
-<p> 在内部实现中，</p>
-<ul>
+<pre><code>在内部实现中，
+</code></pre><ul>
 <li>如果没有 <code>shouldReplace</code>, 将使用 <code>history.pushState()</code>.</li>
 <li>如果有 <code>shouldReplace</code>, 将使用<code>history.replaceState()</code>.</li>
 </ul>
 </li>
 <li><p><code>riot.route.start()</code></p>
-<p>开始监听路由变化，需要手动调用</p>
+<p>   开始监听路由变化，需要手动调用</p>
 </li>
 <li><p><code>riot.route.start(autoExec)</code></p>
-<p>riot.route.start(true) &lt;=&gt; riot.route.start()+riot.route.exec()</p>
+<p>   riot.route.start(true) &lt;=&gt; riot.route.start()+riot.route.exec()</p>
 </li>
 <li><p><code>riot.route.stop()</code></p>
 </li>
@@ -530,8 +530,8 @@
     </entry>
     
     <entry>
-      <title><![CDATA[跨域请求时多出现一条OPTIONS请求的原因及解决办法]]></title>
-      <url>http://chriscindy.top/2016/07/20/%E8%B7%A8%E5%9F%9F%E8%AF%B7%E6%B1%82%E6%97%B6%E5%A4%9A%E5%87%BA%E7%8E%B0%E4%B8%80%E6%9D%A1options%E8%AF%B7%E6%B1%82%E7%9A%84%E5%8E%9F%E5%9B%A0%E5%8F%8A%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</url>
+      <title><![CDATA[跨域请求时多出现一条 OPTIONS 请求的原因及解决办法]]></title>
+      <url>http://chriscindy.top/2016/07/20/%E8%B7%A8%E5%9F%9F%E8%AF%B7%E6%B1%82%E6%97%B6%E5%A4%9A%E5%87%BA%E7%8E%B0%E4%B8%80%E6%9D%A1%20OPTIONS%20%E8%AF%B7%E6%B1%82%E7%9A%84%E5%8E%9F%E5%9B%A0%E5%8F%8A%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</url>
       <content type="html"><![CDATA[<p>最近在公司项目中与后端联调时遇到了一个很奇怪的问题，前端发出的 DELETE 方法的 Ajax 请求传到服务端就变成了 OPTIONS 请求。由于服务端没有针对 OPTIONS 请求作回应，此时返回的 http 状态码为 405，意为“方法不被允许”（Method not allowed），DELETE 请求自然也是失败。上网查了一番，原理是触发了 W3C 规定的跨域请求时的安全机制。</p>
 <p>W3C 规范中的定义如下：</p>
 <blockquote>
@@ -558,8 +558,8 @@
     </entry>
     
     <entry>
-      <title><![CDATA[[译]使用Riot，ES6和Webpack构建应用]]></title>
-      <url>http://chriscindy.top/2016/07/11/%E8%AF%91-%E4%BD%BF%E7%94%A8Riot%EF%BC%8CES6%E5%92%8CWebpack%E6%9E%84%E5%BB%BA%E5%BA%94%E7%94%A8/</url>
+      <title><![CDATA[[译]使用 Riot，ES6 和 Webpack 构建应用]]></title>
+      <url>http://chriscindy.top/2016/07/11/%E8%AF%91-%E4%BD%BF%E7%94%A8%20Riot%EF%BC%8CES6%20%E5%92%8C%20Webpack%20%E6%9E%84%E5%BB%BA%E5%BA%94%E7%94%A8/</url>
       <content type="html"><![CDATA[<p>在读完 Muut 上 <a href="https://muut.com/blog/technology/frameworkless-javascript.html" target="_blank" rel="external">Frameworkless JavaScript</a> 这篇博文后，我遇上了 <a href="http://riotjs.com/zh/" target="_blank" rel="external">Riot</a>，请一定先阅读该博文！Muut 的程序员拿出实际行动编写了 <a href="http://riotjs.com/zh/" target="_blank" rel="external">Riot</a>，一个 <a href="https://muut.com/blog/technology/riot-2.0/" target="_blank" rel="external">类似React</a> 的用来构建响应式UI组件的微型库。</p>
 <p>阅读Riot的文档时，令我感触最深的是 Riot 竟如此容易理解——相比 React 来说，在 Riot 里需要学习的术语和概念极少（说实话，和 Polymer 和 Angular 等比起来，Riot 也是十分简单易懂的）。</p>
 <p>为了有助于学习 Riot，我把自己用 React 编写的 <a href="https://github.com/srackham/flux-backbone-todo" target="_blank" rel="external">flux-backbone-todo</a> 搬运到了用 Riot 编写的 <a href="https://github.com/srackham/riot-todo" target="_blank" rel="external">Riot Todo app</a> 上。这篇博文就是我记录这次重构经历的笔记的合集。</p>
@@ -651,8 +651,8 @@
     </entry>
     
     <entry>
-      <title><![CDATA[两个Git帐号如何在一台电脑上共存]]></title>
-      <url>http://chriscindy.top/2016/07/08/%E4%B8%A4%E4%B8%AAGit%E5%B8%90%E5%8F%B7%E5%A6%82%E4%BD%95%E5%9C%A8%E4%B8%80%E5%8F%B0%E7%94%B5%E8%84%91%E4%B8%8A%E5%85%B1%E5%AD%98/</url>
+      <title><![CDATA[两个 Git 帐号如何在一台电脑上共存]]></title>
+      <url>http://chriscindy.top/2016/07/08/%E4%B8%A4%E4%B8%AA%20Git%20%E5%B8%90%E5%8F%B7%E5%A6%82%E4%BD%95%E5%9C%A8%E4%B8%80%E5%8F%B0%E7%94%B5%E8%84%91%E4%B8%8A%E5%85%B1%E5%AD%98/</url>
       <content type="html"><![CDATA[<p>相信很多开发者都会遇到在自己的电脑上使用不止一个 git 帐号的情况。一个一般是自己的 github 帐号，另一个则是公司的 git 帐号，比如 gitlab、bitbucket 等。如果采用 https 方式通信，那么 git 帐号间不会有冲突，但你在每次 pull、push 的时候都要输入帐号密码，十分繁琐。而且当代码库达到十分庞大的规模时，如果仍然采用 https 方式，在 git pull 时可能出现超时不响应的情况，此时只能采用 ssh 方式。ssh 在配置完 ssh key 后使用起来很方便，但是 git 帐号间可能出现冲突，这时候该如何解决呢？<br>配置 ssh key 的方式此处不再赘述，假设 <code>.ssh</code> 文件夹下有 id_rsa、id_rsa.pub、didi_id_rsa、didi_id_rsa.pub，分别对应个人 github 帐号私钥公钥以及公司 git 帐号私钥公钥。如果不进行设置，使用 github 账号时没有问题，但是使用公司账号时，由于默认情况下私钥存放在 <code>id_rsa</code> 文件中，因此 git 仍会尝试用 id_rsa 中而不是 didi_id_rsa 中的私钥去与服务器上添加的公钥进行比对，自然而然会报错。通常这种情况下 git 会让你输入密码，笔者连续三次输入密码错误（其实根本不知道该密码为何物），报错，Permission denied。<br>网络上的解决方案普遍为在 ssh 的配置文件中加入以下字段：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">Host github.com</div><div class="line"> hostname gitlab.zjut.com</div><div class="line"> User Boy-A</div><div class="line"> IdentityFile /User/&lt;yourusername&gt;/.ssh/id_rsa</div><div class="line"> </div><div class="line">Host git.xiaojukeji.com</div><div class="line"> hostname git.xiaojukeji.com</div><div class="line"> User Boy-B</div><div class="line"> IdentityFile /User/&lt;yourusername&gt;/.ssh/didi_id_rsa</div></pre></td></tr></table></figure>
 <p>该文件的主要作用就是指明各个 git 帐号对应的 User 以及 IdentityFile 的文件位置。当配置完毕后，在各个项目 repo 中应用自己的用户名以及邮箱：</p>
