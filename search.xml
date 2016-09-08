@@ -6,7 +6,7 @@
     <entry>
       <title><![CDATA[深入MutationObserver]]></title>
       <url>http://chriscindy.top/2016/09/08/%E6%B7%B1%E5%85%A5MutationObserver/</url>
-      <content type="html"><![CDATA[<h1 id="MutationObserver"><a href="#MutationObserver" class="headerlink" title="MutationObserver"></a>MutationObserver</h1><blockquote>
+      <content type="html"><![CDATA[<blockquote>
 <p>MutationObserver 给开发者们提供了一种能在某个范围内的 DOM 树发生变化时作出适当反应的能力.该 API 设计用来替换掉在 DOM 3 事件规范中引入的 Mutation 事件。</p>
 <p>——MDN</p>
 </blockquote>

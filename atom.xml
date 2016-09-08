@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://chriscindy.top/"/>
-  <updated>2016-09-08T02:45:07.000Z</updated>
+  <updated>2016-09-08T02:46:45.000Z</updated>
   <id>http://chriscindy.top/</id>
   
   <author>
@@ -20,9 +20,9 @@
     <link href="http://chriscindy.top/2016/09/08/%E6%B7%B1%E5%85%A5MutationObserver/"/>
     <id>http://chriscindy.top/2016/09/08/深入MutationObserver/</id>
     <published>2016-09-08T02:42:04.000Z</published>
-    <updated>2016-09-08T02:45:07.000Z</updated>
+    <updated>2016-09-08T02:46:45.000Z</updated>
     
-    <content type="html">&lt;h1 id=&quot;MutationObserver&quot;&gt;&lt;a href=&quot;#MutationObserver&quot; class=&quot;headerlink&quot; title=&quot;MutationObserver&quot;&gt;&lt;/a&gt;MutationObserver&lt;/h1&gt;&lt;blockquote&gt;
+    <content type="html">&lt;blockquote&gt;
 &lt;p&gt;MutationObserver 给开发者们提供了一种能在某个范围内的 DOM 树发生变化时作出适当反应的能力.该 API 设计用来替换掉在 DOM 3 事件规范中引入的 Mutation 事件。&lt;/p&gt;
 &lt;p&gt;——MDN&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -164,8 +164,10 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;MutationObserver&quot;&gt;&lt;a href=&quot;#MutationObserver&quot; class=&quot;headerlink&quot; title=&quot;MutationObserver&quot;&gt;&lt;/a&gt;MutationObserver&lt;/h1&gt;&lt;blockquote&gt;
-&lt;p&gt;M
+      &lt;blockquote&gt;
+&lt;p&gt;MutationObserver 给开发者们提供了一种能在某个范围内的 DOM 树发生变化时作出适当反应的能力.该 API 设计用来替换掉在 DOM 3 事件规范中引入的 Mutation 事件。&lt;/p&gt;
+&lt;p&gt;——MDN&lt;/p&gt;
+&lt;/blockq
     
     </summary>
     
