@@ -21,7 +21,7 @@
 <h2 id="2-MutationObserver-构造函数"><a href="#2-MutationObserver-构造函数" class="headerlink" title="2. MutationObserver 构造函数"></a>2. MutationObserver 构造函数</h2><p>该构造函数用于实例化一个新的 MutaionObserver ，同时指定触发 DOM 变动时的回调函数：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> observer = <span class="keyword">new</span> MutationObserver(callback);</div></pre></td></tr></table></figure>
 <p>callback，即回调函数接收两个参数，第一个参数是一个包含了所有 <code>MutationRecord</code> 对象（后文会介绍，别急）的数组，第二个参数则是这个MutationObserver 实例本身。</p>
-<h2 id="3-MutationObserver-实例方法"><a href="#3-MutationObserver-实例方法" class="headerlink" title="3. MutationObserver 实例方法"></a>3. MutationObserver 实例方法</h2><h4 id="3-1-Observe-Node-target-optional-MutationObserverInit-options"><a href="#3-1-Observe-Node-target-optional-MutationObserverInit-options" class="headerlink" title="3.1 Observe(Node target, optional MutationObserverInit options);"></a>3.1 <code>Observe(Node target, optional MutationObserverInit options);</code></h4><p>给 MutationObserver 实例添加要观察的 DOM 节点，并可通过一个可选的 options 参数来配置观察哪些变动，该 options 为一个名为 <code>MutationObserverInit</code> 的对象。</p>
+<h2 id="3-MutationObserver-实例方法"><a href="#3-MutationObserver-实例方法" class="headerlink" title="3. MutationObserver 实例方法"></a>3. MutationObserver 实例方法</h2><h3 id="3-1-Observe-Node-target-optional-MutationObserverInit-options"><a href="#3-1-Observe-Node-target-optional-MutationObserverInit-options" class="headerlink" title="3.1 Observe(Node target, optional MutationObserverInit options);"></a>3.1 <code>Observe(Node target, optional MutationObserverInit options);</code></h3><p>给 MutationObserver 实例添加要观察的 DOM 节点，并可通过一个可选的 options 参数来配置观察哪些变动，该 options 为一个名为 <code>MutationObserverInit</code> 的对象。</p>
 <p>以下是 <code>MutationObserverInit</code> 对象的各属性及其描述：</p>
 <table>
 <thead>
@@ -74,10 +74,10 @@
 <li>不能单独观察 subtree 变动，必须同时指定 childList、attributes 和 characterData 中的一种或多种。</li>
 <li>为同一个 DOM 节点多次添加同一个 MutationObserver 是无效的，回调函数将只被触发一次。但如果指定不同的 options 对象（即观察不同的变动），即被视为不同的 MutationObserver。（是不是感觉跟 addEventListener 确实很像？）</li>
 </ul>
-<h4 id="3-2-disconnect"><a href="#3-2-disconnect" class="headerlink" title="3.2  disconnect();"></a>3.2  <code>disconnect();</code></h4><p>该方法用来停止观察。后续如果 DOM 节点发生变动将不再触发回调函数。</p>
+<h3 id="3-2-disconnect"><a href="#3-2-disconnect" class="headerlink" title="3.2  disconnect();"></a>3.2  <code>disconnect();</code></h3><p>该方法用来停止观察。后续如果 DOM 节点发生变动将不再触发回调函数。</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">observer.disconnect();</div></pre></td></tr></table></figure>
 <p>继续类比，<code>disconnect</code> 函数和 <code>removeEventListener</code>大致类似，除了 <code>disconnect</code> 函数比较粗暴（无法传参配置），会把该 MutationObserver 实例上所有的观察都停止。</p>
-<h4 id="3-3-takeRecords"><a href="#3-3-takeRecords" class="headerlink" title="3.3  takeRecords();"></a>3.3  <code>takeRecords();</code></h4><p>该方法用来清除变动记录，返回一个包含了 <code>MutationRecord</code> 对象的数组。<code>MutationRecord</code> 又出现了。它是啥？</p>
+<h3 id="3-3-takeRecords"><a href="#3-3-takeRecords" class="headerlink" title="3.3  takeRecords();"></a>3.3  <code>takeRecords();</code></h3><p>该方法用来清除变动记录，返回一个包含了 <code>MutationRecord</code> 对象的数组。<code>MutationRecord</code> 又出现了。它是啥？</p>
 <p>实际上，DOM 每次发生变化，就会生成一条变动记录，这个变动记录对应一个 <code>MutationRecord</code> 对象。以下是 <code>MutationRecord</code> 对象的各属性及其描述：</p>
 <table>
 <thead>
