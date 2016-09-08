@@ -179,11 +179,11 @@
   </entry>
   
   <entry>
-    <title>采用gulp优化hexohexo博客打开速度</title>
+    <title>采用gulp优化hexo博客打开速度</title>
     <link href="http://chriscindy.top/2016/08/22/%E9%87%87%E7%94%A8gulp%E4%BC%98%E5%8C%96hexo%E5%8D%9A%E5%AE%A2%E6%89%93%E5%BC%80%E9%80%9F%E5%BA%A6/"/>
     <id>http://chriscindy.top/2016/08/22/采用gulp优化hexo博客打开速度/</id>
     <published>2016-08-22T09:42:36.000Z</published>
-    <updated>2016-08-24T03:34:32.000Z</updated>
+    <updated>2016-09-08T08:53:07.000Z</updated>
     
     <content type="html">&lt;p&gt;博客搭建这么久了发现并没有进行过优化，首页虽然打开速度勉强能够接受，但是 github 和 coding 提供的空间有限，是时候优化一下了。基本思路是采用 gulp 进行代码的压缩等。先占个坑，等最近有空搞一下。&lt;/p&gt;
 </content>
@@ -369,11 +369,11 @@
   </entry>
   
   <entry>
-    <title>swiftype搜索服务更换为Local Serach</title>
+    <title>swiftype搜索服务更换为Local Search</title>
     <link href="http://chriscindy.top/2016/08/10/swiftype%E6%90%9C%E7%B4%A2%E6%9C%8D%E5%8A%A1%E6%9B%B4%E6%8D%A2%E4%B8%BALocal%20Serach/"/>
     <id>http://chriscindy.top/2016/08/10/swiftype搜索服务更换为Local Serach/</id>
     <published>2016-08-10T06:49:15.000Z</published>
-    <updated>2016-08-22T10:16:27.000Z</updated>
+    <updated>2016-09-08T08:53:40.000Z</updated>
     
     <content type="html">&lt;p&gt;突然发现博客的搜索服务无法使用，查之发现是因为服务提供商 swiftype 目前已经没有了免费账户的选项，15 天试用期结束后如果不付费将无法继续使用。可以选择的账户类型如下：&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;http://ww4.sinaimg.cn/large/006tKfTcjw1f6onlf2wwxj31kw0qgaf1.jpg&quot; alt=&quot;swiftype.jpg&quot;&gt;&lt;/p&gt;
