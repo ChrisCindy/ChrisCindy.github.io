@@ -91,21 +91,18 @@
 
 
 <meta name="description" content="前言ES5 及之前时代的 JavaScript 中 this 的绑定机制是让很多开发者头疼不已的事情。this 的绑定变化多端，让笔者也吃了不少亏。本文根据《你不知道的 JavaScript》上卷中的内容总结了 this 的四条绑定规则，在此记录，以防遗忘。
-绑定规则##1. 默认绑定
-独立函数调用时，this 指向全局对象，如果使用严格模式，那么全局对象无法使用默认绑定， this绑定至 und">
+绑定规则1. 默认绑定独立函数调用时，this 指向全局对象，如果使用严格模式，那么全局对象无法使用默认绑定， this绑定至 undefi">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JavaScript 中 this 的四条绑定规则">
 <meta property="og:url" content="http://chriscindy.top/2016/09/15/JavaScript-中-this-的四条绑定规则/index.html">
 <meta property="og:site_name" content="sunflower->FE">
 <meta property="og:description" content="前言ES5 及之前时代的 JavaScript 中 this 的绑定机制是让很多开发者头疼不已的事情。this 的绑定变化多端，让笔者也吃了不少亏。本文根据《你不知道的 JavaScript》上卷中的内容总结了 this 的四条绑定规则，在此记录，以防遗忘。
-绑定规则##1. 默认绑定
-独立函数调用时，this 指向全局对象，如果使用严格模式，那么全局对象无法使用默认绑定， this绑定至 und">
-<meta property="og:updated_time" content="2016-09-15T10:24:25.000Z">
+绑定规则1. 默认绑定独立函数调用时，this 指向全局对象，如果使用严格模式，那么全局对象无法使用默认绑定， this绑定至 undefi">
+<meta property="og:updated_time" content="2016-09-15T11:21:47.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaScript 中 this 的四条绑定规则">
 <meta name="twitter:description" content="前言ES5 及之前时代的 JavaScript 中 this 的绑定机制是让很多开发者头疼不已的事情。this 的绑定变化多端，让笔者也吃了不少亏。本文根据《你不知道的 JavaScript》上卷中的内容总结了 this 的四条绑定规则，在此记录，以防遗忘。
-绑定规则##1. 默认绑定
-独立函数调用时，this 指向全局对象，如果使用严格模式，那么全局对象无法使用默认绑定， this绑定至 und">
+绑定规则1. 默认绑定独立函数调用时，this 指向全局对象，如果使用严格模式，那么全局对象无法使用默认绑定， this绑定至 undefi">
 
 
 
@@ -410,13 +407,11 @@
 
       
         <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>ES5 及之前时代的 JavaScript 中 <code>this</code> 的绑定机制是让很多开发者头疼不已的事情。<code>this</code> 的绑定变化多端，让笔者也吃了不少亏。本文根据《你不知道的 JavaScript》上卷中的内容总结了 <code>this</code> 的四条绑定规则，在此记录，以防遗忘。</p>
-<h1 id="绑定规则"><a href="#绑定规则" class="headerlink" title="绑定规则"></a>绑定规则</h1><p>##1. 默认绑定</p>
-<p>独立函数调用时，<code>this</code> 指向全局对象，如果使用严格模式，那么全局对象无法使用默认绑定， <code>this</code>绑定至 <code>undefined</code>。</p>
+<h1 id="绑定规则"><a href="#绑定规则" class="headerlink" title="绑定规则"></a>绑定规则</h1><h2 id="1-默认绑定"><a href="#1-默认绑定" class="headerlink" title="1. 默认绑定"></a>1. 默认绑定</h2><p>独立函数调用时，<code>this</code> 指向全局对象，如果使用严格模式，那么全局对象无法使用默认绑定， <code>this</code>绑定至 <code>undefined</code>。</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="built_in">console</span>.log(<span class="keyword">this</span>.a);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> a = <span class="number">2</span>;</div><div class="line">foo();  <span class="comment">// 2</span></div></pre></td></tr></table></figure>
 <p>严格模式时：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>) </span>&#123;</div><div class="line"><span class="meta">  "use strict"</span>;</div><div class="line">  <span class="built_in">console</span>,log(<span class="keyword">this</span>.a);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> a = <span class="number">2</span>;</div><div class="line">foo();  <span class="comment">// TypeError: this is undefined</span></div></pre></td></tr></table></figure>
-<p>##2. 隐式绑定</p>
-<p>当函数引用有上下文对象时（即函数作为引用属性被添加到对象中），隐式绑定规则会把函数调用中的 <code>this</code> 绑定到这个上下文对象。</p>
+<h2 id="2-隐式绑定"><a href="#2-隐式绑定" class="headerlink" title="2. 隐式绑定"></a>2. 隐式绑定</h2><p>当函数引用有上下文对象时（即函数作为引用属性被添加到对象中），隐式绑定规则会把函数调用中的 <code>this</code> 绑定到这个上下文对象。</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="built_in">console</span>.log( <span class="keyword">this</span>.a);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> obj = &#123;</div><div class="line">  a: <span class="number">2</span>,</div><div class="line">  foo: foo</div><div class="line">&#125;;</div><div class="line"></div><div class="line">obj.foo();  <span class="comment">// 2</span></div></pre></td></tr></table></figure>
 <p>对象属性引用链中只有最顶层或者说最后一层会影响调用位置：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">obj1.obj2.foo();  <span class="comment">// foo 中的 this 与 obj2 绑定</span></div></pre></td></tr></table></figure>
@@ -430,8 +425,7 @@
 </ul>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="built_in">console</span>.log( <span class="keyword">this</span>.a);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">doFoo</span>(<span class="params">fn</span>) </span>&#123;</div><div class="line">  fn();  <span class="comment">// &lt;-- 调用位置</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> obj = &#123;</div><div class="line">  a: <span class="number">2</span>,</div><div class="line">  foo: foo</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="keyword">var</span> a = <span class="string">"这是全局变量喔"</span>;</div><div class="line">doFoo( obj.foo );  <span class="comment">// "这是全局变量喔"</span></div></pre></td></tr></table></figure>
 <p>其实这就是第一种情况的变种，实际上参数传递就是一种隐式赋值。除了开发人员自定义的函数，在将函数传入语言内置的函数比如 <code>setTimeout</code> 时，同样会发生隐式丢失的情况。</p>
-<p>##3. 显式绑定</p>
-<p>显式绑定的核心是 JavaScript 内置的 <code>call(..)</code> 和 <code>apply(..)</code> 方法，这两个方法在 JavaScript 提供的绝大多数函数以及开发者自己创建的所有函数上都可以使用。</p>
+<h2 id="3-显式绑定"><a href="#3-显式绑定" class="headerlink" title="3. 显式绑定"></a>3. 显式绑定</h2><p>显式绑定的核心是 JavaScript 内置的 <code>call(..)</code> 和 <code>apply(..)</code> 方法，这两个方法在 JavaScript 提供的绝大多数函数以及开发者自己创建的所有函数上都可以使用。</p>
 <p><code>call(..)</code> 和 <code>apply(..)</code>的第一个参数是一个对象（二者区别在后面传入的参数形式，这里不是重点，不讨论），他们会将 <code>this</code> 绑定到这个对象上。因为你可以直接指定 <code>this</code> 绑定的对象，所以这条规则被称为显式绑定。</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="built_in">console</span>.log( <span class="keyword">this</span>.a);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> obj = &#123;</div><div class="line">  a: <span class="number">2</span></div><div class="line">&#125;;</div><div class="line"></div><div class="line">foo.call(obj);  <span class="comment">// 2</span></div></pre></td></tr></table></figure>
 <p>如果 <code>call</code> 或者 <code>apply</code> 传入的第一个参数是原始值（字符串类型、布尔类型或者数字类型），那么该原始值会被转换成它的对象形式（new String()、new Boolean() 或 new Number()），俗称“装箱”。</p>
@@ -448,8 +442,7 @@
 <h3 id="3-2-API-调用的“上下文”"><a href="#3-2-API-调用的“上下文”" class="headerlink" title="3.2 API 调用的“上下文”"></a>3.2 API 调用的“上下文”</h3><p>JavaScript 自身以及许多第三方库的函数都提供了一个可选的参数，通常被称为“上下文”，其作用和 <code>bind(..)</code> 一样，确保回调函数使用指定的 <code>this</code>。</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params">el</span>) </span>&#123;</div><div class="line">  <span class="built_in">console</span>.log( el, <span class="keyword">this</span>.id);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> obj = &#123;</div><div class="line">  id: <span class="string">"awsome"</span></div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="comment">//调用 foo(..) 时把 this 绑定到 obj</span></div><div class="line">[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>].forEach(foo, obj);</div><div class="line"><span class="comment">// 1 awsome 2 awsome 3 awsome</span></div></pre></td></tr></table></figure>
 <p>实际上这些函数背后还是调用了 <code>call()</code> 或者 <code>apply()</code> ，只不过这样开发者需要写的代码就少了一些。</p>
-<p>##4. new 绑定</p>
-<p>使用 <code>new</code> 来调用函数时，会自动执行下面的操作：</p>
+<h2 id="4-new-绑定"><a href="#4-new-绑定" class="headerlink" title="4. new 绑定"></a>4. new 绑定</h2><p>使用 <code>new</code> 来调用函数时，会自动执行下面的操作：</p>
 <ol>
 <li>创建一个全新的对象</li>
 <li>这个新对象会被执行 [[原型]] 连接</li>
@@ -685,7 +678,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#绑定规则"><span class="nav-number">2.</span> <span class="nav-text">绑定规则</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-隐式丢失"><span class="nav-number">2.0.1.</span> <span class="nav-text">2.1 隐式丢失</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-硬绑定"><span class="nav-number">2.0.2.</span> <span class="nav-text">3.1 硬绑定</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-API-调用的“上下文”"><span class="nav-number">2.0.3.</span> <span class="nav-text">3.2 API 调用的“上下文”</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#优先级"><span class="nav-number">3.</span> <span class="nav-text">优先级</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#绑定例外"><span class="nav-number">4.</span> <span class="nav-text">绑定例外</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#其他"><span class="nav-number">5.</span> <span class="nav-text">其他</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#绑定规则"><span class="nav-number">2.</span> <span class="nav-text">绑定规则</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-默认绑定"><span class="nav-number">2.1.</span> <span class="nav-text">1. 默认绑定</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-隐式绑定"><span class="nav-number">2.2.</span> <span class="nav-text">2. 隐式绑定</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-隐式丢失"><span class="nav-number">2.2.1.</span> <span class="nav-text">2.1 隐式丢失</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-显式绑定"><span class="nav-number">2.3.</span> <span class="nav-text">3. 显式绑定</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-硬绑定"><span class="nav-number">2.3.1.</span> <span class="nav-text">3.1 硬绑定</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-API-调用的“上下文”"><span class="nav-number">2.3.2.</span> <span class="nav-text">3.2 API 调用的“上下文”</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-new-绑定"><span class="nav-number">2.4.</span> <span class="nav-text">4. new 绑定</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#优先级"><span class="nav-number">3.</span> <span class="nav-text">优先级</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#绑定例外"><span class="nav-number">4.</span> <span class="nav-text">绑定例外</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#其他"><span class="nav-number">5.</span> <span class="nav-text">其他</span></a></li></ol></div>
             
           </div>
         </section>
