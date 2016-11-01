@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://chriscindy.top/"/>
-  <updated>2016-11-01T11:27:36.000Z</updated>
+  <updated>2016-11-01T11:30:43.000Z</updated>
   <id>http://chriscindy.top/</id>
   
   <author>
@@ -20,9 +20,9 @@
     <link href="http://chriscindy.top/2016/11/01/%E3%80%8ACSS%E6%8F%AD%E7%A7%98%E3%80%8B%E8%AF%BB%E4%B9%A6%E6%80%BB%E7%BB%93%EF%BC%9A%E8%83%8C%E6%99%AF%E4%B8%8E%E8%BE%B9%E6%A1%86/"/>
     <id>http://chriscindy.top/2016/11/01/《CSS揭秘》读书总结：背景与边框/</id>
     <published>2016-11-01T11:25:15.000Z</published>
-    <updated>2016-11-01T11:27:36.000Z</updated>
+    <updated>2016-11-01T11:30:43.000Z</updated>
     
-    <content type="html">&lt;h1 id=&quot;《CSS揭秘》读书总结：背景与边框&quot;&gt;&lt;a href=&quot;#《CSS揭秘》读书总结：背景与边框&quot; class=&quot;headerlink&quot; title=&quot;《CSS揭秘》读书总结：背景与边框&quot;&gt;&lt;/a&gt;《CSS揭秘》读书总结：背景与边框&lt;/h1&gt;&lt;blockquote&gt;
+    <content type="html">&lt;blockquote&gt;
 &lt;p&gt;前言:&lt;br&gt;本系列是阅读《CSS揭秘》所作的总结，用以提高知识吸收程度。同时该书本身便是以解决 47 个 CSS 技巧而进行组织的，总结归纳后方便日后查找。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id=&quot;1-半透明边框&quot;&gt;&lt;a href=&quot;#1-半透明边框&quot; class=&quot;headerlink&quot; title=&quot;1. 半透明边框&quot;&gt;&lt;/a&gt;1. 半透明边框&lt;/h2&gt;&lt;h3 id=&quot;难题&quot;&gt;&lt;a href=&quot;#难题&quot; class=&quot;headerlink&quot; title=&quot;难题&quot;&gt;&lt;/a&gt;难题&lt;/h3&gt;&lt;p&gt;在 CSS 中使用半透明颜色，可以使用 rgba() 和 hsla()。&lt;/p&gt;
@@ -195,8 +195,10 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;《CSS揭秘》读书总结：背景与边框&quot;&gt;&lt;a href=&quot;#《CSS揭秘》读书总结：背景与边框&quot; class=&quot;headerlink&quot; title=&quot;《CSS揭秘》读书总结：背景与边框&quot;&gt;&lt;/a&gt;《CSS揭秘》读书总结：背景与边框&lt;/h1&gt;&lt;blockquote&gt;
-
+      &lt;blockquote&gt;
+&lt;p&gt;前言:&lt;br&gt;本系列是阅读《CSS揭秘》所作的总结，用以提高知识吸收程度。同时该书本身便是以解决 47 个 CSS 技巧而进行组织的，总结归纳后方便日后查找。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;1-半透明边框&quot;&gt;&lt;a href=&quot;
     
     </summary>
     
