@@ -31,9 +31,7 @@
 <h3 id="解决方案-1"><a href="#解决方案-1" class="headerlink" title="解决方案"></a>解决方案</h3><ol>
 <li><p><strong>box-shadow 方案</strong></p>
 <p>box-shadow 可以接受 6 个参数，如下表所示：</p>
-<p>​</p>
-<p>| 值        | 说明                     |<br>| ——– | ———————- |<br>| h-shadow | 必需。水平阴影的位置，允许负值        |<br>| v-shadow | 必需。垂直阴影的位置，允许负值        |<br>| blur     | 可选。模糊距离                |<br>| spread   | 可选。阴影的大小               |<br>| color    | 可选。阴影的颜色               |<br>| inset    | 可选。从外层的阴影（开始时）改变阴影内侧阴影 |</p>
-<p>​</p>
+<p><img src="http://ww4.sinaimg.cn/large/006tNc79gw1f9d1yvo82tj318m0gcmzm.jpg" alt=""></p>
 <p>当我们将 spread 属性设为正值，h-shadow、v-shadow 和 blur 均设置为 0，得到的“投影”就像一道实线边框：</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">background</span> : <span class="selector-tag">yellowgreen</span>; </div><div class="line"><span class="selector-tag">box-shadow</span> : 0 0 0 10<span class="selector-tag">px</span> <span class="selector-id">#655</span>;</div></pre></td></tr></table></figure>
 <p>效果如下：</p>
@@ -51,9 +49,7 @@
 </li>
 <li><p><strong>outline 方案</strong></p>
 <p>此方案适用于只创建两层边框的情况。第一层边框使用 border 属性创建，第二层边框使用 outline 属性创建。该方案非常灵活。先看一下 outline 属性可以接受的参数：</p>
-<p>​</p>
-<p>| 值             | 说明                                  |<br>| ————- | ———————————– |<br>| outline-color | 规定边框的颜色                             |<br>| outline-style | 规定边框的样式，如 none、dotted、dashed、solid等 |<br>| outline-width | 规定边框的宽度                             |<br>| inherit       | 规定应该从父元素继承 outline 属性的设置            |</p>
-<p>​</p>
+<p><img src="http://ww3.sinaimg.cn/large/006tNc79gw1f9d201qpovj318e0csq4v.jpg" alt=""></p>
 <p>对于上面用 box-shadow 实现的两层边框，用 outline 实现的方式如下：</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">background</span> : <span class="selector-tag">yellowgreen</span>; </div><div class="line"><span class="selector-tag">border</span> : 10<span class="selector-tag">px</span> <span class="selector-tag">solid</span> <span class="selector-id">#655</span>; </div><div class="line"><span class="selector-tag">outline</span> : 5<span class="selector-tag">px</span> <span class="selector-tag">solid</span> <span class="selector-tag">deeppink</span>;</div></pre></td></tr></table></figure>
 <p>outline 可以和 outline-offset 配合使用，后者用来控制 outline 和元素边缘之间的距离，该属性可以接受负值，对一层 dashed （虚线）outline 使用负的 outline-offset 后，可以得到简单的缝边效果：</p>
