@@ -5,7 +5,7 @@
     
   <url>
     <loc>http://chriscindy.top/2016/12/18/%E8%AF%91-%E8%8D%89%E6%A1%88-HTTP-%E2%80%9C%E5%B8%A6%E5%A4%96%E2%80%9D%E5%86%85%E5%AE%B9%E7%BC%96%E7%A0%81/</loc>
-    <lastmod>2016-12-18T09:52:05.000Z</lastmod>
+    <lastmod>2016-12-18T10:10:49.000Z</lastmod>
     <data>
         <display>
         <title>[译][草案] HTTP “带外”内容编码</title>
@@ -272,9 +272,9 @@
         <title>跨域请求时多出现一条 OPTIONS 请求的原因及解决办法</title>
         <pubTime>2016-07-20T10:19:34.000Z</pubTime>
         
-        <tag>Ajax</tag>
-         
         <tag>HTTP</tag>
+         
+        <tag>Ajax</tag>
          
         <tag>CORS</tag>
          
