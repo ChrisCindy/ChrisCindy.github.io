@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://chriscindy.top/"/>
-  <updated>2016-12-18T10:10:49.000Z</updated>
+  <updated>2016-12-18T10:11:39.000Z</updated>
   <id>http://chriscindy.top/</id>
   
   <author>
@@ -20,11 +20,11 @@
     <link href="http://chriscindy.top/2016/12/18/%E8%AF%91-%E8%8D%89%E6%A1%88-HTTP-%E2%80%9C%E5%B8%A6%E5%A4%96%E2%80%9D%E5%86%85%E5%AE%B9%E7%BC%96%E7%A0%81/"/>
     <id>http://chriscindy.top/2016/12/18/译-草案-HTTP-“带外”内容编码/</id>
     <published>2016-12-18T09:48:12.000Z</published>
-    <updated>2016-12-18T10:10:49.000Z</updated>
+    <updated>2016-12-18T10:11:39.000Z</updated>
     
     <content type="html">&lt;blockquote&gt;
 &lt;p&gt;前言&lt;/p&gt;
-&lt;p&gt;这篇译文其实是高级计网课的作业，教授要求在 &lt;a href=&quot;ietf.org&quot;&gt;IETF&lt;/a&gt; 上找一篇尚未成为 RFC、也就是还处于草案状态的文档翻译一下。于是笔者随便搜了篇 HTTP 协议相关的文档。翻译完毕后感觉还是有一些收获的。这篇文档主要描述了一种新的内容编码格式——out-of-band（文中译为带外，但是我很不喜欢这个翻译，如有更合适的译词欢迎指正），用于描述包含客户端请求资源的辅助服务器的地址。此举可帮助源服务器建立“盲缓存”机制，将内容的传递安全地委派给辅助服务器，该辅助服务器可能在网络拓扑层次上来说“更接近”客户端。感兴趣的同学可以继续往下观看。&lt;/p&gt;
+&lt;p&gt;这篇译文其实是高级计网课的作业，教授要求在 &lt;a href=&quot;ietf.org&quot;&gt;IETF&lt;/a&gt; 上找一篇尚未成为 RFC、也就是还处于草案状态的文档翻译一下。于是笔者随便搜了篇 HTTP 协议相关的文档。翻译完毕后感觉还是有一些收获的。这篇文档主要描述了一种新的内容编码格式——out-of-band（文中译为带外，但是我很不喜欢这个翻译，如有更合适的译词欢迎指正），用于描述包含客户端请求资源的辅助服务器的地址。此举可帮助源服务器建立“盲缓存”机制，将内容的传递安全地委派给辅助服务器，该辅助服务器可能在网络拓扑层次上来说“更接近”客户端。感兴趣的同学可以继续往下查看。&lt;/p&gt;
 &lt;p&gt;Network Working Group&lt;br&gt;Internet-Draft&lt;br&gt;Intended status: Standards Track&lt;br&gt;Expires: May 3, 2017&lt;br&gt;October 30, 2016&lt;/p&gt;
 &lt;p&gt;J. Reschke   greenbytes  S. Loreto  Ericsson&lt;/p&gt;
 &lt;/blockquote&gt;
