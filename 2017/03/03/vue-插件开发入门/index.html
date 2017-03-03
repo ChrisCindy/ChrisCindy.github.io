@@ -72,7 +72,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="博客搭建," />
+  <meta name="keywords" content="Vue.js," />
 
 
 
@@ -90,34 +90,25 @@
 
 
 
-<meta name="description" content="突然发现博客的搜索服务无法使用，查之发现是因为服务提供商 swiftype 目前已经没有了免费账户的选项，15 天试用期结束后如果不付费将无法继续使用。可以选择的账户类型如下：
-
-恕我直言，这是完全不让我们这种小博客用户使用的节奏啊。既然 swiftype 已经无法继续使用，我们只能另寻他路。
-Next 的使用文档在 swiftype 之外提供了两种方案：微搜索和 Local Search。
-
-微">
+<meta name="description" content="相对组件来说，Vue 的插件开发受到的关注要少一点。但是插件的功能是十分强大的，能够完成许多 Vue 框架本身不具备的功能。
+大家一般习惯直接调用现成的插件，比如官方推荐的 vue-router、vue-touch 等。下面就看一下 Vue 的插件开发如何入门。
+首先我们简单回顾一下 Vue.js 官方文档中对于插件开发的描述。
+Vue 的插件必须提供一个公开方法 install，该方法会在你使用">
 <meta property="og:type" content="article">
-<meta property="og:title" content="swiftype 搜索服务更换为 Local Search">
-<meta property="og:url" content="http://chriscindy.top/2016/08/10/swiftype 搜索服务更换为 Local Search/index.html">
+<meta property="og:title" content="vue 插件开发入门">
+<meta property="og:url" content="http://chriscindy.top/2017/03/03/vue-插件开发入门/index.html">
 <meta property="og:site_name" content="sunflower->FE">
-<meta property="og:description" content="突然发现博客的搜索服务无法使用，查之发现是因为服务提供商 swiftype 目前已经没有了免费账户的选项，15 天试用期结束后如果不付费将无法继续使用。可以选择的账户类型如下：
-
-恕我直言，这是完全不让我们这种小博客用户使用的节奏啊。既然 swiftype 已经无法继续使用，我们只能另寻他路。
-Next 的使用文档在 swiftype 之外提供了两种方案：微搜索和 Local Search。
-
-微">
-<meta property="og:image" content="http://ww4.sinaimg.cn/large/006tKfTcjw1f6onlf2wwxj31kw0qgaf1.jpg">
-<meta property="og:image" content="http://ww3.sinaimg.cn/large/006tKfTcjw1f6oo7rsw3uj319q116aeu.jpg">
-<meta property="og:updated_time" content="2016-09-08T08:57:43.000Z">
+<meta property="og:description" content="相对组件来说，Vue 的插件开发受到的关注要少一点。但是插件的功能是十分强大的，能够完成许多 Vue 框架本身不具备的功能。
+大家一般习惯直接调用现成的插件，比如官方推荐的 vue-router、vue-touch 等。下面就看一下 Vue 的插件开发如何入门。
+首先我们简单回顾一下 Vue.js 官方文档中对于插件开发的描述。
+Vue 的插件必须提供一个公开方法 install，该方法会在你使用">
+<meta property="og:updated_time" content="2017-03-03T07:28:51.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="swiftype 搜索服务更换为 Local Search">
-<meta name="twitter:description" content="突然发现博客的搜索服务无法使用，查之发现是因为服务提供商 swiftype 目前已经没有了免费账户的选项，15 天试用期结束后如果不付费将无法继续使用。可以选择的账户类型如下：
-
-恕我直言，这是完全不让我们这种小博客用户使用的节奏啊。既然 swiftype 已经无法继续使用，我们只能另寻他路。
-Next 的使用文档在 swiftype 之外提供了两种方案：微搜索和 Local Search。
-
-微">
-<meta name="twitter:image" content="http://ww4.sinaimg.cn/large/006tKfTcjw1f6onlf2wwxj31kw0qgaf1.jpg">
+<meta name="twitter:title" content="vue 插件开发入门">
+<meta name="twitter:description" content="相对组件来说，Vue 的插件开发受到的关注要少一点。但是插件的功能是十分强大的，能够完成许多 Vue 框架本身不具备的功能。
+大家一般习惯直接调用现成的插件，比如官方推荐的 vue-router、vue-touch 等。下面就看一下 Vue 的插件开发如何入门。
+首先我们简单回顾一下 Vue.js 官方文档中对于插件开发的描述。
+Vue 的插件必须提供一个公开方法 install，该方法会在你使用">
 
 
 
@@ -161,10 +152,10 @@ Next 的使用文档在 swiftype 之外提供了两种方案：微搜索和 Loca
 
 
 
-  <link rel="canonical" href="http://chriscindy.top/2016/08/10/swiftype 搜索服务更换为 Local Search/"/>
+  <link rel="canonical" href="http://chriscindy.top/2017/03/03/vue-插件开发入门/"/>
 
 
-  <title> swiftype 搜索服务更换为 Local Search | sunflower->FE </title>
+  <title> vue 插件开发入门 | sunflower->FE </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -346,7 +337,7 @@ Next 的使用文档在 swiftype 之外提供了两种方案：微搜索和 Loca
             
             
               
-                swiftype 搜索服务更换为 Local Search
+                vue 插件开发入门
               
             
           </h1>
@@ -358,8 +349,8 @@ Next 的使用文档在 swiftype 之外提供了两种方案：微搜索和 Loca
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-08-10T14:49:15+08:00" content="2016-08-10">
-              2016-08-10
+            <time itemprop="dateCreated" datetime="2017-03-03T15:21:38+08:00" content="2017-03-03">
+              2017-03-03
             </time>
           </span>
 
@@ -372,8 +363,8 @@ Next 的使用文档在 swiftype 之外提供了两种方案：微搜索和 Loca
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/解决方案/" itemprop="url" rel="index">
-                    <span itemprop="name">解决方案</span>
+                  <a href="/categories/技术使用/" itemprop="url" rel="index">
+                    <span itemprop="name">技术使用</span>
                   </a>
                 </span>
 
@@ -388,8 +379,8 @@ Next 的使用文档在 swiftype 之外提供了两种方案：微搜索和 Loca
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/08/10/swiftype 搜索服务更换为 Local Search/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/08/10/swiftype 搜索服务更换为 Local Search/" itemprop="commentsCount"></span>
+                <a href="/2017/03/03/vue-插件开发入门/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/03/vue-插件开发入门/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -399,7 +390,7 @@ Next 的使用文档在 swiftype 之外提供了两种方案：微搜索和 Loca
 
           
           
-             <span id="/2016/08/10/swiftype 搜索服务更换为 Local Search/" class="leancloud_visitors" data-flag-title="swiftype 搜索服务更换为 Local Search">
+             <span id="/2017/03/03/vue-插件开发入门/" class="leancloud_visitors" data-flag-title="vue 插件开发入门">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -421,21 +412,25 @@ Next 的使用文档在 swiftype 之外提供了两种方案：微搜索和 Loca
       
 
       
-        <p>突然发现博客的搜索服务无法使用，查之发现是因为服务提供商 swiftype 目前已经没有了免费账户的选项，15 天试用期结束后如果不付费将无法继续使用。可以选择的账户类型如下：</p>
-<p><img src="http://ww4.sinaimg.cn/large/006tKfTcjw1f6onlf2wwxj31kw0qgaf1.jpg" alt="swiftype.jpg"></p>
-<p>恕我直言，这是完全不让我们这种小博客用户使用的节奏啊。既然 swiftype 已经无法继续使用，我们只能另寻他路。</p>
-<p>Next 的使用文档在 swiftype 之外提供了两种方案：微搜索和 Local Search。</p>
-<ul>
-<li><p><a href="http://tinysou.com/" target="_blank" rel="external">微搜索</a></p>
-<p>国内的一家志在做最好的站内搜索的服务商。截止本文发表时，其官网仍无法注册，进入注册页提示“504 Gateway Time-out”，无奈，放弃。</p>
-</li>
-</ul>
-<ul>
-<li><p>Local Search</p>
-<p>尝试了一下，还不错，免费，速度堪比 swiftype，Next 定制的外观也还可以，就它了。</p>
-<p><img src="http://ww3.sinaimg.cn/large/006tKfTcjw1f6oo7rsw3uj319q116aeu.jpg" alt="localsearch.jpg"></p>
-</li>
-</ul>
+        <p>相对<strong>组件</strong>来说，Vue 的<strong>插件</strong>开发受到的关注要<strong>少</strong>一点。但是插件的功能是十分强大的，能够完成许多 Vue 框架本身不具备的功能。</p>
+<p>大家一般习惯直接调用现成的插件，比如官方推荐的 <strong>vue-router</strong>、<strong>vue-touch</strong> 等。<br>下面就看一下 Vue 的插件开发如何入门。</p>
+<p>首先我们简单回顾一下 Vue.js 官方文档中对于插件开发的描述。</p>
+<p>Vue 的插件必须提供一个公开方法 <strong>install</strong>，该方法会在你使用该插件，也就是 <code>Vue.use(yourPlugin)</code> 时被调用，相当于是一个插件的注册或者声明。<code>install</code> 接受 Vue 构造器作为第一个参数，并且有一个可选的选项对象作为第二个参数，比如：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">yourPlugin.install = <span class="function"><span class="keyword">function</span> (<span class="params">Vue, options</span>) </span>&#123;</div><div class="line">  <span class="comment">// 1. 添加全局方法或属性</span></div><div class="line">  Vue.myGlobalMethod = ...</div><div class="line">  <span class="comment">// 2. 添加全局资源</span></div><div class="line">  Vue.directive(<span class="string">'my-directive'</span>, &#123;&#125;)</div><div class="line">  <span class="comment">// 3. 添加实例方法</span></div><div class="line">  Vue.prototype.$myMethod = ...</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>插件在使用时有<strong>两种</strong>方式：</p>
+<blockquote>
+<p>第一种是如上述提到的，可以通过 <code>Vue.use(yourPlugin)</code> 全局方法进行调用。<br>进行 Vue 的大型项目开发时，如果用 vue-cli 生成项目目录结构，<code>Vue.use()</code> 方法一般在 main.js 中调用。</p>
+<p>第二种实际上是插件本身帮你完成了 <code>Vue.use()</code>的调用。<br>这种情况下，插件会去检测是否存在 <code>Vue</code> 全局变量，如果存在，就自动调用 <code>Vue.use()</code>。所以，如果你的项目中是使用 script 方式引入的 Vue.js（这种情况下 <code>Vue</code> 才会作为一个全局变量存在），在使用比如 vue-router 之类的插件时就可以直接引入然后使用，不用再调用 <code>Vue.use()</code>。<br>但是，在模块环境下应当始终显式调用该方法，以保证插件可以正常使用：</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 通过 Browserify 或 Webpack 使用 CommonJS 兼容模块</span></div><div class="line"><span class="keyword">var</span> Vue = <span class="built_in">require</span>(<span class="string">'vue'</span>)</div><div class="line"><span class="keyword">var</span> VueRouter = <span class="built_in">require</span>(<span class="string">'vue-router'</span>)</div><div class="line"><span class="comment">// 不要忘了调用此方法</span></div><div class="line">Vue.use(VueRouter)</div><div class="line"></div><div class="line"><span class="comment">// 或者可以多传入一个选项对象</span></div><div class="line"><span class="comment">// Vue.use(VueRouter, &#123; hashbang: true &#125;)</span></div></pre></td></tr></table></figure>
+<p>接下来我们看一下一些官方的常用<strong>插件</strong>的实现，我们配合去除具体逻辑的源码进行一些解读：</p>
+<p>1、<strong>vue-touch</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// version: 1.1.0</span></div><div class="line"><span class="comment">// vue-touch.js</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> vueTouch = &#123;&#125;</div><div class="line"></div><div class="line"><span class="comment">// 暴露出的全局配置项，也就是在调用 Vue.use(Vue, options) 时传入的第二个选项参数</span></div><div class="line">vueTouch.config = &#123;&#125;</div><div class="line"></div><div class="line"><span class="comment">// 核心部分，插件的具体逻辑均在此实现</span></div><div class="line">vueTouch.install = <span class="function"><span class="keyword">function</span> (<span class="params">Vue</span>) </span>&#123;</div><div class="line">  Vue.directive(<span class="string">'touch'</span>, &#123;</div><div class="line">    bind: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    &#125;,</div><div class="line">    update: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    &#125;,</div><div class="line">    unbind: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    &#125;</div><div class="line">  &#125;)</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// 支持 CommonJS</span></div><div class="line"><span class="keyword">if</span> (<span class="keyword">typeof</span> exports == <span class="string">"object"</span>) &#123;</div><div class="line">  <span class="built_in">module</span>.exports = vueTouch</div><div class="line"><span class="comment">// 支持 AMD</span></div><div class="line">&#125; <span class="keyword">else</span> <span class="keyword">if</span> (<span class="keyword">typeof</span> define == <span class="string">"function"</span> &amp;&amp; define.amd) &#123;</div><div class="line">  define([], <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123; <span class="keyword">return</span> vueTouch &#125;)</div><div class="line"><span class="comment">// Vue 是全局变量时，自动调用 Vue.use()</span></div><div class="line">&#125; <span class="keyword">else</span> <span class="keyword">if</span> (<span class="built_in">window</span>.Vue) &#123;</div><div class="line">  <span class="built_in">window</span>.VueTouch = vueTouch</div><div class="line">  Vue.use(vueTouch)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>2、<strong>vue-router</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// version: 0.7.13</span></div><div class="line"><span class="comment">// src/index.js</span></div><div class="line"></div><div class="line"><span class="keyword">let</span> Vue</div><div class="line"></div><div class="line"><span class="comment">// 封装为 ES6 class</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Router</span> </span>&#123;</div><div class="line">  <span class="comment">// 可传入全局配置项</span></div><div class="line">  <span class="keyword">constructor</span>(&#123;</div><div class="line">    hashbang = <span class="literal">true</span>,</div><div class="line">    abstract = <span class="literal">false</span>,</div><div class="line">    history = <span class="literal">false</span>,</div><div class="line">    saveScrollPosition = <span class="literal">false</span>,</div><div class="line">    transitionOnLoad = <span class="literal">false</span>,</div><div class="line">    suppressTransitionError = <span class="literal">false</span>,</div><div class="line">    root = <span class="literal">null</span>,</div><div class="line">    linkActiveClass = <span class="string">'v-link-active'</span></div><div class="line">  &#125; = &#123;&#125;) &#123;</div><div class="line">    <span class="comment">// ...</span></div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// 避免重复 install，设立 flag</span></div><div class="line">Router.installed = <span class="literal">false</span></div><div class="line">Router.install = <span class="function"><span class="keyword">function</span> (<span class="params">externalVue</span>) </span>&#123;</div><div class="line">  <span class="keyword">if</span> (Route.installed) &#123;</div><div class="line">    <span class="keyword">return</span></div><div class="line">  &#125;</div><div class="line">  Vue = externalVue</div><div class="line"></div><div class="line">  <span class="comment">// install 的具体逻辑，此处省略</span></div><div class="line">  <span class="comment">// ...</span></div><div class="line">  <span class="comment">// install 完毕</span></div><div class="line">  Router.installed = <span class="literal">true</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// 同样，Vue 作为全局变量时自动 install</span></div><div class="line"></div><div class="line"><span class="keyword">if</span> (<span class="keyword">typeof</span> <span class="built_in">window</span> !== <span class="string">'undefined'</span> &amp;&amp; <span class="built_in">window</span>.Vue) &#123;</div><div class="line">  <span class="built_in">window</span>.Vue.use(Router)</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> Router</div></pre></td></tr></table></figure>
+<p>3、 <strong>vue-resource</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// version: 1.0.3</span></div><div class="line"><span class="comment">// src/index.js</span></div><div class="line"></div><div class="line"><span class="comment">// install 方法</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">plugin</span>(<span class="params">Vue</span>) </span>&#123;</div><div class="line">  <span class="keyword">if</span> (plugin.installed) &#123;</div><div class="line">    <span class="keyword">return</span>;</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  <span class="comment">// 插件核心逻辑，此处省略</span></div><div class="line">  <span class="comment">// ...</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// 同上，Vue 是全局变量时，自动 install</span></div><div class="line"><span class="keyword">if</span> (<span class="keyword">typeof</span> <span class="built_in">window</span> !== <span class="string">'undefined'</span> &amp;&amp; <span class="built_in">window</span>.Vue) &#123;</div><div class="line">    <span class="built_in">window</span>.Vue.use(plugin);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> plugin;</div></pre></td></tr></table></figure>
+<p>看完以上三个官方例子，相信各位已经对 Vue 的插件开发过程有了一定的了解，大家就可以根据自己的需要为 Vue 增加各种全局功能了。</p>
 
       
     </div>
@@ -479,7 +474,7 @@ Next 的使用文档在 swiftype 之外提供了两种方案：微搜索和 Loca
       
         <div class="post-tags">
           
-            <a href="/tags/博客搭建/" rel="tag">#博客搭建</a>
+            <a href="/tags/Vue-js/" rel="tag">#Vue.js</a>
           
         </div>
       
@@ -488,17 +483,13 @@ Next 的使用文档在 swiftype 之外提供了两种方案：微搜索和 Loca
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/08/10/Babel 6 的 loose 模式/" rel="next" title="Babel 6 的 loose 模式">
-                <i class="fa fa-chevron-left"></i> Babel 6 的 loose 模式
+              <a href="/2016/12/18/译-草案-HTTP-“带外”内容编码/" rel="next" title="[译][草案] HTTP “带外”内容编码">
+                <i class="fa fa-chevron-left"></i> [译][草案] HTTP “带外”内容编码
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/08/22/Babel 6 特性总结/" rel="prev" title="Babel 6 特性总结">
-                Babel 6 特性总结 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -513,10 +504,10 @@ Next 的使用文档在 swiftype 之外提供了两种方案：微搜索和 Loca
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2016/08/10/swiftype 搜索服务更换为 Local Search/"
-     data-title="swiftype 搜索服务更换为 Local Search"
+        <div class="ds-share flat" data-thread-key="2017/03/03/vue-插件开发入门/"
+     data-title="vue 插件开发入门"
      data-content=""
-     data-url="http://chriscindy.top/2016/08/10/swiftype 搜索服务更换为 Local Search/">
+     data-url="http://chriscindy.top/2017/03/03/vue-插件开发入门/">
   <div class="ds-share-inline">
     <ul  class="ds-share-icons-16">
 
@@ -543,8 +534,8 @@ Next 的使用文档在 swiftype 之外提供了两种方案：微搜索和 Loca
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/08/10/swiftype 搜索服务更换为 Local Search/"
-           data-title="swiftype 搜索服务更换为 Local Search" data-url="http://chriscindy.top/2016/08/10/swiftype 搜索服务更换为 Local Search/">
+      <div class="ds-thread" data-thread-key="2017/03/03/vue-插件开发入门/"
+           data-title="vue 插件开发入门" data-url="http://chriscindy.top/2017/03/03/vue-插件开发入门/">
       </div>
     
   </div>

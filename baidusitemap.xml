@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>http://chriscindy.top/2017/03/03/vue-%E6%8F%92%E4%BB%B6%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8/</loc>
+    <lastmod>2017-03-03T07:28:51.000Z</lastmod>
+    <data>
+        <display>
+        <title>vue 插件开发入门</title>
+        <pubTime>2017-03-03T07:21:38.000Z</pubTime>
+        
+        <tag>Vue.js</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术使用" url="http://chriscindy.top/categories/%E6%8A%80%E6%9C%AF%E4%BD%BF%E7%94%A8/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://chriscindy.top/2016/12/18/%E8%AF%91-%E8%8D%89%E6%A1%88-HTTP-%E2%80%9C%E5%B8%A6%E5%A4%96%E2%80%9D%E5%86%85%E5%AE%B9%E7%BC%96%E7%A0%81/</loc>
     <lastmod>2016-12-18T10:11:39.000Z</lastmod>
     <data>
@@ -272,9 +292,9 @@
         <title>跨域请求时多出现一条 OPTIONS 请求的原因及解决办法</title>
         <pubTime>2016-07-20T10:19:34.000Z</pubTime>
         
-        <tag>HTTP</tag>
-         
         <tag>Ajax</tag>
+         
+        <tag>HTTP</tag>
          
         <tag>CORS</tag>
          
