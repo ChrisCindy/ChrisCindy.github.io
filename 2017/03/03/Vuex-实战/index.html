@@ -72,7 +72,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Vue.js," />
+  <meta name="keywords" content="Vue.js,Vuex," />
 
 
 
@@ -90,25 +90,25 @@
 
 
 
-<meta name="description" content="相对组件来说，Vue 的插件开发受到的关注要少一点。但是插件的功能是十分强大的，能够完成许多 Vue 框架本身不具备的功能。
-大家一般习惯直接调用现成的插件，比如官方推荐的 vue-router、vue-touch 等。下面就看一下 Vue 的插件开发如何入门。
-首先我们简单回顾一下 Vue.js 官方文档中对于插件开发的描述。
-Vue 的插件必须提供一个公开方法 install，该方法会在你使用">
+<meta name="description" content="Vuex 作为中大型 Vue 应用中的“御用”集中数据管理工具，在实习时的公司很早就得到了广泛使用。本文旨在以尽可能简洁的文字向读者展示：如何在一个颇具规模的 Vue 应用中组织和管理 Vuex 的代码。
+
+注：虽然目前 Vuex 的最新版本已经来到 2.x。2.x 在1.0 的基础上进行了一些优化，提升了命名的语义化以及 增强了模块的可移植性和可组合性，但基本思想和架构并没有改变。
+本文基于 V">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Vue 插件开发入门">
-<meta property="og:url" content="http://chriscindy.top/2017/03/03/Vue-插件开发入门/index.html">
+<meta property="og:title" content="Vuex 实战">
+<meta property="og:url" content="http://chriscindy.top/2017/03/03/Vuex-实战/index.html">
 <meta property="og:site_name" content="sunflower->FE">
-<meta property="og:description" content="相对组件来说，Vue 的插件开发受到的关注要少一点。但是插件的功能是十分强大的，能够完成许多 Vue 框架本身不具备的功能。
-大家一般习惯直接调用现成的插件，比如官方推荐的 vue-router、vue-touch 等。下面就看一下 Vue 的插件开发如何入门。
-首先我们简单回顾一下 Vue.js 官方文档中对于插件开发的描述。
-Vue 的插件必须提供一个公开方法 install，该方法会在你使用">
-<meta property="og:updated_time" content="2017-03-03T07:31:57.000Z">
+<meta property="og:description" content="Vuex 作为中大型 Vue 应用中的“御用”集中数据管理工具，在实习时的公司很早就得到了广泛使用。本文旨在以尽可能简洁的文字向读者展示：如何在一个颇具规模的 Vue 应用中组织和管理 Vuex 的代码。
+
+注：虽然目前 Vuex 的最新版本已经来到 2.x。2.x 在1.0 的基础上进行了一些优化，提升了命名的语义化以及 增强了模块的可移植性和可组合性，但基本思想和架构并没有改变。
+本文基于 V">
+<meta property="og:updated_time" content="2017-03-03T07:34:23.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Vue 插件开发入门">
-<meta name="twitter:description" content="相对组件来说，Vue 的插件开发受到的关注要少一点。但是插件的功能是十分强大的，能够完成许多 Vue 框架本身不具备的功能。
-大家一般习惯直接调用现成的插件，比如官方推荐的 vue-router、vue-touch 等。下面就看一下 Vue 的插件开发如何入门。
-首先我们简单回顾一下 Vue.js 官方文档中对于插件开发的描述。
-Vue 的插件必须提供一个公开方法 install，该方法会在你使用">
+<meta name="twitter:title" content="Vuex 实战">
+<meta name="twitter:description" content="Vuex 作为中大型 Vue 应用中的“御用”集中数据管理工具，在实习时的公司很早就得到了广泛使用。本文旨在以尽可能简洁的文字向读者展示：如何在一个颇具规模的 Vue 应用中组织和管理 Vuex 的代码。
+
+注：虽然目前 Vuex 的最新版本已经来到 2.x。2.x 在1.0 的基础上进行了一些优化，提升了命名的语义化以及 增强了模块的可移植性和可组合性，但基本思想和架构并没有改变。
+本文基于 V">
 
 
 
@@ -152,10 +152,10 @@ Vue 的插件必须提供一个公开方法 install，该方法会在你使用">
 
 
 
-  <link rel="canonical" href="http://chriscindy.top/2017/03/03/Vue-插件开发入门/"/>
+  <link rel="canonical" href="http://chriscindy.top/2017/03/03/Vuex-实战/"/>
 
 
-  <title> Vue 插件开发入门 | sunflower->FE </title>
+  <title> Vuex 实战 | sunflower->FE </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -337,7 +337,7 @@ Vue 的插件必须提供一个公开方法 install，该方法会在你使用">
             
             
               
-                Vue 插件开发入门
+                Vuex 实战
               
             
           </h1>
@@ -349,7 +349,7 @@ Vue 的插件必须提供一个公开方法 install，该方法会在你使用">
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2017-03-03T15:21:38+08:00" content="2017-03-03">
+            <time itemprop="dateCreated" datetime="2017-03-03T15:31:39+08:00" content="2017-03-03">
               2017-03-03
             </time>
           </span>
@@ -379,8 +379,8 @@ Vue 的插件必须提供一个公开方法 install，该方法会在你使用">
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2017/03/03/Vue-插件开发入门/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/03/Vue-插件开发入门/" itemprop="commentsCount"></span>
+                <a href="/2017/03/03/Vuex-实战/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/03/Vuex-实战/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -390,7 +390,7 @@ Vue 的插件必须提供一个公开方法 install，该方法会在你使用">
 
           
           
-             <span id="/2017/03/03/Vue-插件开发入门/" class="leancloud_visitors" data-flag-title="Vue 插件开发入门">
+             <span id="/2017/03/03/Vuex-实战/" class="leancloud_visitors" data-flag-title="Vuex 实战">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -412,25 +412,46 @@ Vue 的插件必须提供一个公开方法 install，该方法会在你使用">
       
 
       
-        <p>相对<strong>组件</strong>来说，Vue 的<strong>插件</strong>开发受到的关注要<strong>少</strong>一点。但是插件的功能是十分强大的，能够完成许多 Vue 框架本身不具备的功能。</p>
-<p>大家一般习惯直接调用现成的插件，比如官方推荐的 <strong>vue-router</strong>、<strong>vue-touch</strong> 等。<br>下面就看一下 Vue 的插件开发如何入门。</p>
-<p>首先我们简单回顾一下 Vue.js 官方文档中对于插件开发的描述。</p>
-<p>Vue 的插件必须提供一个公开方法 <strong>install</strong>，该方法会在你使用该插件，也就是 <code>Vue.use(yourPlugin)</code> 时被调用，相当于是一个插件的注册或者声明。<code>install</code> 接受 Vue 构造器作为第一个参数，并且有一个可选的选项对象作为第二个参数，比如：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">yourPlugin.install = <span class="function"><span class="keyword">function</span> (<span class="params">Vue, options</span>) </span>&#123;</div><div class="line">  <span class="comment">// 1. 添加全局方法或属性</span></div><div class="line">  Vue.myGlobalMethod = ...</div><div class="line">  <span class="comment">// 2. 添加全局资源</span></div><div class="line">  Vue.directive(<span class="string">'my-directive'</span>, &#123;&#125;)</div><div class="line">  <span class="comment">// 3. 添加实例方法</span></div><div class="line">  Vue.prototype.$myMethod = ...</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>插件在使用时有<strong>两种</strong>方式：</p>
+        <p>Vuex 作为中大型 Vue 应用中的“御用”集中数据管理工具，在实习时的公司很早就得到了广泛使用。本文旨在以尽可能简洁的文字向读者展示：如何在一个颇具规模的 Vue 应用中<strong>组织和管理 Vuex 的代码</strong>。</p>
 <blockquote>
-<p>第一种是如上述提到的，可以通过 <code>Vue.use(yourPlugin)</code> 全局方法进行调用。<br>进行 Vue 的大型项目开发时，如果用 vue-cli 生成项目目录结构，<code>Vue.use()</code> 方法一般在 main.js 中调用。</p>
-<p>第二种实际上是插件本身帮你完成了 <code>Vue.use()</code>的调用。<br>这种情况下，插件会去检测是否存在 <code>Vue</code> 全局变量，如果存在，就自动调用 <code>Vue.use()</code>。所以，如果你的项目中是使用 script 方式引入的 Vue.js（这种情况下 <code>Vue</code> 才会作为一个全局变量存在），在使用比如 vue-router 之类的插件时就可以直接引入然后使用，不用再调用 <code>Vue.use()</code>。<br>但是，在模块环境下应当始终显式调用该方法，以保证插件可以正常使用：</p>
+<p>注：虽然目前 Vuex 的最新版本已经来到 <strong>2.x</strong>。2.x 在1.0 的基础上进行了一些优化，提升了命名的语义化以及 增强了模块的可移植性和可组合性，但基本思想和架构并没有改变。</p>
+<p>本文基于 Vuex <strong>1.0</strong> 版本，读者大可不必担心出现类似 Angular 1.x  升级到 2.x 式的断崖式更新。</p>
 </blockquote>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 通过 Browserify 或 Webpack 使用 CommonJS 兼容模块</span></div><div class="line"><span class="keyword">var</span> Vue = <span class="built_in">require</span>(<span class="string">'vue'</span>)</div><div class="line"><span class="keyword">var</span> VueRouter = <span class="built_in">require</span>(<span class="string">'vue-router'</span>)</div><div class="line"><span class="comment">// 不要忘了调用此方法</span></div><div class="line">Vue.use(VueRouter)</div><div class="line"></div><div class="line"><span class="comment">// 或者可以多传入一个选项对象</span></div><div class="line"><span class="comment">// Vue.use(VueRouter, &#123; hashbang: true &#125;)</span></div></pre></td></tr></table></figure>
-<p>接下来我们看一下一些官方的常用<strong>插件</strong>的实现，我们配合去除具体逻辑的源码进行一些解读：</p>
-<p>1、<strong>vue-touch</strong></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// version: 1.1.0</span></div><div class="line"><span class="comment">// vue-touch.js</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> vueTouch = &#123;&#125;</div><div class="line"></div><div class="line"><span class="comment">// 暴露出的全局配置项，也就是在调用 Vue.use(Vue, options) 时传入的第二个选项参数</span></div><div class="line">vueTouch.config = &#123;&#125;</div><div class="line"></div><div class="line"><span class="comment">// 核心部分，插件的具体逻辑均在此实现</span></div><div class="line">vueTouch.install = <span class="function"><span class="keyword">function</span> (<span class="params">Vue</span>) </span>&#123;</div><div class="line">  Vue.directive(<span class="string">'touch'</span>, &#123;</div><div class="line">    bind: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    &#125;,</div><div class="line">    update: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    &#125;,</div><div class="line">    unbind: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    &#125;</div><div class="line">  &#125;)</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// 支持 CommonJS</span></div><div class="line"><span class="keyword">if</span> (<span class="keyword">typeof</span> exports == <span class="string">"object"</span>) &#123;</div><div class="line">  <span class="built_in">module</span>.exports = vueTouch</div><div class="line"><span class="comment">// 支持 AMD</span></div><div class="line">&#125; <span class="keyword">else</span> <span class="keyword">if</span> (<span class="keyword">typeof</span> define == <span class="string">"function"</span> &amp;&amp; define.amd) &#123;</div><div class="line">  define([], <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123; <span class="keyword">return</span> vueTouch &#125;)</div><div class="line"><span class="comment">// Vue 是全局变量时，自动调用 Vue.use()</span></div><div class="line">&#125; <span class="keyword">else</span> <span class="keyword">if</span> (<span class="built_in">window</span>.Vue) &#123;</div><div class="line">  <span class="built_in">window</span>.VueTouch = vueTouch</div><div class="line">  Vue.use(vueTouch)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>2、<strong>vue-router</strong></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// version: 0.7.13</span></div><div class="line"><span class="comment">// src/index.js</span></div><div class="line"></div><div class="line"><span class="keyword">let</span> Vue</div><div class="line"></div><div class="line"><span class="comment">// 封装为 ES6 class</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Router</span> </span>&#123;</div><div class="line">  <span class="comment">// 可传入全局配置项</span></div><div class="line">  <span class="keyword">constructor</span>(&#123;</div><div class="line">    hashbang = <span class="literal">true</span>,</div><div class="line">    abstract = <span class="literal">false</span>,</div><div class="line">    history = <span class="literal">false</span>,</div><div class="line">    saveScrollPosition = <span class="literal">false</span>,</div><div class="line">    transitionOnLoad = <span class="literal">false</span>,</div><div class="line">    suppressTransitionError = <span class="literal">false</span>,</div><div class="line">    root = <span class="literal">null</span>,</div><div class="line">    linkActiveClass = <span class="string">'v-link-active'</span></div><div class="line">  &#125; = &#123;&#125;) &#123;</div><div class="line">    <span class="comment">// ...</span></div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// 避免重复 install，设立 flag</span></div><div class="line">Router.installed = <span class="literal">false</span></div><div class="line">Router.install = <span class="function"><span class="keyword">function</span> (<span class="params">externalVue</span>) </span>&#123;</div><div class="line">  <span class="keyword">if</span> (Route.installed) &#123;</div><div class="line">    <span class="keyword">return</span></div><div class="line">  &#125;</div><div class="line">  Vue = externalVue</div><div class="line"></div><div class="line">  <span class="comment">// install 的具体逻辑，此处省略</span></div><div class="line">  <span class="comment">// ...</span></div><div class="line">  <span class="comment">// install 完毕</span></div><div class="line">  Router.installed = <span class="literal">true</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// 同样，Vue 作为全局变量时自动 install</span></div><div class="line"></div><div class="line"><span class="keyword">if</span> (<span class="keyword">typeof</span> <span class="built_in">window</span> !== <span class="string">'undefined'</span> &amp;&amp; <span class="built_in">window</span>.Vue) &#123;</div><div class="line">  <span class="built_in">window</span>.Vue.use(Router)</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> Router</div></pre></td></tr></table></figure>
-<p>3、 <strong>vue-resource</strong></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// version: 1.0.3</span></div><div class="line"><span class="comment">// src/index.js</span></div><div class="line"></div><div class="line"><span class="comment">// install 方法</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">plugin</span>(<span class="params">Vue</span>) </span>&#123;</div><div class="line">  <span class="keyword">if</span> (plugin.installed) &#123;</div><div class="line">    <span class="keyword">return</span>;</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  <span class="comment">// 插件核心逻辑，此处省略</span></div><div class="line">  <span class="comment">// ...</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// 同上，Vue 是全局变量时，自动 install</span></div><div class="line"><span class="keyword">if</span> (<span class="keyword">typeof</span> <span class="built_in">window</span> !== <span class="string">'undefined'</span> &amp;&amp; <span class="built_in">window</span>.Vue) &#123;</div><div class="line">    <span class="built_in">window</span>.Vue.use(plugin);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> plugin;</div></pre></td></tr></table></figure>
-<p>看完以上三个官方例子，相信各位已经对 Vue 的插件开发过程有了一定的了解，大家就可以根据自己的需要为 Vue 增加各种全局功能了。</p>
+<p>首先，介绍一下项目的背景：<br>一个采用 Vue.js 编写的富交互的 H5 编辑器，由于各个组件中的数据交互繁多，页面的生成也极度依赖存储的状态，使用 Vuex 进行管理便势在必行。<br>项目引入 Vuex 的方式如下：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> App <span class="keyword">from</span> <span class="string">'components/home/App'</span></div><div class="line"><span class="keyword">import</span> store <span class="keyword">from</span> <span class="string">'vuex/editor/store'</span></div><div class="line"></div><div class="line"><span class="comment">// 在 Vue 实例的初始化中声明 store。</span></div><div class="line"><span class="keyword">new</span> Vue(&#123;</div><div class="line">  el: <span class="string">'body'</span>,</div><div class="line">  components: &#123;</div><div class="line">    App</div><div class="line">  &#125;,</div><div class="line">  store</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<p>在根实例中注册 store 选项，这样该 store 实例会注入到根组件下的所有子组件中，方便后面我们在每个子组件中调用 store 中 state 里存储的数据。</p>
+<p>然后看一下 <strong>vuex</strong> 文件夹下的目录，后面我们会逐个分析每个文件的作用：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">└── editor</div><div class="line"></div><div class="line">    ├── mutation-types.js</div><div class="line">    ├── actions</div><div class="line">    │   └── index.js</div><div class="line">    ├── mutations</div><div class="line">    │   └── index.js</div><div class="line">    ├── plugins</div><div class="line">    │   └── index.js</div><div class="line">    ├── state</div><div class="line">    │   └── index.js</div><div class="line">    └── store</div><div class="line">        └── index.js</div></pre></td></tr></table></figure>
+<p>创建 store 对象的代码放在 vuex/editor/store/index.js 中，如下所示：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// vuex/editor/store/index.js</span></div><div class="line"><span class="keyword">import</span> Vuex <span class="keyword">from</span> <span class="string">'vuex'</span></div><div class="line"><span class="keyword">import</span> state <span class="keyword">from</span> <span class="string">'vuex/editor/state'</span></div><div class="line"><span class="keyword">import</span> mutations <span class="keyword">from</span> <span class="string">'vuex/editor/mutations'</span></div><div class="line"><span class="keyword">import</span> &#123; actionLogPlugin &#125; <span class="keyword">from</span> <span class="string">'vuex/editor/plugins'</span></div><div class="line"></div><div class="line"><span class="keyword">const</span> store = <span class="keyword">new</span> Vuex.Store(&#123;</div><div class="line">  state,</div><div class="line">  mutations,</div><div class="line">  plugins: [actionLogPlugin]</div><div class="line">&#125;)</div><div class="line"></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> store</div></pre></td></tr></table></figure>
+<p>这里又声明了 state 和 mutations 对象，以及声明了使用到的 plugins。plugins 后面再说，先看 state 和 mutations，相信各位读者已经对 Vuex 中各个部件的作用已经了如指掌，但是为防遗忘，还是贴一下这张图吧：</p>
+<p>state 是用于存储各种状态的<strong>核心仓库</strong>，让我们一瞥 vuex/editor/state/index.js 中的内容：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 编辑器相关状态</span></div><div class="line"><span class="keyword">const</span> editor = &#123;</div><div class="line">  ...</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// 页面相关状态</span></div><div class="line"></div><div class="line"><span class="keyword">let</span> page = &#123;</div><div class="line">  ...</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">const</span> state = &#123;</div><div class="line">  editor,</div><div class="line">  page</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> state</div></pre></td></tr></table></figure>
+<p>state 中存储了 <strong>editor</strong> 和 <strong>page</strong> 两个对象，用于存储不同模块的状态。需要说明的是，这里完全可以使用模块机制将其拆开，在 editor.js 里存储编辑器相关的 state 和 mutations，在 page.js 中存储页面相关的 state 和 mutations，以使结构更加清晰。不过这里没有使用模块机制，由于模块数量并不多，也是完全可以接受的。</p>
+<p>这些 state 需要反映到组件中。</p>
+<p>跳过官方文档中对为何不使用计算属性的解释，我们直接来看最佳实践：在子组件中通过 <code>vuex.getters</code> 来获取该组件需要用到的所有状态：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// src/components/h5/Navbar.vue</span></div><div class="line"></div><div class="line">...</div><div class="line">export <span class="keyword">default</span> &#123;</div><div class="line">    data () &#123;</div><div class="line">      <span class="keyword">return</span> &#123;</div><div class="line">        ...</div><div class="line">      &#125;</div><div class="line">    &#125;,</div><div class="line">    methods: &#123;</div><div class="line">      ...</div><div class="line">    &#125;,</div><div class="line">    vuex: &#123;</div><div class="line">      actions: &#123;</div><div class="line">        ...</div><div class="line">      &#125;,</div><div class="line">      getters: &#123;</div><div class="line">        editor(state) &#123;</div><div class="line">          <span class="keyword">return</span> state.editor</div><div class="line">        &#125;,</div><div class="line">        page(state) &#123;</div><div class="line">          <span class="keyword">return</span> state.page</div><div class="line">        &#125;,</div><div class="line">        ...</div><div class="line">      &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>在 <code>vuex.getters</code> 对象中，每个属性对应一个 getter 函数，该函数仅接收 store 中 state，也就是总的状态树作为唯一参数，然后返回 state 中需要的状态，然后在组件中就可以以 <code>this.editor</code> 的方式直接调用，类似计算属性。</p>
+<p>再看一下 vuex/editor/mutations/index.js 中的内容：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> * <span class="keyword">as</span> types <span class="keyword">from</span> <span class="string">'../mutation-types'</span></div><div class="line"></div><div class="line"><span class="keyword">const</span> mutations = &#123;</div><div class="line">  [types.CHANGE_LAYER_ZINDEX] (state, dir, index) &#123;</div><div class="line">    ...</div><div class="line">  &#125;,</div><div class="line">  [types.DEL_LAYER] (state, index) &#123;</div><div class="line">    ...</div><div class="line">  &#125;,</div><div class="line">  [types.REMOVE_FROM_ARR] (state, arr, itemToRemove) &#123;</div><div class="line">    ...</div><div class="line">  &#125;,</div><div class="line">  [types.ADD_TO_ARR] (state, arr, itemToAdd) &#123;</div><div class="line">    ...</div><div class="line">  &#125;,</div><div class="line">  [types.DEL_SCENE] (state, index) &#123;</div><div class="line">    ...</div><div class="line">  &#125;,</div><div class="line">  ...</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> mutations</div></pre></td></tr></table></figure>
+<p>具体业务逻辑这里不展开，mutations 中主要就是定义各种对 state 的状态修改。每个 mutation 函数接收<strong>第一个参数为 state 对象</strong>，其余参数则为一路从组件中触发 action 时传过来的 payload。所有的 mutation 函数必须为<strong>同步</strong>执行，否则无法追踪状态的改动。</p>
+<p>注意到，这里引入了 mutation-types.js。该文件主要作用为放置所有的命名 Mutations 的常量，方便合作开发人员厘清整个 app 包含的 mutations。在采用模块机制时，可以在每个模块内只引入相关的 mutations，也可以像本项目一样使用 <code>import * as types</code> 简单粗暴地引入全部。</p>
+<p>mutation-types.js 中内容大致如下：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">export</span> <span class="keyword">const</span> CHANGE_LAYER_ZINDEX = <span class="string">'CHANGE_LAYER_ZINDEX'</span></div><div class="line"><span class="keyword">export</span> <span class="keyword">const</span> DEL_LAYER = <span class="string">'DEL_LAYER'</span></div></pre></td></tr></table></figure>
+<p>然后我们来到 <strong>actions</strong>，照例先看一下 vuex/editor/actions/index.js 中的内容：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> * <span class="keyword">as</span> types <span class="keyword">from</span> <span class="string">'../mutation-types'</span></div><div class="line"></div><div class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">delLayer</span>(<span class="params"> &#123; dispatch &#125;, index</span>) </span>&#123;</div><div class="line">  dispatch(types.DEL_LAYER, index)</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">delScene</span>(<span class="params"> &#123; dispatch &#125;, index</span>) </span>&#123;</div><div class="line">  dispatch(types.DEL_SCENE, index)</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">removeFromArr</span>(<span class="params"> &#123; dispatch &#125;, arr, itemToRemove</span>) </span>&#123;</div><div class="line">  dispatch(types.REMOVE_FROM_ARR, arr, itemToRemove)</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">addToArr</span>(<span class="params"> &#123; dispatch &#125;, arr, itemToAdd</span>) </span>&#123;</div><div class="line">  dispatch(types.ADD_TO_ARR, arr, itemToAdd)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>actions 的主要工作就是 <strong>dispatch</strong> （中文译为分发）mutations。初入门的同学可能觉得这是<strong>多此一举</strong>，actions 这一步看起来完全可以省略。</p>
+<p>事实上，actions 的出现是为了弥补 mutations 无法实现异步操作的缺陷。所有的异步操作都可以放在 actions 中，比如如果想在调用 delScene 函数 5 秒后再分发 mutations，可以写成这样：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">delScene</span> (<span class="params">&#123; dispatch &#125;, index</span>) </span>&#123;</div><div class="line">  setTimeout(() =&gt; &#123;</div><div class="line">    dispatch(types.DEL_SCENE, index)</div><div class="line">  &#125;, <span class="number">5000</span>)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>触发 mutations 的代码不会在组件中出现，<strong>但 actions 会出现在每个需要它的组件中</strong>，其也是连接组件和 mutations 的桥梁（额，另一条桥梁是 state，见上面那张经典老图）。在子组件中引入 actions 的方式类似 state，也是注册在 vuex 选项下：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// src/components/h5/Navbar.vue</span></div><div class="line">...</div><div class="line"></div><div class="line">import &#123; </div><div class="line">  undoAction, </div><div class="line">  redoAction,</div><div class="line">  togglePreviewStatus,</div><div class="line">  ...</div><div class="line">&#125; <span class="keyword">from</span> <span class="string">'vuex/editor/actions'</span></div><div class="line"></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</div><div class="line">    data () &#123;</div><div class="line">      <span class="keyword">return</span> &#123;</div><div class="line">        ...</div><div class="line">      &#125;</div><div class="line">    &#125;,</div><div class="line">    methods: &#123;</div><div class="line">      ...</div><div class="line">    &#125;,</div><div class="line">    vuex: &#123;</div><div class="line">      actions: &#123;</div><div class="line">        undoAction,</div><div class="line">        redoAction,</div><div class="line">        togglePreviewStatus,</div><div class="line">        ...</div><div class="line">      &#125;,</div><div class="line">      getters: &#123;</div><div class="line">        ...</div><div class="line">      &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>这样，组件中可以直接调用各个 actions，比如 <code>this.togglePreviewStatus(status)</code>，等价于<code>this.togglePreviewStatus( this.$store, status)</code>（还记得我们在 actions 中定义的各个函数的第一个参数是 store 吗？）。这是最基本的使用 actions 的方式，在此基础上你还可以玩出别的花样来，比如给 actions 取别名、定义内联 actions、绑定所有 actions 等，具体用法参见官方文档。</p>
+<p>回过头去看 vuex 文件夹下的目录结构，发现还有一个 plugins 我们没有介绍。老规矩，先看一下  vuex/editor/plugins/index.js 中的内容：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">...</div><div class="line">export <span class="function"><span class="keyword">function</span> <span class="title">actionLogPlugin</span>(<span class="params">store</span>) </span>&#123;</div><div class="line"></div><div class="line">  store.subscribe((mutation, state) =&gt; &#123;</div><div class="line"></div><div class="line">    <span class="comment">// 每次 mutation 之后调用</span></div><div class="line">    <span class="comment">// mutation 的格式为 &#123; type, payload &#125;</span></div><div class="line">    ...</div><div class="line">  &#125;)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>核心部分在于采用 <code>store.subscribe</code> 注册了一个函数。</p>
+<blockquote>
+<p>该函数会在每次 mutation 之后被调用。这里 actionLogPlugin 函数完成的是记录每次 mutation 操作，实现撤销重做功能。具体实现逻辑此处不作赘述。</p>
+</blockquote>
 
       
     </div>
@@ -476,6 +497,8 @@ Vue 的插件必须提供一个公开方法 install，该方法会在你使用">
           
             <a href="/tags/Vue-js/" rel="tag">#Vue.js</a>
           
+            <a href="/tags/Vuex/" rel="tag">#Vuex</a>
+          
         </div>
       
 
@@ -483,17 +506,13 @@ Vue 的插件必须提供一个公开方法 install，该方法会在你使用">
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/12/18/译-草案-HTTP-“带外”内容编码/" rel="next" title="[译][草案] HTTP “带外”内容编码">
-                <i class="fa fa-chevron-left"></i> [译][草案] HTTP “带外”内容编码
+              <a href="/2017/03/03/Vue-插件开发入门/" rel="next" title="Vue 插件开发入门">
+                <i class="fa fa-chevron-left"></i> Vue 插件开发入门
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/03/03/Vuex-实战/" rel="prev" title="Vuex 实战">
-                Vuex 实战 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -508,10 +527,10 @@ Vue 的插件必须提供一个公开方法 install，该方法会在你使用">
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2017/03/03/Vue-插件开发入门/"
-     data-title="Vue 插件开发入门"
+        <div class="ds-share flat" data-thread-key="2017/03/03/Vuex-实战/"
+     data-title="Vuex 实战"
      data-content=""
-     data-url="http://chriscindy.top/2017/03/03/Vue-插件开发入门/">
+     data-url="http://chriscindy.top/2017/03/03/Vuex-实战/">
   <div class="ds-share-inline">
     <ul  class="ds-share-icons-16">
 
@@ -538,8 +557,8 @@ Vue 的插件必须提供一个公开方法 install，该方法会在你使用">
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2017/03/03/Vue-插件开发入门/"
-           data-title="Vue 插件开发入门" data-url="http://chriscindy.top/2017/03/03/Vue-插件开发入门/">
+      <div class="ds-thread" data-thread-key="2017/03/03/Vuex-实战/"
+           data-title="Vuex 实战" data-url="http://chriscindy.top/2017/03/03/Vuex-实战/">
       </div>
     
   </div>
