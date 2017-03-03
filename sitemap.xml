@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://chriscindy.top/about/index.html</loc>
+    
+    <lastmod>2017-03-03T07:39:46.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://chriscindy.top/2017/03/03/HTTP-%E5%8D%8F%E8%AE%AE%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD%E5%8A%9F%E8%83%BD/</loc>
     
     <lastmod>2017-03-03T07:37:11.000Z</lastmod>
@@ -47,13 +54,6 @@
     <loc>http://chriscindy.top/2016/09/15/JavaScript-%E4%B8%AD-this-%E7%9A%84%E5%9B%9B%E6%9D%A1%E7%BB%91%E5%AE%9A%E8%A7%84%E5%88%99/</loc>
     
     <lastmod>2016-09-18T09:09:17.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://chriscindy.top/about/index.html</loc>
-    
-    <lastmod>2016-09-15T15:32:09.000Z</lastmod>
     
   </url>
   
