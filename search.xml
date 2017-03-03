@@ -4,6 +4,17 @@
   
     
     <entry>
+      <title><![CDATA[HTTP 协议如何实现文件下载功能]]></title>
+      <url>http://chriscindy.top/2017/03/03/HTTP-%E5%8D%8F%E8%AE%AE%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD%E5%8A%9F%E8%83%BD/</url>
+      <content type="html"><![CDATA[<p>最近在做的一个项目需要自己搭建 node 服务端作中间层来转发请求与响应，原本倒也无甚难度，但是在中转一个返回内容是 excel 文件时遇到了一些问题。当然后来这个问题解决了，node 层对后端返回的响应不作处理，直接利用 pipe 穿透到前端即可（当然，用 node 改造一下再转发也是可以的，只是不如直接穿透方便）。今天想谈谈的是 http 响应头在返回数据是一个需要下载的文件时，应该是什么样子的。</p>
+<p>http 协议实现文件下载时，需要在服务器设置好相关响应头，并使用二进制传输文件数据，而客户端（浏览器）会根据响应头接收文件数据。在 http 响应报文中，<code>Content-type</code> 和 <code>Content-Disposition</code> 是最关键的两个响应头。我们知道，通常情况下，前后端进行 ajax 交互时，后端返回前端的数据格式为 json（或者 xml）。这个时候响应报文里 <code>Content-type</code> 一般是 <code>text/html</code>、<code>text/plain</code> 或者 <code>application/json</code>，并且不会出现 <code>Content-Disposition</code> 头。但在下载文件时，<code>Content-type</code> 需要设置为 <code>application/octet-stream</code>，该 MIME 类型在 RFC 1341 中定义，表示响应实体部分是未分类的二进制数据；<code>Content-Disposition</code> 则需要设置为 <code>attachment; filename=yourFileName.yourFileExtension</code>。客户端（浏览器）在接收到这个响应之后，<code>Content-Type: application/octet-stream</code> 告诉客户端这是一个二进制文件，<code>Content-Disposition</code> 告诉客户端这是一个需要下载的附件并告诉浏览器该附件默认的文件名。如果不添加 <code>Content-Disposition</code> 响应头，浏览器可能会下载或显示文件内容，不同浏览器的处理有所不同。</p>
+<p>在设置 <code>Content-type</code> 时，除了设置 <code>application/octet-stream</code>，也可以设置更为具体的文件类型，比如如果下载文件为微软的 word 文件，<code>Content-type</code> 就可以设置为 <code>application/msword</code>。一般来说 web 服务器比如 Nginx 会自动根据传输的文件类型来选择相应的 <code>Content-type</code>（需要先配置好映射关系）。当然，在 Web 程序中也可以手动设置。比如在 node 中就可以使用 mime 包来完成这个工作。</p>
+<p>以上就是基本的 http 协议实现文件下载功能的方式。如果还要进一步实现断点续传等功能，需要设置 <code>Content-range</code>，这里就不展开了。</p>
+<p>参考文献：《HTTP权威指南》、《图解HTTP》</p>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[Vuex 实战]]></title>
       <url>http://chriscindy.top/2017/03/03/Vuex-%E5%AE%9E%E6%88%98/</url>
       <content type="html"><![CDATA[<p>Vuex 作为中大型 Vue 应用中的“御用”集中数据管理工具，在实习时的公司很早就得到了广泛使用。本文旨在以尽可能简洁的文字向读者展示：如何在一个颇具规模的 Vue 应用中<strong>组织和管理 Vuex 的代码</strong>。</p>

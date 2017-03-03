@@ -72,7 +72,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Frontend, sunflower" />
+  <meta name="keywords" content="HTTP," />
 
 
 
@@ -90,15 +90,16 @@
 
 
 
-<meta name="description" content="立志成为顶级JavaScript技术栈开发者">
-<meta property="og:type" content="website">
-<meta property="og:title" content="sunflower->FE">
-<meta property="og:url" content="http://chriscindy.top/categories/读书笔记/index.html">
+<meta name="description" content="最近在做的一个项目需要自己搭建 node 服务端作中间层来转发请求与响应，原本倒也无甚难度，但是在中转一个返回内容是 excel 文件时遇到了一些问题。当然后来这个问题解决了，node 层对后端返回的响应不作处理，直接利用 pipe 穿透到前端即可（当然，用 node 改造一下再转发也是可以的，只是不如直接穿透方便）。今天想谈谈的是 http 响应头在返回数据是一个需要下载的文件时，应该是什么样子">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HTTP 协议如何实现文件下载功能">
+<meta property="og:url" content="http://chriscindy.top/2017/03/03/HTTP-协议如何实现文件下载功能/index.html">
 <meta property="og:site_name" content="sunflower->FE">
-<meta property="og:description" content="立志成为顶级JavaScript技术栈开发者">
+<meta property="og:description" content="最近在做的一个项目需要自己搭建 node 服务端作中间层来转发请求与响应，原本倒也无甚难度，但是在中转一个返回内容是 excel 文件时遇到了一些问题。当然后来这个问题解决了，node 层对后端返回的响应不作处理，直接利用 pipe 穿透到前端即可（当然，用 node 改造一下再转发也是可以的，只是不如直接穿透方便）。今天想谈谈的是 http 响应头在返回数据是一个需要下载的文件时，应该是什么样子">
+<meta property="og:updated_time" content="2017-03-03T07:37:11.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="sunflower->FE">
-<meta name="twitter:description" content="立志成为顶级JavaScript技术栈开发者">
+<meta name="twitter:title" content="HTTP 协议如何实现文件下载功能">
+<meta name="twitter:description" content="最近在做的一个项目需要自己搭建 node 服务端作中间层来转发请求与响应，原本倒也无甚难度，但是在中转一个返回内容是 excel 文件时遇到了一些问题。当然后来这个问题解决了，node 层对后端返回的响应不作处理，直接利用 pipe 穿透到前端即可（当然，用 node 改造一下再转发也是可以的，只是不如直接穿透方便）。今天想谈谈的是 http 响应头在返回数据是一个需要下载的文件时，应该是什么样子">
 
 
 
@@ -142,10 +143,10 @@
 
 
 
-  <link rel="canonical" href="http://chriscindy.top/categories/读书笔记/"/>
+  <link rel="canonical" href="http://chriscindy.top/2017/03/03/HTTP-协议如何实现文件下载功能/"/>
 
 
-  <title> 分类: 读书笔记 | sunflower->FE </title>
+  <title> HTTP 协议如何实现文件下载功能 | sunflower->FE </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -185,7 +186,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -306,47 +307,201 @@
           <div id="content" class="content">
             
 
-  <section id="posts" class="posts-collapse">
-    <div class="collection-title">
-      <h2 >
-        读书笔记
-        <small>分类</small>
-      </h2>
-    </div>
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
 
     
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                HTTP 协议如何实现文件下载功能
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-03-03T15:35:58+08:00" content="2017-03-03">
+              2017-03-03
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/理论学习/" itemprop="url" rel="index">
+                    <span itemprop="name">理论学习</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2017/03/03/HTTP-协议如何实现文件下载功能/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/03/HTTP-协议如何实现文件下载功能/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2017/03/03/HTTP-协议如何实现文件下载功能/" class="leancloud_visitors" data-flag-title="HTTP 协议如何实现文件下载功能">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
       
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+      
+        <p>最近在做的一个项目需要自己搭建 node 服务端作中间层来转发请求与响应，原本倒也无甚难度，但是在中转一个返回内容是 excel 文件时遇到了一些问题。当然后来这个问题解决了，node 层对后端返回的响应不作处理，直接利用 pipe 穿透到前端即可（当然，用 node 改造一下再转发也是可以的，只是不如直接穿透方便）。今天想谈谈的是 http 响应头在返回数据是一个需要下载的文件时，应该是什么样子的。</p>
+<p>http 协议实现文件下载时，需要在服务器设置好相关响应头，并使用二进制传输文件数据，而客户端（浏览器）会根据响应头接收文件数据。在 http 响应报文中，<code>Content-type</code> 和 <code>Content-Disposition</code> 是最关键的两个响应头。我们知道，通常情况下，前后端进行 ajax 交互时，后端返回前端的数据格式为 json（或者 xml）。这个时候响应报文里 <code>Content-type</code> 一般是 <code>text/html</code>、<code>text/plain</code> 或者 <code>application/json</code>，并且不会出现 <code>Content-Disposition</code> 头。但在下载文件时，<code>Content-type</code> 需要设置为 <code>application/octet-stream</code>，该 MIME 类型在 RFC 1341 中定义，表示响应实体部分是未分类的二进制数据；<code>Content-Disposition</code> 则需要设置为 <code>attachment; filename=yourFileName.yourFileExtension</code>。客户端（浏览器）在接收到这个响应之后，<code>Content-Type: application/octet-stream</code> 告诉客户端这是一个二进制文件，<code>Content-Disposition</code> 告诉客户端这是一个需要下载的附件并告诉浏览器该附件默认的文件名。如果不添加 <code>Content-Disposition</code> 响应头，浏览器可能会下载或显示文件内容，不同浏览器的处理有所不同。</p>
+<p>在设置 <code>Content-type</code> 时，除了设置 <code>application/octet-stream</code>，也可以设置更为具体的文件类型，比如如果下载文件为微软的 word 文件，<code>Content-type</code> 就可以设置为 <code>application/msword</code>。一般来说 web 服务器比如 Nginx 会自动根据传输的文件类型来选择相应的 <code>Content-type</code>（需要先配置好映射关系）。当然，在 Web 程序中也可以手动设置。比如在 node 中就可以使用 mime 包来完成这个工作。</p>
+<p>以上就是基本的 http 协议实现文件下载功能的方式。如果还要进一步实现断点续传等功能，需要设置 <code>Content-range</code>，这里就不展开了。</p>
+<p>参考文献：《HTTP权威指南》、《图解HTTP》</p>
 
-      <h1 class="post-title">
+      
+    </div>
+
+    <div>
+      
         
-            <a class="post-title-link" href="/2016/11/01/《CSS揭秘》读书总结：背景与边框/" itemprop="url">
-              
-                <span itemprop="name">《CSS揭秘》读书总结：背景与边框</span>
-              
-            </a>
+
+      
+    </div>
+
+    <div>
+      
         
-      </h1>
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/images/wechat.jpg" alt="ChrisCindy WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/images/alipay.jpg" alt="ChrisCindy Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-11-01T19:25:15+08:00"
-              content="2016-11-01" >
-          11-01
-        </time>
-      </div>
 
-    </header>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/HTTP/" rel="tag">#HTTP</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/03/03/Vuex-实战/" rel="next" title="Vuex 实战">
+                <i class="fa fa-chevron-left"></i> Vuex 实战
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+        <div class="ds-share flat" data-thread-key="2017/03/03/HTTP-协议如何实现文件下载功能/"
+     data-title="HTTP 协议如何实现文件下载功能"
+     data-content=""
+     data-url="http://chriscindy.top/2017/03/03/HTTP-协议如何实现文件下载功能/">
+  <div class="ds-share-inline">
+    <ul  class="ds-share-icons-16">
 
+      <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+      <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+      <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+      <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+      <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+
+    </ul>
+    <div class="ds-share-icons-more">
+    </div>
+  </div>
+</div>
+      
+    </div>
+  </div>
 
 
           </div>
@@ -354,6 +509,14 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2017/03/03/HTTP-协议如何实现文件下载功能/"
+           data-title="HTTP 协议如何实现文件下载功能" data-url="http://chriscindy.top/2017/03/03/HTTP-协议如何实现文件下载功能/">
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -373,8 +536,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.jpg"
@@ -431,6 +603,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <p class="post-toc-empty">此文章未包含目录</p>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -534,6 +717,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 

@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://chriscindy.top/"/>
-  <updated>2017-03-03T07:34:23.000Z</updated>
+  <updated>2017-03-03T07:37:11.000Z</updated>
   <id>http://chriscindy.top/</id>
   
   <author>
@@ -14,6 +14,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>HTTP 协议如何实现文件下载功能</title>
+    <link href="http://chriscindy.top/2017/03/03/HTTP-%E5%8D%8F%E8%AE%AE%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD%E5%8A%9F%E8%83%BD/"/>
+    <id>http://chriscindy.top/2017/03/03/HTTP-协议如何实现文件下载功能/</id>
+    <published>2017-03-03T07:35:58.000Z</published>
+    <updated>2017-03-03T07:37:11.000Z</updated>
+    
+    <content type="html">&lt;p&gt;最近在做的一个项目需要自己搭建 node 服务端作中间层来转发请求与响应，原本倒也无甚难度，但是在中转一个返回内容是 excel 文件时遇到了一些问题。当然后来这个问题解决了，node 层对后端返回的响应不作处理，直接利用 pipe 穿透到前端即可（当然，用 node 改造一下再转发也是可以的，只是不如直接穿透方便）。今天想谈谈的是 http 响应头在返回数据是一个需要下载的文件时，应该是什么样子的。&lt;/p&gt;
+&lt;p&gt;http 协议实现文件下载时，需要在服务器设置好相关响应头，并使用二进制传输文件数据，而客户端（浏览器）会根据响应头接收文件数据。在 http 响应报文中，&lt;code&gt;Content-type&lt;/code&gt; 和 &lt;code&gt;Content-Disposition&lt;/code&gt; 是最关键的两个响应头。我们知道，通常情况下，前后端进行 ajax 交互时，后端返回前端的数据格式为 json（或者 xml）。这个时候响应报文里 &lt;code&gt;Content-type&lt;/code&gt; 一般是 &lt;code&gt;text/html&lt;/code&gt;、&lt;code&gt;text/plain&lt;/code&gt; 或者 &lt;code&gt;application/json&lt;/code&gt;，并且不会出现 &lt;code&gt;Content-Disposition&lt;/code&gt; 头。但在下载文件时，&lt;code&gt;Content-type&lt;/code&gt; 需要设置为 &lt;code&gt;application/octet-stream&lt;/code&gt;，该 MIME 类型在 RFC 1341 中定义，表示响应实体部分是未分类的二进制数据；&lt;code&gt;Content-Disposition&lt;/code&gt; 则需要设置为 &lt;code&gt;attachment; filename=yourFileName.yourFileExtension&lt;/code&gt;。客户端（浏览器）在接收到这个响应之后，&lt;code&gt;Content-Type: application/octet-stream&lt;/code&gt; 告诉客户端这是一个二进制文件，&lt;code&gt;Content-Disposition&lt;/code&gt; 告诉客户端这是一个需要下载的附件并告诉浏览器该附件默认的文件名。如果不添加 &lt;code&gt;Content-Disposition&lt;/code&gt; 响应头，浏览器可能会下载或显示文件内容，不同浏览器的处理有所不同。&lt;/p&gt;
+&lt;p&gt;在设置 &lt;code&gt;Content-type&lt;/code&gt; 时，除了设置 &lt;code&gt;application/octet-stream&lt;/code&gt;，也可以设置更为具体的文件类型，比如如果下载文件为微软的 word 文件，&lt;code&gt;Content-type&lt;/code&gt; 就可以设置为 &lt;code&gt;application/msword&lt;/code&gt;。一般来说 web 服务器比如 Nginx 会自动根据传输的文件类型来选择相应的 &lt;code&gt;Content-type&lt;/code&gt;（需要先配置好映射关系）。当然，在 Web 程序中也可以手动设置。比如在 node 中就可以使用 mime 包来完成这个工作。&lt;/p&gt;
+&lt;p&gt;以上就是基本的 http 协议实现文件下载功能的方式。如果还要进一步实现断点续传等功能，需要设置 &lt;code&gt;Content-range&lt;/code&gt;，这里就不展开了。&lt;/p&gt;
+&lt;p&gt;参考文献：《HTTP权威指南》、《图解HTTP》&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;最近在做的一个项目需要自己搭建 node 服务端作中间层来转发请求与响应，原本倒也无甚难度，但是在中转一个返回内容是 excel 文件时遇到了一些问题。当然后来这个问题解决了，node 层对后端返回的响应不作处理，直接利用 pipe 穿透到前端即可（当然，用 node 改造
+    
+    </summary>
+    
+      <category term="理论学习" scheme="http://chriscindy.top/categories/%E7%90%86%E8%AE%BA%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="HTTP" scheme="http://chriscindy.top/tags/HTTP/"/>
+    
+  </entry>
   
   <entry>
     <title>Vuex 实战</title>
