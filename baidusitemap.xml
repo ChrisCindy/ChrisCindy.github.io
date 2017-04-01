@@ -3,6 +3,26 @@
 
 
     
+  <url>
+    <loc>http://chriscindy.top/2017/04/01/Vuex-%E6%8F%92%E4%BB%B6%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8/</loc>
+    <lastmod>2017-04-01T07:48:09.000Z</lastmod>
+    <data>
+        <display>
+        <title>Vue 插件开发入门</title>
+        <pubTime>2017-04-01T07:47:42.000Z</pubTime>
+        
+        <tag>Vue.js</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术使用" url="http://chriscindy.top/categories/%E6%8A%80%E6%9C%AF%E4%BD%BF%E7%94%A8/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
     
   <url>
     <loc>http://chriscindy.top/2017/03/03/HTTP-%E5%8D%8F%E8%AE%AE%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD%E5%8A%9F%E8%83%BD/</loc>
@@ -35,26 +55,6 @@
         <tag>Vue.js</tag>
          
         <tag>Vuex</tag>
-         
-         
-           
-             
-              <breadCrumb title="技术使用" url="http://chriscindy.top/categories/%E6%8A%80%E6%9C%AF%E4%BD%BF%E7%94%A8/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://chriscindy.top/2017/03/03/Vue-%E6%8F%92%E4%BB%B6%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8/</loc>
-    <lastmod>2017-03-03T07:31:57.000Z</lastmod>
-    <data>
-        <display>
-        <title>Vue 插件开发入门</title>
-        <pubTime>2017-03-03T07:21:38.000Z</pubTime>
-        
-        <tag>Vue.js</tag>
          
          
            
