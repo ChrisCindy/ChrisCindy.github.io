@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://chriscindy.top/"/>
-  <updated>2017-04-13T09:59:15.000Z</updated>
+  <updated>2017-04-19T09:31:18.000Z</updated>
   <id>http://chriscindy.top/</id>
   
   <author>
@@ -14,6 +14,40 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>慎用 for..of，Babel 不是万能的！</title>
+    <link href="http://chriscindy.top/2017/04/18/%E6%85%8E%E7%94%A8-for-of%EF%BC%8CBabel-%E4%B8%8D%E6%98%AF%E4%B8%87%E8%83%BD%E7%9A%84/"/>
+    <id>http://chriscindy.top/2017/04/18/慎用-for-of，Babel-不是万能的/</id>
+    <published>2017-04-18T08:02:25.000Z</published>
+    <updated>2017-04-19T09:31:18.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>ES6 借鉴了其他编程语言的特性，为 JavaScript 带来了 for…of 循环语法，用于遍历数组等数据结构。当然，由于是 ES6 的特性，我们使用 for…of 的时候，依然要借助 Babel 进行转码。我们来看看 Babel 是如何处理 for…of 代码的。</p>
+<p>ES6 原生代码如下。为避免干扰，这里不使用 ES6 其他特性。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> names = [<span class="string">'paul'</span>, <span class="string">'jordan'</span>, <span class="string">'griffin'</span>];</div><div class="line"><span class="keyword">for</span> (<span class="keyword">var</span> name <span class="keyword">of</span> names) &#123;</div><div class="line">  <span class="built_in">console</span>.log(name);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>Babel 转码后结果如下：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"><span class="meta">'use strict'</span>;</div><div class="line"></div><div class="line"><span class="keyword">var</span> names = [<span class="string">'paul'</span>, <span class="string">'jordan'</span>, <span class="string">'griffin'</span>];</div><div class="line"><span class="keyword">var</span> _iteratorNormalCompletion = <span class="literal">true</span>;</div><div class="line"><span class="keyword">var</span> _didIteratorError = <span class="literal">false</span>;</div><div class="line"><span class="keyword">var</span> _iteratorError = <span class="literal">undefined</span>;</div><div class="line"></div><div class="line"><span class="keyword">try</span> &#123;</div><div class="line">  <span class="keyword">for</span> (<span class="keyword">var</span> _iterator = names[<span class="built_in">Symbol</span>.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = <span class="literal">true</span>) &#123;</div><div class="line">    <span class="keyword">var</span> name = _step.value;</div><div class="line"></div><div class="line">    <span class="built_in">console</span>.log(name);</div><div class="line">  &#125;</div><div class="line">&#125; <span class="keyword">catch</span> (err) &#123;</div><div class="line">  _didIteratorError = <span class="literal">true</span>;</div><div class="line">  _iteratorError = err;</div><div class="line">&#125; <span class="keyword">finally</span> &#123;</div><div class="line">  <span class="keyword">try</span> &#123;</div><div class="line">    <span class="keyword">if</span> (!_iteratorNormalCompletion &amp;&amp; _iterator.return) &#123;</div><div class="line">      _iterator.return();</div><div class="line">    &#125;</div><div class="line">  &#125; <span class="keyword">finally</span> &#123;</div><div class="line">    <span class="keyword">if</span> (_didIteratorError) &#123;</div><div class="line">      <span class="keyword">throw</span> _iteratorError;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>我们观察到 Babel 转换后的代码里第 9 行仍然出现了 ES6 的特性——Symbol.iterator，这是为什么呢？我们先来探究一下 for…of 的实现原理。</p>
+<p>for…of 在对数据结构进行循环时，背后实际上是调用了该数据结构的 Iterator 接口。一种数据结构只要具有 Iterator 接口，我们就可以认为该数据结构是“<strong>可遍历的</strong>”（iterable）。原生数据结构中具有“可遍历”属性的包括数组、Set、Map、以及字符串之类的类数组对象等。具体到 Iterator 接口上，ES6 规定。默认的 Iterator 接口部署在该数据结构的 Symbol.iterator 属性上（Symbol 是 ES6 新增的原始数据类型，表示独一无二的值，具体参见 ES6 文档），该属性本身是一个函数，执行该函数会返回一个指针对象。该指针对象称为<strong>遍历器</strong>，其必须包含一个 next 方法，不断调用 next 方法可以使指针从数据结构的第一个成员一直指向最后一个成员，即调用 next 方法会返回数据结构当前成员的信息，该信息为一个对象，包含 value 和 done 两个属性。value 是当前成员的值，done 是一个布尔值，表示遍历是否结束。以上的理论有点抽象，我们来模拟一个“可遍历”的数据结构：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> iterableData = &#123;</div><div class="line">  <span class="attr">data</span>: [<span class="string">'paul'</span>,<span class="string">'jordan'</span>,<span class="string">'griffin'</span>,<span class="string">'redick'</span>,<span class="string">'rivers'</span>],</div><div class="line">  <span class="attr">dataIndex</span>: <span class="number">0</span>,</div><div class="line">  <span class="comment">//Symbol 类型的值作为对象属性时必须使用方括号结构</span></div><div class="line">  [<span class="built_in">Symbol</span>.iterator]: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> self = <span class="keyword">this</span>;</div><div class="line">    <span class="keyword">return</span> &#123;</div><div class="line">      <span class="attr">next</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">	    <span class="keyword">return</span> &#123;</div><div class="line">		 <span class="attr">value</span>: self.data[self.dataIndex++],</div><div class="line">          <span class="attr">done</span>: self.dataIndex &lt; self.data.length? <span class="literal">false</span>: <span class="literal">true</span>	</div><div class="line">	    &#125;;</div><div class="line">      &#125;</div><div class="line">    &#125;;</div><div class="line">  &#125;</div><div class="line">&#125;;</div><div class="line"></div><div class="line"></div><div class="line"><span class="keyword">for</span> (<span class="keyword">let</span> item <span class="keyword">of</span> iterableData) &#123;</div><div class="line">  <span class="built_in">console</span>.log(item);</div><div class="line">&#125;</div><div class="line"><span class="comment">// paul, jordan, griffin, redick, rivers</span></div></pre></td></tr></table></figure>
+<p>可以看到，只要一个数据结构具有符合要求的 Symbol.iterator 属性，就可以通过 for…of 遍历（事实上，解构赋值、扩展运算符、yield* 等 ES6 特性也是调用该属性接口）。</p>
+<p>现在，我们回过头来看 Babel 转换 for…of 循环的代码，其本质上还是通过调用 Iterator 接口（注意第 9 行），将 for…of 转换为传统的 for 循环，并在每次循环中调用遍历器的 next 方法来吐出数组中的值。如果在循环调用过程中出现错误，如果有遍历器中含有预定义的 return 函数（参见 ES6 文档中遍历器对象的规范 ），则调用之，否则直接抛出错误。</p>
+<p>所以，问题就出现了，即使调用 Babel 对 for…of 循环进行转码，我们实际上还是无法完全摆脱 ES6 的特性——在不支持 Symbol 的环境下，代码仍然会报错。因为 Babel 默认只转换新的 JavaScript 句法（syntax）,而不转换 Proxy、Set、Promise、Symbol 等新的 API。所以，在对兼容性要求较高时，确实要慎重使用 for…of 语法，即使我们有 Babel 这件神兵利器。</p>
+<p>实际上，要想完全抹平 ES6 特性带来的新 API 也是可行的，只要在项目中引入 babel-polyfill 并配置好即可，但是这样带来的另一个问题就是因为 babel-polyfill 本身的体积，我们的代码也会变庞大不少。所以此举有利有弊，需要根据实际情况进行权衡。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;ES6 借鉴了其他编程语言的特性，为 JavaScript 带来了 for…of 循环语法，用于遍历数组等数据结构。当然，由于是 ES6 的特性，我们使用 for…of 的时候，依然要借助 Babel 进行转码。我们来看看 Babel 是如何处理 for…of 代码的。&lt;/
+    
+    </summary>
+    
+    
+      <category term="Babel" scheme="http://chriscindy.top/tags/Babel/"/>
+    
+      <category term="ES6" scheme="http://chriscindy.top/tags/ES6/"/>
+    
+  </entry>
   
   <entry>
     <title>如何终止 JS 脚本的运行</title>
@@ -1585,33 +1619,6 @@
     
     
       <category term="Git" scheme="http://chriscindy.top/tags/Git/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="http://chriscindy.top/2016/07/08/Hello%20World/"/>
-    <id>http://chriscindy.top/2016/07/08/Hello World/</id>
-    <published>2016-07-08T03:25:04.000Z</published>
-    <updated>2016-08-22T10:15:21.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>恩，这是 hexo 建好后默认的第一篇博文，没有想过删除它，因为我觉得对于这样一个有纪念意义的时刻，应该有一篇文章能够记录一下。</p>
-<p>没错，终于有自己可以写文章的地方了，感觉就像是终于有了一个只属于自己的小窝，这种美妙的感觉难以言表。从今以后，就在这里分享技术，感悟生活啦。</p>
-<p>配置 Hexo 的过程并不困难，就是有些繁琐。之前选用了一个比较小众但很清新的主题 <a href="https://github.com/ahonn/hexo-theme-even" target="_blank" rel="external">even</a>，但是发现有各种功能上的缺失，终于还是决定回到最强势最完善的 NexT 上，折腾一圈，安装完各种插件，看着博客的功能慢慢丰满起来，虽然没有太大的难度，但是仍有一种满满的成就感。</p>
-<p>所以，Hello World，向成为前端大拿努力！</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;恩，这是 hexo 建好后默认的第一篇博文，没有想过删除它，因为我觉得对于这样一个有纪念意义的时刻，应该有一篇文章能够记录一下。&lt;/p&gt;
-&lt;p&gt;没错，终于有自己可以写文章的地方了，感觉就像是终于有了一个只属于自己的小窝，这种美妙的感觉难以言表。从今以后，就在这里分享技术，感
-    
-    </summary>
-    
-      <category term="生活感悟" scheme="http://chriscindy.top/categories/%E7%94%9F%E6%B4%BB%E6%84%9F%E6%82%9F/"/>
-    
-    
-      <category term="里程碑" scheme="http://chriscindy.top/tags/%E9%87%8C%E7%A8%8B%E7%A2%91/"/>
     
   </entry>
   
