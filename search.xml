@@ -20,6 +20,12 @@
 <p>实际上，要想完全抹平 ES6 特性带来的新 API 也是可行的，只要在项目中引入 babel-polyfill 并配置好即可，但是这样带来的另一个问题就是因为 babel-polyfill 本身的体积，我们的代码也会变庞大不少。所以此举有利有弊，需要根据实际情况进行权衡。</p>
 ]]></content>
       
+        <categories>
+            
+            <category> 理论学习 </category>
+            
+        </categories>
+        
         
         <tags>
             
