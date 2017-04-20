@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://chriscindy.top/about/index.html</loc>
+    
+    <lastmod>2017-04-20T09:43:01.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://chriscindy.top/2017/04/18/%E6%85%8E%E7%94%A8-for-of%EF%BC%8CBabel-%E4%B8%8D%E6%98%AF%E4%B8%87%E8%83%BD%E7%9A%84/</loc>
     
     <lastmod>2017-04-20T07:05:59.000Z</lastmod>
@@ -19,13 +26,6 @@
     <loc>http://chriscindy.top/2017/04/01/Vuex-%E6%8F%92%E4%BB%B6%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8/</loc>
     
     <lastmod>2017-04-01T07:48:09.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://chriscindy.top/about/index.html</loc>
-    
-    <lastmod>2017-03-03T07:39:46.000Z</lastmod>
     
   </url>
   
