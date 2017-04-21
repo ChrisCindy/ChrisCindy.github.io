@@ -4,6 +4,46 @@
 
     
   <url>
+    <loc>http://chriscindy.top/post/%5Btranslation%5D-Building-Apps-with-Riot-ES6-and-Webpack/</loc>
+    <lastmod>2017-04-21T08:42:09.000Z</lastmod>
+    <data>
+        <display>
+        <title>[译]使用 Riot，ES6 和 Webpack 构建应用</title>
+        <pubTime>2016-07-11T03:10:52.000Z</pubTime>
+        
+        <tag>Riot.js</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术研究" url="http://chriscindy.top/categories/%E6%8A%80%E6%9C%AF%E7%A0%94%E7%A9%B6/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://chriscindy.top/post/%5Btranslation%5D-Out-Of-Band-Content-Coding/</loc>
+    <lastmod>2017-04-21T08:41:26.000Z</lastmod>
+    <data>
+        <display>
+        <title>[译][草案] HTTP “带外”内容编码</title>
+        <pubTime>2016-12-18T09:48:12.000Z</pubTime>
+        
+        <tag>HTTP</tag>
+         
+         
+           
+             
+              <breadCrumb title="理论学习" url="http://chriscindy.top/categories/%E7%90%86%E8%AE%BA%E5%AD%A6%E4%B9%A0/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://chriscindy.top/post/background-and-border%E2%80%94%E2%80%94reading-notes-of-CSS-secrets/</loc>
     <lastmod>2017-04-21T02:57:52.000Z</lastmod>
     <data>
@@ -391,46 +431,6 @@
     </url>
 
     
-    
-  <url>
-    <loc>http://chriscindy.top/post/undefined/</loc>
-    <lastmod>2016-12-18T10:11:39.000Z</lastmod>
-    <data>
-        <display>
-        <title>[译][草案] HTTP “带外”内容编码</title>
-        <pubTime>2016-12-18T09:48:12.000Z</pubTime>
-        
-        <tag>HTTP</tag>
-         
-         
-           
-             
-              <breadCrumb title="理论学习" url="http://chriscindy.top/categories/%E7%90%86%E8%AE%BA%E5%AD%A6%E4%B9%A0/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://chriscindy.top/post/undefined/</loc>
-    <lastmod>2016-09-08T08:55:57.000Z</lastmod>
-    <data>
-        <display>
-        <title>[译]使用 Riot，ES6 和 Webpack 构建应用</title>
-        <pubTime>2016-07-11T03:10:52.000Z</pubTime>
-        
-        <tag>Riot.js</tag>
-         
-         
-           
-             
-              <breadCrumb title="技术研究" url="http://chriscindy.top/categories/%E6%8A%80%E6%9C%AF%E7%A0%94%E7%A9%B6/"/>
-          
-        </display>
-    </data>
-    </url>
-
     
     
     
