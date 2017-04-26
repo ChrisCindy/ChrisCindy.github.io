@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://chriscindy.top/"/>
-  <updated>2017-04-26T07:26:46.000Z</updated>
+  <updated>2017-04-26T07:33:38.000Z</updated>
   <id>http://chriscindy.top/</id>
   
   <author>
@@ -20,44 +20,54 @@
     <link href="http://chriscindy.top/post/reading-notes-one-of-learning-HTTP-together/"/>
     <id>http://chriscindy.top/post/reading-notes-one-of-learning-HTTP-together/</id>
     <published>2017-04-26T07:22:26.000Z</published>
-    <updated>2017-04-26T07:26:46.000Z</updated>
+    <updated>2017-04-26T07:33:38.000Z</updated>
     
-    <content type="html"><![CDATA[<p>第一章 了解 Web 及网络基础<br>略</p>
-<p>第二章 简单的 HTTP 协议</p>
-<ul>
+    <content type="html"><![CDATA[<h2 id="第一章-了解-Web-及网络基础"><a href="#第一章-了解-Web-及网络基础" class="headerlink" title="第一章 了解 Web 及网络基础"></a>第一章 了解 Web 及网络基础</h2><p>略</p>
+<h2 id="第二章-简单的-HTTP-协议"><a href="#第二章-简单的-HTTP-协议" class="headerlink" title="第二章 简单的 HTTP 协议"></a>第二章 简单的 HTTP 协议</h2><ul>
 <li>HTTP/1.1 所有连接默认为持久连接，但 HTTP/1.0 未标准化</li>
 <li>管线化技术出现后，不需要等待响应即可直接发送下一个请求</li>
 <li>Cookie 技术通过在请求和响应报文中写入 Cookie 信息来控制客户端的状态。服务器发送的响应报文中含有 Set-Cookie 的首部字段时，客户端保存 Cookie。此后客户端在请求报文中会自动加上 Cookie 值</li>
 </ul>
-<p>第三章 HHTP 报文内的 HTTP 信息</p>
-<ul>
-<li>编码提升传输速率，常用的内容编码有以下几种：gzip（GNU zip）、compress（UNIX 系统的标准压缩）、deflate（zlib）、identify（不进行编码）</li>
-<li>分割发送的分块传输编码（Chunked Transfer Coding），其将实体主体分成多个部分，每一部分均通过十六进制来标记块的大小，最后一块使用『0（CR+LF）』来标记。</li>
-<li>MIME（多用途因特网邮件扩展）机制，允许邮件处理文本、图片、视频等多个不同类型的数据。MIME 扩展中使用一种称为多部分对象集合（Multipart）的方法，用来容纳多份不同类型的数据。</li>
+<h2 id="第三章-HHTP-报文内的-HTTP-信息"><a href="#第三章-HHTP-报文内的-HTTP-信息" class="headerlink" title="第三章 HHTP 报文内的 HTTP 信息"></a>第三章 HHTP 报文内的 HTTP 信息</h2><ul>
+<li><p>编码提升传输速率，常用的内容编码有以下几种：gzip（GNU zip）、compress（UNIX 系统的标准压缩）、deflate（zlib）、identify（不进行编码）</p>
+</li>
+<li><p>分割发送的分块传输编码（Chunked Transfer Coding），其将实体主体分成多个部分，每一部分均通过十六进制来标记块的大小，最后一块使用『0（CR+LF）』来标记。</p>
+</li>
+<li><p>MIME（多用途因特网邮件扩展）机制，允许邮件处理文本、图片、视频等多个不同类型的数据。MIME 扩展中使用一种称为多部分对象集合（Multipart）的方法，用来容纳多份不同类型的数据。</p>
+</li>
 <li><p>mulitpart 包含的对象如下：</p>
 <ul>
-<li><p>multipart/form-data：在 Web 表单文件上传时使用<br>  Content-Type: multipart/form-data; boundary=AaB03x</p>
-<p>  –AaB03x<br>  Content-Disposition: form-data; name=”field1”</p>
-<p>  Joe Blow<br>  –AaB03x<br>  Content-Disposition: form-data; name=”pics”; filename=”file1.txt”<br>  Content-Type: text/plain</p>
-<p>  …（file1.txt的数据）…<br>  –AaB03x–</p>
-</li>
-<li><p>multipart/byteranges：状态码 206（Partial Content，部分内容）响应报文包含了多个范围的内容时使用<br>  HTTP/1.1 206 Partial Content<br>  Date: Fri, 13 Jul 2012 02:45:26v GMT<br>  Last-Modified: Fri, 31 Aug 2007 02:02:20 GMT<br>  Content-Type: multipart/byteranges; boundary=THIS_STRING_SEPARATES</p>
-<p>  –THIS_STRING_SEPARATES<br>  Content-Type: application/pdf<br>  Content-Range: bytes 500-999/8000</p>
-<p>  …(范围指定的数据)…</p>
-<p>  –THIS_STRING_SEPARATES<br>  Content-Type: application/pdf<br>  Content-Range: bytes 7000-7999/8000</p>
-<p>  …(范围指定的数据)…<br>  –THIS_STRING_SEPARATES–<br>说明：</p>
-</li>
+<li>multipart/form-data：在 Web 表单文件上传时使用</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">Content-Type: multipart/form-data; boundary=AaB03x</div><div class="line"></div><div class="line">--AaB03x</div><div class="line">Content-Disposition: form-data; name=&quot;field1&quot;</div><div class="line"></div><div class="line">Joe Blow</div><div class="line">--AaB03x</div><div class="line">Content-Disposition: form-data; name=&quot;pics&quot;; filename=&quot;file1.txt&quot;</div><div class="line">Content-Type: text/plain</div><div class="line"></div><div class="line">...（file1.txt的数据）...</div><div class="line">--AaB03x--</div></pre></td></tr></table></figure>
+<ul>
+<li>multipart/byteranges：状态码 206（Partial Content，部分内容）响应报文包含了多个范围的内容时使用</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">HTTP/1.1 206 Partial Content</div><div class="line">Date: Fri, 13 Jul 2012 02:45:26v GMT</div><div class="line">Last-Modified: Fri, 31 Aug 2007 02:02:20 GMT</div><div class="line">Content-Type: multipart/byteranges; boundary=THIS_STRING_SEPARATES</div><div class="line"></div><div class="line">--THIS_STRING_SEPARATES</div><div class="line">Content-Type: application/pdf</div><div class="line">Content-Range: bytes 500-999/8000</div><div class="line"></div><div class="line">...(范围指定的数据)...</div><div class="line"></div><div class="line">--THIS_STRING_SEPARATES</div><div class="line">Content-Type: application/pdf</div><div class="line">Content-Range: bytes 7000-7999/8000</div><div class="line"></div><div class="line">...(范围指定的数据)...</div><div class="line">--THIS_STRING_SEPARATES--</div></pre></td></tr></table></figure>
+<p>说明：</p>
+<ul>
 <li>使用 boundary 字符串来划分 multipart 指明的各类实体，在其指定的各个实体的起始行之前插入『—』标记（如 –AaB03x），在对应的字符串的最后插入『–』标记作为结束（如 –AaB03x—）。</li>
 </ul>
 </li>
-<li>范围请求（Range Request）：指定范围发送的请求。执行范围请求时，用到首部字段 Range 来指定资源的 byte 范围：<ul>
-<li>5001~10000 字节<br>  Range: bytes=5001-10000</li>
-<li>从 5001 字节之后全部的<br>  Range: bytes=5001-</li>
-<li>从一开始到 3000 字节和 5000~7000 字节的多重范围<br>  Range: bytes=-3000, 5000-7000</li>
+<li><p>范围请求（Range Request）：指定范围发送的请求。执行范围请求时，用到首部字段 Range 来指定资源的 byte 范围：</p>
+<ul>
+<li>5001~10000 字节</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Range: bytes=5001-10000</div></pre></td></tr></table></figure>
+<ul>
+<li>从 5001 字节之后全部的</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Range: bytes=5001-</div></pre></td></tr></table></figure>
+<ul>
+<li>从一开始到 3000 字节和 5000~7000 字节的多重范围</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Range: bytes=-3000, 5000-7000</div></pre></td></tr></table></figure>
+<ul>
 <li>说明：针对范围请求，响应返回 206 Partial Content 的响应报文。对于多重范围的范围请求，响应会在首部字段 Content-Type 标明 multipart/byteranges 后 返回响应报文。如果服务器无法响应范围请求，则会返回 200 OK。</li>
 </ul>
 </li>
-<li>内容协商（Content Negotiation）：客户端和服务器端就响应的资源内容进行交涉，然后提供给客户端最合适的资源。内容协商会以响应资源的语言、字符集、编码方式等作为判断的基准，包含在请求报文中的某些首部字段用于标识这些判断标准：<ul>
+<li><p>内容协商（Content Negotiation）：客户端和服务器端就响应的资源内容进行交涉，然后提供给客户端最合适的资源。内容协商会以响应资源的语言、字符集、编码方式等作为判断的基准，包含在请求报文中的某些首部字段用于标识这些判断标准：</p>
+<ul>
 <li>Accept</li>
 <li>Accept-Charset</li>
 <li>Accept-Encoding</li>
@@ -65,7 +75,8 @@
 <li>Content-Language</li>
 </ul>
 </li>
-<li>内容协商技术的 3 种类型：<ul>
+<li><p>内容协商技术的 3 种类型：</p>
+<ul>
 <li>服务器驱动协商</li>
 <li>客户端驱动协商</li>
 <li>透明协商</li>
@@ -76,12 +87,8 @@
     
     <summary type="html">
     
-      &lt;p&gt;第一章 了解 Web 及网络基础&lt;br&gt;略&lt;/p&gt;
-&lt;p&gt;第二章 简单的 HTTP 协议&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;HTTP/1.1 所有连接默认为持久连接，但 HTTP/1.0 未标准化&lt;/li&gt;
-&lt;li&gt;管线化技术出现后，不需要等待响应即可直接发送下一个请求&lt;/li&gt;
-
+      &lt;h2 id=&quot;第一章-了解-Web-及网络基础&quot;&gt;&lt;a href=&quot;#第一章-了解-Web-及网络基础&quot; class=&quot;headerlink&quot; title=&quot;第一章 了解 Web 及网络基础&quot;&gt;&lt;/a&gt;第一章 了解 Web 及网络基础&lt;/h2&gt;&lt;p&gt;略&lt;/p&gt;
+&lt;h2 id=&quot;
     
     </summary>
     
