@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://chriscindy.top/"/>
-  <updated>2017-04-21T02:43:10.000Z</updated>
+  <updated>2017-04-26T07:26:46.000Z</updated>
   <id>http://chriscindy.top/</id>
   
   <author>
@@ -14,6 +14,83 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>《图解 HTTP》 梳理（一）</title>
+    <link href="http://chriscindy.top/post/reading-notes-one-of-learning-HTTP-together/"/>
+    <id>http://chriscindy.top/post/reading-notes-one-of-learning-HTTP-together/</id>
+    <published>2017-04-26T07:22:26.000Z</published>
+    <updated>2017-04-26T07:26:46.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>第一章 了解 Web 及网络基础<br>略</p>
+<p>第二章 简单的 HTTP 协议</p>
+<ul>
+<li>HTTP/1.1 所有连接默认为持久连接，但 HTTP/1.0 未标准化</li>
+<li>管线化技术出现后，不需要等待响应即可直接发送下一个请求</li>
+<li>Cookie 技术通过在请求和响应报文中写入 Cookie 信息来控制客户端的状态。服务器发送的响应报文中含有 Set-Cookie 的首部字段时，客户端保存 Cookie。此后客户端在请求报文中会自动加上 Cookie 值</li>
+</ul>
+<p>第三章 HHTP 报文内的 HTTP 信息</p>
+<ul>
+<li>编码提升传输速率，常用的内容编码有以下几种：gzip（GNU zip）、compress（UNIX 系统的标准压缩）、deflate（zlib）、identify（不进行编码）</li>
+<li>分割发送的分块传输编码（Chunked Transfer Coding），其将实体主体分成多个部分，每一部分均通过十六进制来标记块的大小，最后一块使用『0（CR+LF）』来标记。</li>
+<li>MIME（多用途因特网邮件扩展）机制，允许邮件处理文本、图片、视频等多个不同类型的数据。MIME 扩展中使用一种称为多部分对象集合（Multipart）的方法，用来容纳多份不同类型的数据。</li>
+<li><p>mulitpart 包含的对象如下：</p>
+<ul>
+<li><p>multipart/form-data：在 Web 表单文件上传时使用<br>  Content-Type: multipart/form-data; boundary=AaB03x</p>
+<p>  –AaB03x<br>  Content-Disposition: form-data; name=”field1”</p>
+<p>  Joe Blow<br>  –AaB03x<br>  Content-Disposition: form-data; name=”pics”; filename=”file1.txt”<br>  Content-Type: text/plain</p>
+<p>  …（file1.txt的数据）…<br>  –AaB03x–</p>
+</li>
+<li><p>multipart/byteranges：状态码 206（Partial Content，部分内容）响应报文包含了多个范围的内容时使用<br>  HTTP/1.1 206 Partial Content<br>  Date: Fri, 13 Jul 2012 02:45:26v GMT<br>  Last-Modified: Fri, 31 Aug 2007 02:02:20 GMT<br>  Content-Type: multipart/byteranges; boundary=THIS_STRING_SEPARATES</p>
+<p>  –THIS_STRING_SEPARATES<br>  Content-Type: application/pdf<br>  Content-Range: bytes 500-999/8000</p>
+<p>  …(范围指定的数据)…</p>
+<p>  –THIS_STRING_SEPARATES<br>  Content-Type: application/pdf<br>  Content-Range: bytes 7000-7999/8000</p>
+<p>  …(范围指定的数据)…<br>  –THIS_STRING_SEPARATES–<br>说明：</p>
+</li>
+<li>使用 boundary 字符串来划分 multipart 指明的各类实体，在其指定的各个实体的起始行之前插入『—』标记（如 –AaB03x），在对应的字符串的最后插入『–』标记作为结束（如 –AaB03x—）。</li>
+</ul>
+</li>
+<li>范围请求（Range Request）：指定范围发送的请求。执行范围请求时，用到首部字段 Range 来指定资源的 byte 范围：<ul>
+<li>5001~10000 字节<br>  Range: bytes=5001-10000</li>
+<li>从 5001 字节之后全部的<br>  Range: bytes=5001-</li>
+<li>从一开始到 3000 字节和 5000~7000 字节的多重范围<br>  Range: bytes=-3000, 5000-7000</li>
+<li>说明：针对范围请求，响应返回 206 Partial Content 的响应报文。对于多重范围的范围请求，响应会在首部字段 Content-Type 标明 multipart/byteranges 后 返回响应报文。如果服务器无法响应范围请求，则会返回 200 OK。</li>
+</ul>
+</li>
+<li>内容协商（Content Negotiation）：客户端和服务器端就响应的资源内容进行交涉，然后提供给客户端最合适的资源。内容协商会以响应资源的语言、字符集、编码方式等作为判断的基准，包含在请求报文中的某些首部字段用于标识这些判断标准：<ul>
+<li>Accept</li>
+<li>Accept-Charset</li>
+<li>Accept-Encoding</li>
+<li>Accept-Language</li>
+<li>Content-Language</li>
+</ul>
+</li>
+<li>内容协商技术的 3 种类型：<ul>
+<li>服务器驱动协商</li>
+<li>客户端驱动协商</li>
+<li>透明协商</li>
+</ul>
+</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;第一章 了解 Web 及网络基础&lt;br&gt;略&lt;/p&gt;
+&lt;p&gt;第二章 简单的 HTTP 协议&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;HTTP/1.1 所有连接默认为持久连接，但 HTTP/1.0 未标准化&lt;/li&gt;
+&lt;li&gt;管线化技术出现后，不需要等待响应即可直接发送下一个请求&lt;/li&gt;
+
+    
+    </summary>
+    
+      <category term="读书笔记" scheme="http://chriscindy.top/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="HTTP" scheme="http://chriscindy.top/tags/HTTP/"/>
+    
+  </entry>
   
   <entry>
     <title>慎用 for..of，Babel 不是万能的！</title>
@@ -1589,42 +1666,6 @@
     
     
       <category term="JavaScript" scheme="http://chriscindy.top/tags/JavaScript/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>两个 Git 帐号如何在一台电脑上共存</title>
-    <link href="http://chriscindy.top/post/how-to-make-two-git-accounts-compatible-in-one-computer/"/>
-    <id>http://chriscindy.top/post/how-to-make-two-git-accounts-compatible-in-one-computer/</id>
-    <published>2016-07-08T08:11:59.000Z</published>
-    <updated>2017-04-21T02:44:40.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>相信很多开发者都会遇到在自己的电脑上使用不止一个 git 帐号的情况。一个一般是自己的 github 帐号，另一个则是公司的 git 帐号，比如 gitlab、bitbucket 等。如果采用 https 方式通信，那么 git 帐号间不会有冲突，但你在每次 pull、push 的时候都要输入帐号密码，十分繁琐。而且当代码库达到十分庞大的规模时，如果仍然采用 https 方式，在 git pull 时可能出现超时不响应的情况，此时只能采用 ssh 方式。ssh 在配置完 ssh key 后使用起来很方便，但是 git 帐号间可能出现冲突，这时候该如何解决呢？<br>配置 ssh key 的方式此处不再赘述，假设 <code>.ssh</code> 文件夹下有 id_rsa、id_rsa.pub、didi_id_rsa、didi_id_rsa.pub，分别对应个人 github 帐号私钥公钥以及公司 git 帐号私钥公钥。如果不进行设置，使用 github 账号时没有问题，但是使用公司账号时，由于默认情况下私钥存放在 <code>id_rsa</code> 文件中，因此 git 仍会尝试用 id_rsa 中而不是 didi_id_rsa 中的私钥去与服务器上添加的公钥进行比对，自然而然会报错。通常这种情况下 git 会让你输入密码，笔者连续三次输入密码错误（其实根本不知道该密码为何物），报错，Permission denied。<br>网络上的解决方案普遍为在 ssh 的配置文件中加入以下字段：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">Host github.com</div><div class="line"> hostname gitlab.zjut.com</div><div class="line"> User Boy-A</div><div class="line"> IdentityFile /User/&lt;yourusername&gt;/.ssh/id_rsa</div><div class="line"> </div><div class="line">Host git.xiaojukeji.com</div><div class="line"> hostname git.xiaojukeji.com</div><div class="line"> User Boy-B</div><div class="line"> IdentityFile /User/&lt;yourusername&gt;/.ssh/didi_id_rsa</div></pre></td></tr></table></figure>
-<p>该文件的主要作用就是指明各个 git 帐号对应的 User 以及 IdentityFile 的文件位置。当配置完毕后，在各个项目 repo 中应用自己的用户名以及邮箱：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">1.取消 global</div><div class="line">git config --global --unset user.name</div><div class="line">git config --global --unset user.email</div><div class="line"></div><div class="line">2.设置每个项目 repo 的自己的 user.email</div><div class="line">git config  user.email &quot;xxxx@xx.com&quot;</div><div class="line">git config  user.name &quot;ddfe&quot;</div></pre></td></tr></table></figure>
-<p>如此，各个 git 帐号间就可以“井水不犯河水”了。</p>
-<p>但是，最麻烦的地方其实并不在这里，而是这个配置文件究竟位于何处。根据网友的分享，Window 系统中，该配置信息存放在名为 config 的文件中，位置在 <code>~/.ssh/</code> 目录下，而在Linux/Unix系统中配置信息则保存在 ssh_config 文件中，至于位置，众说纷纭。笔者使用的是 macOS 系统，尝试用 “ssh -vT git@git.xiaojukeji.com” 去查看 ssh 连接主机的 debug 信息，终于发现了头绪，debug信息的第二行如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">debug1: Reading configuration data /etc/ssh/ssh_config</div></pre></td></tr></table></figure>
-<p>终于找到了文件的位置！修改之，大功告成！</p>
-<h2 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h2><ol>
-<li>使用命令 “ssh -vT git@xxx.com” 查看 ssh_config 文件的位置</li>
-<li>进入 ssh_config 文件，配置各个 git 帐号的 User 以及 IdentityFIle</li>
-<li>在各个项目中配置好 user.name 以及 user.email</li>
-<li>在各个 git 帐号间尽情穿梭吧~</li>
-</ol>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;相信很多开发者都会遇到在自己的电脑上使用不止一个 git 帐号的情况。一个一般是自己的 github 帐号，另一个则是公司的 git 帐号，比如 gitlab、bitbucket 等。如果采用 https 方式通信，那么 git 帐号间不会有冲突，但你在每次 pull、pu
-    
-    </summary>
-    
-      <category term="解决方案" scheme="http://chriscindy.top/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
-    
-    
-      <category term="Git" scheme="http://chriscindy.top/tags/Git/"/>
     
   </entry>
   
