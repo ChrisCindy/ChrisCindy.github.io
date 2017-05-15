@@ -4,109 +4,8 @@
 
     
   <url>
-    <loc>http://chriscindy.top/post/JavaScript-custom-events/</loc>
-    <lastmod>2017-05-15T04:05:41.000Z</lastmod>
-    <data>
-        <display>
-        <title>JavaScript 自定义事件</title>
-        <pubTime>2017-05-15T02:18:34.000Z</pubTime>
-        
-        <tag>JavaScript</tag>
-         
-         
-           
-             
-              <breadCrumb title="代码片段" url="http://chriscindy.top/categories/%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-    
-  <url>
-    <loc>http://chriscindy.top/post/reading-notes-two-of-learning-HTTP-together/</loc>
-    <lastmod>2017-04-27T07:16:14.000Z</lastmod>
-    <data>
-        <display>
-        <title>《图解HTTP》梳理（二）</title>
-        <pubTime>2017-04-27T07:14:53.000Z</pubTime>
-        
-        <tag>HTTP</tag>
-         
-         
-           
-             
-              <breadCrumb title="读书笔记" url="http://chriscindy.top/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://chriscindy.top/post/reading-notes-one-of-learning-HTTP-together/</loc>
-    <lastmod>2017-04-27T07:15:28.000Z</lastmod>
-    <data>
-        <display>
-        <title>《图解 HTTP》 梳理（一）</title>
-        <pubTime>2017-04-26T07:22:26.000Z</pubTime>
-        
-        <tag>HTTP</tag>
-         
-         
-           
-             
-              <breadCrumb title="读书笔记" url="http://chriscindy.top/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://chriscindy.top/post/%5Btranslation%5D-Building-Apps-with-Riot-ES6-and-Webpack/</loc>
-    <lastmod>2017-04-21T08:42:09.000Z</lastmod>
-    <data>
-        <display>
-        <title>[译]使用 Riot，ES6 和 Webpack 构建应用</title>
-        <pubTime>2016-07-11T03:10:52.000Z</pubTime>
-        
-        <tag>Riot.js</tag>
-         
-         
-           
-             
-              <breadCrumb title="技术研究" url="http://chriscindy.top/categories/%E6%8A%80%E6%9C%AF%E7%A0%94%E7%A9%B6/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://chriscindy.top/post/%5Btranslation%5D-Out-Of-Band-Content-Coding/</loc>
-    <lastmod>2017-04-21T08:41:26.000Z</lastmod>
-    <data>
-        <display>
-        <title>[译][草案] HTTP “带外”内容编码</title>
-        <pubTime>2016-12-18T09:48:12.000Z</pubTime>
-        
-        <tag>HTTP</tag>
-         
-         
-           
-             
-              <breadCrumb title="理论学习" url="http://chriscindy.top/categories/%E7%90%86%E8%AE%BA%E5%AD%A6%E4%B9%A0/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://chriscindy.top/post/background-and-border%E2%80%94%E2%80%94reading-notes-of-CSS-secrets/</loc>
-    <lastmod>2017-04-21T02:57:52.000Z</lastmod>
+    <lastmod>2017-05-15T04:28:11.000Z</lastmod>
     <data>
         <display>
         <title>《CSS揭秘》读书总结：背景与边框</title>
@@ -125,19 +24,383 @@
 
     
   <url>
-    <loc>http://chriscindy.top/post/optimizing-my-blog-by-gulp/</loc>
-    <lastmod>2017-04-21T02:56:29.000Z</lastmod>
+    <loc>http://chriscindy.top/post/%5Btranslation%5D-Out-Of-Band-Content-Coding/</loc>
+    <lastmod>2017-05-15T04:28:00.000Z</lastmod>
     <data>
         <display>
-        <title>采用 gulp 优化 hexo 博客打开速度</title>
-        <pubTime>2016-08-22T09:42:36.000Z</pubTime>
+        <title>[译][草案] HTTP “带外”内容编码</title>
+        <pubTime>2016-12-18T09:48:12.000Z</pubTime>
+        
+        <tag>HTTP</tag>
+         
+         
+           
+             
+              <breadCrumb title="理论学习" url="http://chriscindy.top/categories/%E7%90%86%E8%AE%BA%E5%AD%A6%E4%B9%A0/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://chriscindy.top/post/learning-MutationObserver/</loc>
+    <lastmod>2017-05-15T04:22:56.000Z</lastmod>
+    <data>
+        <display>
+        <title>深入 MutationObserver</title>
+        <pubTime>2016-09-08T02:42:04.000Z</pubTime>
+        
+        <tag>DOM</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术研究" url="http://chriscindy.top/categories/%E6%8A%80%E6%9C%AF%E7%A0%94%E7%A9%B6/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://chriscindy.top/post/Vuex-practice/</loc>
+    <lastmod>2017-05-15T04:20:28.000Z</lastmod>
+    <data>
+        <display>
+        <title>Vuex 实战</title>
+        <pubTime>2017-03-03T07:31:39.000Z</pubTime>
+        
+        <tag>Vue.js</tag>
+         
+        <tag>Vuex</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术使用" url="http://chriscindy.top/categories/%E6%8A%80%E6%9C%AF%E4%BD%BF%E7%94%A8/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://chriscindy.top/post/Vue-plugin-development-introduction/</loc>
+    <lastmod>2017-05-15T04:20:25.000Z</lastmod>
+    <data>
+        <display>
+        <title>Vue 插件开发入门</title>
+        <pubTime>2017-04-01T07:47:42.000Z</pubTime>
+        
+        <tag>Vue.js</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术使用" url="http://chriscindy.top/categories/%E6%8A%80%E6%9C%AF%E4%BD%BF%E7%94%A8/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://chriscindy.top/post/swifttype-search-service-replaced-by-Local-Search/</loc>
+    <lastmod>2017-05-15T04:20:20.000Z</lastmod>
+    <data>
+        <display>
+        <title>swiftype 搜索服务更换为 Local Search</title>
+        <pubTime>2016-08-10T06:49:15.000Z</pubTime>
         
         <tag>博客搭建</tag>
          
          
            
              
-              <breadCrumb title="学以致用" url="http://chriscindy.top/categories/%E5%AD%A6%E4%BB%A5%E8%87%B4%E7%94%A8/"/>
+              <breadCrumb title="解决方案" url="http://chriscindy.top/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://chriscindy.top/post/characteristics-of-Riotjs/</loc>
+    <lastmod>2017-05-15T04:20:16.000Z</lastmod>
+    <data>
+        <display>
+        <title>Riot.js 特性一览</title>
+        <pubTime>2016-07-29T08:11:36.000Z</pubTime>
+        
+        <tag>Riot.js</tag>
+         
+         
+           
+             
+              <breadCrumb title="理论学习" url="http://chriscindy.top/categories/%E7%90%86%E8%AE%BA%E5%AD%A6%E4%B9%A0/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://chriscindy.top/post/JavaScript-custom-events/</loc>
+    <lastmod>2017-05-15T04:20:11.000Z</lastmod>
+    <data>
+        <display>
+        <title>JavaScript 自定义事件</title>
+        <pubTime>2017-05-15T02:18:34.000Z</pubTime>
+        
+        <tag>JavaScript</tag>
+         
+         
+           
+             
+              <breadCrumb title="代码片段" url="http://chriscindy.top/categories/%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://chriscindy.top/post/the-rule-of-binding-this-in-JavaScript/</loc>
+    <lastmod>2017-05-15T04:20:06.000Z</lastmod>
+    <data>
+        <display>
+        <title>JavaScript 中 this 的四条绑定规则</title>
+        <pubTime>2016-09-15T08:17:44.000Z</pubTime>
+        
+        <tag>JavaScript</tag>
+         
+         
+           
+             
+              <breadCrumb title="理论学习" url="http://chriscindy.top/categories/%E7%90%86%E8%AE%BA%E5%AD%A6%E4%B9%A0/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://chriscindy.top/post/how-to-download-files-by-HTTP/</loc>
+    <lastmod>2017-05-15T04:20:03.000Z</lastmod>
+    <data>
+        <display>
+        <title>HTTP 协议如何实现文件下载功能</title>
+        <pubTime>2017-03-03T07:35:58.000Z</pubTime>
+        
+        <tag>HTTP</tag>
+         
+         
+           
+             
+              <breadCrumb title="理论学习" url="http://chriscindy.top/categories/%E7%90%86%E8%AE%BA%E5%AD%A6%E4%B9%A0/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://chriscindy.top/post/Hello-World/</loc>
+    <lastmod>2017-05-15T04:20:00.000Z</lastmod>
+    <data>
+        <display>
+        <title>Hello World</title>
+        <pubTime>2016-07-08T03:25:04.000Z</pubTime>
+        
+        <tag>里程碑</tag>
+         
+         
+           
+             
+              <breadCrumb title="生活感悟" url="http://chriscindy.top/categories/%E7%94%9F%E6%B4%BB%E6%84%9F%E6%82%9F/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://chriscindy.top/post/Composition-Event/</loc>
+    <lastmod>2017-05-15T04:19:56.000Z</lastmod>
+    <data>
+        <display>
+        <title>Composition Event</title>
+        <pubTime>2016-07-11T02:26:38.000Z</pubTime>
+        
+        <tag>JavaScript</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术研究" url="http://chriscindy.top/categories/%E6%8A%80%E6%9C%AF%E7%A0%94%E7%A9%B6/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://chriscindy.top/post/the-use-of-babel-register-and-babel-node/</loc>
+    <lastmod>2017-05-15T04:19:52.000Z</lastmod>
+    <data>
+        <display>
+        <title>babel-register 和 babel-node 的使用</title>
+        <pubTime>2016-08-22T09:37:28.000Z</pubTime>
+        
+        <tag>Babel</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术使用" url="http://chriscindy.top/categories/%E6%8A%80%E6%9C%AF%E4%BD%BF%E7%94%A8/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://chriscindy.top/post/the-characteristics-of-Babel-6/</loc>
+    <lastmod>2017-05-15T04:19:48.000Z</lastmod>
+    <data>
+        <display>
+        <title>Babel 6 特性总结</title>
+        <pubTime>2016-08-22T09:33:53.000Z</pubTime>
+        
+        <tag>Babel</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术使用" url="http://chriscindy.top/categories/%E6%8A%80%E6%9C%AF%E4%BD%BF%E7%94%A8/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://chriscindy.top/post/the-loose-mode-Babel-6/</loc>
+    <lastmod>2017-05-15T04:19:39.000Z</lastmod>
+    <data>
+        <display>
+        <title>Babel 6 的 loose 模式</title>
+        <pubTime>2016-08-10T06:32:49.000Z</pubTime>
+        
+        <tag>Babel</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术研究" url="http://chriscindy.top/categories/%E6%8A%80%E6%9C%AF%E7%A0%94%E7%A9%B6/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://chriscindy.top/post/%5Btranslation%5D-Building-Apps-with-Riot-ES6-and-Webpack/</loc>
+    <lastmod>2017-05-15T04:19:27.000Z</lastmod>
+    <data>
+        <display>
+        <title>[译]使用 Riot，ES6 和 Webpack 构建应用</title>
+        <pubTime>2016-07-11T03:10:52.000Z</pubTime>
+        
+        <tag>Riot.js</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术研究" url="http://chriscindy.top/categories/%E6%8A%80%E6%9C%AF%E7%A0%94%E7%A9%B6/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://chriscindy.top/post/what-wechat-xiaochengxu-brings-to-front-end/</loc>
+    <lastmod>2017-05-15T04:19:17.000Z</lastmod>
+    <data>
+        <display>
+        <title>微信小程序的出现给前端带来了什么</title>
+        <pubTime>2016-09-22T09:39:49.000Z</pubTime>
+        
+        <tag>JavaScript</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术感悟" url="http://chriscindy.top/categories/%E6%8A%80%E6%9C%AF%E6%84%9F%E6%82%9F/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://chriscindy.top/post/be-careful-with-for...of/</loc>
+    <lastmod>2017-05-15T04:19:13.000Z</lastmod>
+    <data>
+        <display>
+        <title>慎用 for..of，Babel 不是万能的！</title>
+        <pubTime>2017-04-18T08:02:25.000Z</pubTime>
+        
+        <tag>Babel</tag>
+         
+        <tag>ES6</tag>
+         
+         
+           
+             
+              <breadCrumb title="理论学习" url="http://chriscindy.top/categories/%E7%90%86%E8%AE%BA%E5%AD%A6%E4%B9%A0/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://chriscindy.top/post/how-to-stop-js-script/</loc>
+    <lastmod>2017-05-15T04:18:58.000Z</lastmod>
+    <data>
+        <display>
+        <title>如何终止 JS 脚本的运行</title>
+        <pubTime>2017-04-13T02:20:22.000Z</pubTime>
+        
+        <tag>JavaScript</tag>
+         
+         
+           
+             
+              <breadCrumb title="解决方案" url="http://chriscindy.top/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://chriscindy.top/post/how-to-make-two-git-accounts-compatible-in-one-computer/</loc>
+    <lastmod>2017-05-15T04:18:54.000Z</lastmod>
+    <data>
+        <display>
+        <title>两个 Git 帐号如何在一台电脑上共存</title>
+        <pubTime>2016-07-08T08:11:59.000Z</pubTime>
+        
+        <tag>Git</tag>
+         
+         
+           
+             
+              <breadCrumb title="解决方案" url="http://chriscindy.top/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
           
         </display>
     </data>
@@ -146,7 +409,7 @@
     
   <url>
     <loc>http://chriscindy.top/post/the-reason-why-an-options-request-appeard-before-cross-origin-request/</loc>
-    <lastmod>2017-04-21T02:49:17.000Z</lastmod>
+    <lastmod>2017-05-15T04:18:50.000Z</lastmod>
     <data>
         <display>
         <title>跨域请求时多出现一条 OPTIONS 请求的原因及解决办法</title>
@@ -169,281 +432,19 @@
 
     
   <url>
-    <loc>http://chriscindy.top/post/how-to-make-two-git-accounts-compatible-in-one-computer/</loc>
-    <lastmod>2017-04-21T02:44:40.000Z</lastmod>
+    <loc>http://chriscindy.top/post/optimizing-my-blog-by-gulp/</loc>
+    <lastmod>2017-05-15T04:17:35.000Z</lastmod>
     <data>
         <display>
-        <title>两个 Git 帐号如何在一台电脑上共存</title>
-        <pubTime>2016-07-08T08:11:59.000Z</pubTime>
-        
-        <tag>Git</tag>
-         
-         
-           
-             
-              <breadCrumb title="解决方案" url="http://chriscindy.top/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://chriscindy.top/post/how-to-stop-js-script/</loc>
-    <lastmod>2017-04-21T02:43:59.000Z</lastmod>
-    <data>
-        <display>
-        <title>如何终止 JS 脚本的运行</title>
-        <pubTime>2017-04-13T02:20:22.000Z</pubTime>
-        
-        <tag>JavaScript</tag>
-         
-         
-           
-             
-              <breadCrumb title="解决方案" url="http://chriscindy.top/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://chriscindy.top/post/learning-MutationObserver/</loc>
-    <lastmod>2017-04-21T02:43:36.000Z</lastmod>
-    <data>
-        <display>
-        <title>深入 MutationObserver</title>
-        <pubTime>2016-09-08T02:42:04.000Z</pubTime>
-        
-        <tag>DOM</tag>
-         
-         
-           
-             
-              <breadCrumb title="技术研究" url="http://chriscindy.top/categories/%E6%8A%80%E6%9C%AF%E7%A0%94%E7%A9%B6/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://chriscindy.top/post/be-careful-with-for...of/</loc>
-    <lastmod>2017-04-21T02:43:10.000Z</lastmod>
-    <data>
-        <display>
-        <title>慎用 for..of，Babel 不是万能的！</title>
-        <pubTime>2017-04-18T08:02:25.000Z</pubTime>
-        
-        <tag>Babel</tag>
-         
-        <tag>ES6</tag>
-         
-         
-           
-             
-              <breadCrumb title="理论学习" url="http://chriscindy.top/categories/%E7%90%86%E8%AE%BA%E5%AD%A6%E4%B9%A0/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://chriscindy.top/post/what-wechat-xiaochengxu-brings-to-front-end/</loc>
-    <lastmod>2017-04-21T02:42:40.000Z</lastmod>
-    <data>
-        <display>
-        <title>微信小程序的出现给前端带来了什么</title>
-        <pubTime>2016-09-22T09:39:49.000Z</pubTime>
-        
-        <tag>JavaScript</tag>
-         
-         
-           
-             
-              <breadCrumb title="技术感悟" url="http://chriscindy.top/categories/%E6%8A%80%E6%9C%AF%E6%84%9F%E6%82%9F/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://chriscindy.top/post/the-loose-mode-Babel-6/</loc>
-    <lastmod>2017-04-21T02:40:09.000Z</lastmod>
-    <data>
-        <display>
-        <title>Babel 6 的 loose 模式</title>
-        <pubTime>2016-08-10T06:32:49.000Z</pubTime>
-        
-        <tag>Babel</tag>
-         
-         
-           
-             
-              <breadCrumb title="技术研究" url="http://chriscindy.top/categories/%E6%8A%80%E6%9C%AF%E7%A0%94%E7%A9%B6/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://chriscindy.top/post/the-characteristics-of-Babel-6/</loc>
-    <lastmod>2017-04-21T02:39:33.000Z</lastmod>
-    <data>
-        <display>
-        <title>Babel 6 特性总结</title>
-        <pubTime>2016-08-22T09:33:53.000Z</pubTime>
-        
-        <tag>Babel</tag>
-         
-         
-           
-             
-              <breadCrumb title="技术使用" url="http://chriscindy.top/categories/%E6%8A%80%E6%9C%AF%E4%BD%BF%E7%94%A8/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://chriscindy.top/post/characteristics-of-Riotjs/</loc>
-    <lastmod>2017-04-21T02:39:14.000Z</lastmod>
-    <data>
-        <display>
-        <title>Riot.js 特性一览</title>
-        <pubTime>2016-07-29T08:11:36.000Z</pubTime>
-        
-        <tag>Riot.js</tag>
-         
-         
-           
-             
-              <breadCrumb title="理论学习" url="http://chriscindy.top/categories/%E7%90%86%E8%AE%BA%E5%AD%A6%E4%B9%A0/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://chriscindy.top/post/the-use-of-babel-register-and-babel-node/</loc>
-    <lastmod>2017-04-21T02:36:50.000Z</lastmod>
-    <data>
-        <display>
-        <title>babel-register 和 babel-node 的使用</title>
-        <pubTime>2016-08-22T09:37:28.000Z</pubTime>
-        
-        <tag>Babel</tag>
-         
-         
-           
-             
-              <breadCrumb title="技术使用" url="http://chriscindy.top/categories/%E6%8A%80%E6%9C%AF%E4%BD%BF%E7%94%A8/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://chriscindy.top/post/Composition-Event/</loc>
-    <lastmod>2017-04-21T02:36:14.000Z</lastmod>
-    <data>
-        <display>
-        <title>Composition Event</title>
-        <pubTime>2016-07-11T02:26:38.000Z</pubTime>
-        
-        <tag>JavaScript</tag>
-         
-         
-           
-             
-              <breadCrumb title="技术研究" url="http://chriscindy.top/categories/%E6%8A%80%E6%9C%AF%E7%A0%94%E7%A9%B6/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://chriscindy.top/post/Hello-World/</loc>
-    <lastmod>2017-04-21T02:36:02.000Z</lastmod>
-    <data>
-        <display>
-        <title>Hello World</title>
-        <pubTime>2016-07-08T03:25:04.000Z</pubTime>
-        
-        <tag>里程碑</tag>
-         
-         
-           
-             
-              <breadCrumb title="生活感悟" url="http://chriscindy.top/categories/%E7%94%9F%E6%B4%BB%E6%84%9F%E6%82%9F/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://chriscindy.top/post/how-to-download-files-by-HTTP/</loc>
-    <lastmod>2017-04-21T02:35:22.000Z</lastmod>
-    <data>
-        <display>
-        <title>HTTP 协议如何实现文件下载功能</title>
-        <pubTime>2017-03-03T07:35:58.000Z</pubTime>
-        
-        <tag>HTTP</tag>
-         
-         
-           
-             
-              <breadCrumb title="理论学习" url="http://chriscindy.top/categories/%E7%90%86%E8%AE%BA%E5%AD%A6%E4%B9%A0/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://chriscindy.top/post/the-rule-of-binding-this-in-JavaScript/</loc>
-    <lastmod>2017-04-21T02:34:34.000Z</lastmod>
-    <data>
-        <display>
-        <title>JavaScript 中 this 的四条绑定规则</title>
-        <pubTime>2016-09-15T08:17:44.000Z</pubTime>
-        
-        <tag>JavaScript</tag>
-         
-         
-           
-             
-              <breadCrumb title="理论学习" url="http://chriscindy.top/categories/%E7%90%86%E8%AE%BA%E5%AD%A6%E4%B9%A0/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://chriscindy.top/post/swifttype-search-service-replaced-by-Local-Search/</loc>
-    <lastmod>2017-04-21T02:31:55.000Z</lastmod>
-    <data>
-        <display>
-        <title>swiftype 搜索服务更换为 Local Search</title>
-        <pubTime>2016-08-10T06:49:15.000Z</pubTime>
+        <title>采用 gulp 优化 hexo 博客打开速度</title>
+        <pubTime>2016-08-22T09:42:36.000Z</pubTime>
         
         <tag>博客搭建</tag>
          
          
            
              
-              <breadCrumb title="解决方案" url="http://chriscindy.top/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
+              <breadCrumb title="学以致用" url="http://chriscindy.top/categories/%E5%AD%A6%E4%BB%A5%E8%87%B4%E7%94%A8/"/>
           
         </display>
     </data>
@@ -451,19 +452,19 @@
 
     
   <url>
-    <loc>http://chriscindy.top/post/Vue-plugin-development-introduction/</loc>
-    <lastmod>2017-04-21T02:31:21.000Z</lastmod>
+    <loc>http://chriscindy.top/post/reading-notes-one-of-learning-HTTP-together/</loc>
+    <lastmod>2017-05-15T04:17:27.000Z</lastmod>
     <data>
         <display>
-        <title>Vue 插件开发入门</title>
-        <pubTime>2017-04-01T07:47:42.000Z</pubTime>
+        <title>《图解 HTTP》 梳理（一）</title>
+        <pubTime>2017-04-26T07:22:26.000Z</pubTime>
         
-        <tag>Vue.js</tag>
+        <tag>HTTP</tag>
          
          
            
              
-              <breadCrumb title="技术使用" url="http://chriscindy.top/categories/%E6%8A%80%E6%9C%AF%E4%BD%BF%E7%94%A8/"/>
+              <breadCrumb title="读书笔记" url="http://chriscindy.top/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
           
         </display>
     </data>
@@ -471,26 +472,25 @@
 
     
   <url>
-    <loc>http://chriscindy.top/post/Vuex-practice/</loc>
-    <lastmod>2017-04-21T02:30:16.000Z</lastmod>
+    <loc>http://chriscindy.top/post/reading-notes-two-of-learning-HTTP-together/</loc>
+    <lastmod>2017-05-15T04:17:19.000Z</lastmod>
     <data>
         <display>
-        <title>Vuex 实战</title>
-        <pubTime>2017-03-03T07:31:39.000Z</pubTime>
+        <title>《图解HTTP》梳理（二）</title>
+        <pubTime>2017-04-27T07:14:53.000Z</pubTime>
         
-        <tag>Vue.js</tag>
-         
-        <tag>Vuex</tag>
+        <tag>HTTP</tag>
          
          
            
              
-              <breadCrumb title="技术使用" url="http://chriscindy.top/categories/%E6%8A%80%E6%9C%AF%E4%BD%BF%E7%94%A8/"/>
+              <breadCrumb title="读书笔记" url="http://chriscindy.top/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
           
         </display>
     </data>
     </url>
 
+    
     
     
     

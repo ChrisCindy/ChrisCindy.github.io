@@ -2,9 +2,170 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://chriscindy.top/post/background-and-border%E2%80%94%E2%80%94reading-notes-of-CSS-secrets/</loc>
+    
+    <lastmod>2017-05-15T04:28:11.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://chriscindy.top/post/%5Btranslation%5D-Out-Of-Band-Content-Coding/</loc>
+    
+    <lastmod>2017-05-15T04:28:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://chriscindy.top/post/learning-MutationObserver/</loc>
+    
+    <lastmod>2017-05-15T04:22:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://chriscindy.top/post/Vuex-practice/</loc>
+    
+    <lastmod>2017-05-15T04:20:28.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://chriscindy.top/post/Vue-plugin-development-introduction/</loc>
+    
+    <lastmod>2017-05-15T04:20:25.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://chriscindy.top/post/swifttype-search-service-replaced-by-Local-Search/</loc>
+    
+    <lastmod>2017-05-15T04:20:20.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://chriscindy.top/post/characteristics-of-Riotjs/</loc>
+    
+    <lastmod>2017-05-15T04:20:16.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://chriscindy.top/post/JavaScript-custom-events/</loc>
     
-    <lastmod>2017-05-15T04:05:41.000Z</lastmod>
+    <lastmod>2017-05-15T04:20:11.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://chriscindy.top/post/the-rule-of-binding-this-in-JavaScript/</loc>
+    
+    <lastmod>2017-05-15T04:20:06.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://chriscindy.top/post/how-to-download-files-by-HTTP/</loc>
+    
+    <lastmod>2017-05-15T04:20:03.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://chriscindy.top/post/Hello-World/</loc>
+    
+    <lastmod>2017-05-15T04:20:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://chriscindy.top/post/Composition-Event/</loc>
+    
+    <lastmod>2017-05-15T04:19:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://chriscindy.top/post/the-use-of-babel-register-and-babel-node/</loc>
+    
+    <lastmod>2017-05-15T04:19:52.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://chriscindy.top/post/the-characteristics-of-Babel-6/</loc>
+    
+    <lastmod>2017-05-15T04:19:48.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://chriscindy.top/post/the-loose-mode-Babel-6/</loc>
+    
+    <lastmod>2017-05-15T04:19:39.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://chriscindy.top/post/%5Btranslation%5D-Building-Apps-with-Riot-ES6-and-Webpack/</loc>
+    
+    <lastmod>2017-05-15T04:19:27.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://chriscindy.top/post/what-wechat-xiaochengxu-brings-to-front-end/</loc>
+    
+    <lastmod>2017-05-15T04:19:17.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://chriscindy.top/post/be-careful-with-for...of/</loc>
+    
+    <lastmod>2017-05-15T04:19:13.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://chriscindy.top/post/how-to-stop-js-script/</loc>
+    
+    <lastmod>2017-05-15T04:18:58.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://chriscindy.top/post/how-to-make-two-git-accounts-compatible-in-one-computer/</loc>
+    
+    <lastmod>2017-05-15T04:18:54.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://chriscindy.top/post/the-reason-why-an-options-request-appeard-before-cross-origin-request/</loc>
+    
+    <lastmod>2017-05-15T04:18:50.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://chriscindy.top/post/optimizing-my-blog-by-gulp/</loc>
+    
+    <lastmod>2017-05-15T04:17:35.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://chriscindy.top/post/reading-notes-one-of-learning-HTTP-together/</loc>
+    
+    <lastmod>2017-05-15T04:17:27.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://chriscindy.top/post/reading-notes-two-of-learning-HTTP-together/</loc>
+    
+    <lastmod>2017-05-15T04:17:19.000Z</lastmod>
     
   </url>
   
@@ -12,167 +173,6 @@
     <loc>http://chriscindy.top/categories/index.html</loc>
     
     <lastmod>2017-05-14T16:12:02.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://chriscindy.top/post/reading-notes-two-of-learning-HTTP-together/</loc>
-    
-    <lastmod>2017-04-27T07:16:14.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://chriscindy.top/post/reading-notes-one-of-learning-HTTP-together/</loc>
-    
-    <lastmod>2017-04-27T07:15:28.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://chriscindy.top/post/%5Btranslation%5D-Building-Apps-with-Riot-ES6-and-Webpack/</loc>
-    
-    <lastmod>2017-04-21T08:42:09.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://chriscindy.top/post/%5Btranslation%5D-Out-Of-Band-Content-Coding/</loc>
-    
-    <lastmod>2017-04-21T08:41:26.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://chriscindy.top/post/background-and-border%E2%80%94%E2%80%94reading-notes-of-CSS-secrets/</loc>
-    
-    <lastmod>2017-04-21T02:57:52.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://chriscindy.top/post/optimizing-my-blog-by-gulp/</loc>
-    
-    <lastmod>2017-04-21T02:56:29.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://chriscindy.top/post/the-reason-why-an-options-request-appeard-before-cross-origin-request/</loc>
-    
-    <lastmod>2017-04-21T02:49:17.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://chriscindy.top/post/how-to-make-two-git-accounts-compatible-in-one-computer/</loc>
-    
-    <lastmod>2017-04-21T02:44:40.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://chriscindy.top/post/how-to-stop-js-script/</loc>
-    
-    <lastmod>2017-04-21T02:43:59.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://chriscindy.top/post/learning-MutationObserver/</loc>
-    
-    <lastmod>2017-04-21T02:43:36.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://chriscindy.top/post/be-careful-with-for...of/</loc>
-    
-    <lastmod>2017-04-21T02:43:10.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://chriscindy.top/post/what-wechat-xiaochengxu-brings-to-front-end/</loc>
-    
-    <lastmod>2017-04-21T02:42:40.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://chriscindy.top/post/the-loose-mode-Babel-6/</loc>
-    
-    <lastmod>2017-04-21T02:40:09.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://chriscindy.top/post/the-characteristics-of-Babel-6/</loc>
-    
-    <lastmod>2017-04-21T02:39:33.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://chriscindy.top/post/characteristics-of-Riotjs/</loc>
-    
-    <lastmod>2017-04-21T02:39:14.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://chriscindy.top/post/the-use-of-babel-register-and-babel-node/</loc>
-    
-    <lastmod>2017-04-21T02:36:50.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://chriscindy.top/post/Composition-Event/</loc>
-    
-    <lastmod>2017-04-21T02:36:14.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://chriscindy.top/post/Hello-World/</loc>
-    
-    <lastmod>2017-04-21T02:36:02.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://chriscindy.top/post/how-to-download-files-by-HTTP/</loc>
-    
-    <lastmod>2017-04-21T02:35:22.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://chriscindy.top/post/the-rule-of-binding-this-in-JavaScript/</loc>
-    
-    <lastmod>2017-04-21T02:34:34.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://chriscindy.top/post/swifttype-search-service-replaced-by-Local-Search/</loc>
-    
-    <lastmod>2017-04-21T02:31:55.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://chriscindy.top/post/Vue-plugin-development-introduction/</loc>
-    
-    <lastmod>2017-04-21T02:31:21.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://chriscindy.top/post/Vuex-practice/</loc>
-    
-    <lastmod>2017-04-21T02:30:16.000Z</lastmod>
     
   </url>
   
