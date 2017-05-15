@@ -4,6 +4,43 @@
   
     
     <entry>
+      <title><![CDATA[macOS 终端下启动 MySQL]]></title>
+      <url>http://chriscindy.top/post/how-to-start-mysql-in-macOS-terminal/</url>
+      <content type="html"><![CDATA[<p>此文纯属备忘，对 MySQL 十分熟悉的朋友可忽略。<br><a id="more"></a><br>由于一直无法通过网上搜索的方法快速在终端启动 MySQL，只能在设置里通过点击按钮开启（MySQL 的下载安装均根据官网提示的步骤进行），如下图所示：<br><img src="http://ww3.sinaimg.cn/large/006tKfTcly1ffm2u62utwj30x80ewacu.jpg" alt=""><br>现在终于找到了通过命令行启动 MySQL 的方式，记录如下：</p>
+<p>启动：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo /usr/local/mysql/support-files/mysql.server start</div></pre></td></tr></table></figure>
+<p>停止：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo /usr/local/mysql/support-files/mysql.server stop</div></pre></td></tr></table></figure>
+<p>还是比较麻烦，可以简化一下：在 <code>~/.bash_aliases</code> 中添加这样的命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">alias mysqlstart=&apos;sudo /usr/local/mysql/support-files/mysql.server start&apos;</div><div class="line">alias mysqlstop=&apos;sudo /usr/local/mysql/support-files/mysql.server stop&apos;</div></pre></td></tr></table></figure>
+<p>如果没有 <code>.bash_aliases</code> 文件，可以创建一个，并在 <code>.bash_profile</code> 文件的最后加上这样的代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">if [ -f ~/.bash_aliases ]; then</div><div class="line">. ~/.bash_aliases</div><div class="line">fi</div></pre></td></tr></table></figure>
+<blockquote>
+<p>参考文档：</p>
+<ol>
+<li><a href="https://my.oschina.net/ioslighter/blog/425018" target="_blank" rel="external">Mac下命令行启动Mysql</a></li>
+<li><a href="http://stackoverflow.com/questions/7927854/start-mysql-server-from-command-line-on-mac-os-lion" target="_blank" rel="external">osx - start mySQL server from command line on Mac OS Lion - Stack Overflow</a></li>
+<li><a href="https://ss64.com/bash/syntax-bashrc.html" target="_blank" rel="external">bashrc bash_profile bash_aliases | Bash | SS64.com</a></li>
+</ol>
+</blockquote>
+]]></content>
+      
+        <categories>
+            
+            <category> 技巧备忘 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> MySQL </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[JavaScript 自定义事件]]></title>
       <url>http://chriscindy.top/post/JavaScript-custom-events/</url>
       <content type="html"><![CDATA[<p>自定义事件，就是有别于有别于带有浏览器特定行为的事件（类似 click, mouseover, submit, keydown 等事件），事件名称可以随意定义，可以通过特定的方法进行添加，触发以及删除。<br><a id="more"></a></p>
@@ -503,7 +540,7 @@
 <li><p>实例1： 主资源不支持“gzip”编码<br>在这种情况下，主资源的响应将永远不会在 Content-Encoding 头字段中包含“gzip”。但是辅助资源可能支持它，在这种情况下客户端可以通过在向辅助资源的请求中包含“Accept-Encoding：gzip”来协商压缩。</p>
 </li>
 <li><p>实例2：主资源支持“gzip”编码<br>这里，原始服务器实际上将使用两个不同的辅助资源，其中之一是经过 gzip 压缩的。 例如——回到 3.4.1 节的第一个例子——它可能回复如下：</p>
-<figure class="highlight http"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">HTTP/1.1 <span class="number">200</span> OK</div><div class="line"><span class="attribute">Date</span>: Thu, 14 May 2015 18:52:00 GMT</div><div class="line"><span class="attribute">Content-Type</span>: text/plain</div><div class="line"><span class="attribute">Cache-Control</span>: max-age=10, public</div><div class="line"><span class="attribute">Content-Encoding</span>: gzip, out-of-band</div><div class="line"><span class="attribute">Content-Length</span>: 165</div><div class="line"><span class="attribute">Vary</span>: Accept-Encoding</div><div class="line"></div><div class="line"><span class="javascript">&#123;</span></div><div class="line">  <span class="string">"sr"</span>: [</div><div class="line">    &#123; <span class="string">"r"</span> :</div><div class="line">      <span class="string">"http://example.net/bae27c36-fa6a-11e4-ae5d-00059a3c7a01"</span>&#125;,</div><div class="line">    &#123; <span class="string">"r"</span> :</div><div class="line">      <span class="string">"/c/bae27c36-fa6a-11e4-ae5d-00059a3c7a01"</span>&#125;</div><div class="line">  ]</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight http"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">HTTP/1.1 <span class="number">200</span> OK</div><div class="line"><span class="attribute">Date</span>: Thu, 14 May 2015 18:52:00 GMT</div><div class="line"><span class="attribute">Content-Type</span>: text/plain</div><div class="line"><span class="attribute">Cache-Control</span>: max-age=10, public</div><div class="line"><span class="attribute">Content-Encoding</span>: gzip, out-of-band</div><div class="line"><span class="attribute">Content-Length</span>: 165</div><div class="line"><span class="attribute">Vary</span>: Accept-Encoding</div><div class="line"></div><div class="line"><span class="json">&#123;</span></div><div class="line">  <span class="attr">"sr"</span>: [</div><div class="line">    &#123; <span class="attr">"r"</span> :</div><div class="line">      <span class="string">"http://example.net/bae27c36-fa6a-11e4-ae5d-00059a3c7a01"</span>&#125;,</div><div class="line">    &#123; <span class="attr">"r"</span> :</div><div class="line">      <span class="string">"/c/bae27c36-fa6a-11e4-ae5d-00059a3c7a01"</span>&#125;</div><div class="line">  ]</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>这意味着辅助资源的有效负载已经经过 gzip 压缩。</p>
 </li>
 </ul>
