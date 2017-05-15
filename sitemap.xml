@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://chriscindy.top/post/JavaScript-custom-events/</loc>
+    
+    <lastmod>2017-05-15T03:52:07.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://chriscindy.top/categories/index.html</loc>
+    
+    <lastmod>2017-05-14T16:12:02.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://chriscindy.top/post/reading-notes-two-of-learning-HTTP-together/</loc>
     
     <lastmod>2017-04-27T07:16:14.000Z</lastmod>
@@ -173,13 +187,6 @@
     <loc>http://chriscindy.top/404.html</loc>
     
     <lastmod>2016-07-08T03:09:51.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://chriscindy.top/categories/index.html</loc>
-    
-    <lastmod>2016-07-07T16:23:45.000Z</lastmod>
     
   </url>
   
