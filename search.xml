@@ -22,6 +22,18 @@
 <p>最后，感谢 co 这样的优秀项目作为开拓者，才有了后来的 async/await ，让 JavaScript 开发人员不再因为这门语言独特的单线程特性而深陷异步编程带来的困扰。</p>
 ]]></content>
       
+        <categories>
+            
+            <category> 源码解析 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> JavaScript </tag>
+            
+        </tags>
         
     </entry>
     

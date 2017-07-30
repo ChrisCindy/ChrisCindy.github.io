@@ -5,14 +5,59 @@
     
   <url>
     <loc>http://chriscindy.top/post/the-analysis-of-the-source-code-of-co/</loc>
-    <lastmod>2017-07-30T15:08:23.000Z</lastmod>
+    <lastmod>2017-07-30T15:43:57.000Z</lastmod>
     <data>
         <display>
         <title>co 源码精读</title>
         <pubTime>2017-07-30T01:46:40.000Z</pubTime>
         
+        <tag>JavaScript</tag>
+         
          
            
+             
+              <breadCrumb title="源码解析" url="http://chriscindy.top/categories/%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://chriscindy.top/post/the-characteristics-of-Babel-6/</loc>
+    <lastmod>2017-07-30T15:23:49.000Z</lastmod>
+    <data>
+        <display>
+        <title>Babel 6 特性总结</title>
+        <pubTime>2016-08-22T09:33:53.000Z</pubTime>
+        
+        <tag>Babel</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术使用" url="http://chriscindy.top/categories/%E6%8A%80%E6%9C%AF%E4%BD%BF%E7%94%A8/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://chriscindy.top/post/the-loose-mode-Babel-6/</loc>
+    <lastmod>2017-07-30T15:23:44.000Z</lastmod>
+    <data>
+        <display>
+        <title>Babel 6 的 loose 模式</title>
+        <pubTime>2016-08-10T06:32:49.000Z</pubTime>
+        
+        <tag>Babel</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术研究" url="http://chriscindy.top/categories/%E6%8A%80%E6%9C%AF%E7%A0%94%E7%A9%B6/"/>
+          
         </display>
     </data>
     </url>
@@ -294,46 +339,6 @@
            
              
               <breadCrumb title="技术使用" url="http://chriscindy.top/categories/%E6%8A%80%E6%9C%AF%E4%BD%BF%E7%94%A8/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://chriscindy.top/post/the-characteristics-of-Babel-6/</loc>
-    <lastmod>2017-05-15T04:19:48.000Z</lastmod>
-    <data>
-        <display>
-        <title>Babel 6 特性总结</title>
-        <pubTime>2016-08-22T09:33:53.000Z</pubTime>
-        
-        <tag>Babel</tag>
-         
-         
-           
-             
-              <breadCrumb title="技术使用" url="http://chriscindy.top/categories/%E6%8A%80%E6%9C%AF%E4%BD%BF%E7%94%A8/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://chriscindy.top/post/the-loose-mode-Babel-6/</loc>
-    <lastmod>2017-05-15T04:19:39.000Z</lastmod>
-    <data>
-        <display>
-        <title>Babel 6 的 loose 模式</title>
-        <pubTime>2016-08-10T06:32:49.000Z</pubTime>
-        
-        <tag>Babel</tag>
-         
-         
-           
-             
-              <breadCrumb title="技术研究" url="http://chriscindy.top/categories/%E6%8A%80%E6%9C%AF%E7%A0%94%E7%A9%B6/"/>
           
         </display>
     </data>
